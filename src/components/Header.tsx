@@ -1,42 +1,71 @@
-const Header = ({ data }: any) => {
-   const { name, occupation, description, social } = data || {};
-   const networks = social ? social.map((network: any) => (
-      <li key={network.name}>
-         <a target="_blank" rel="noopener noreferrer" href={network.url}>
-            <i className={network.className}></i>
-         </a>
-      </li>
-   )) : null;
+import { useState } from 'react';
+import { scrollToSection } from '../utilities';
+import { IconMenu, IconClose, SocialIcon } from './Icons';
+import type { Main } from '../interfaces';
+
+const NAV_ITEMS = [
+   { href: '#about', label: 'About' },
+   { href: '#resume', label: 'Experience' },
+   { href: '#portfolio', label: 'Work' },
+   { href: '#testimonials', label: 'Recommendations' },
+   { href: '#contact', label: 'Contact' },
+];
+
+const Header = ({ data }: { data: Main }) => {
+   const { name, occupation, description, social, email } = data;
+   const [menuOpen, setMenuOpen] = useState(false);
+
+   const handleNav = (href: string) => (e: React.MouseEvent) => {
+      setMenuOpen(false);
+      scrollToSection(href)(e);
+   };
 
    return (
-      <header id="home">
-         <nav id="nav-wrap">
-            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-            <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
-            <ul id="nav" className="nav">
-               <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-               <li><a className="smoothscroll" href="#about">About</a></li>
-               <li><a className="smoothscroll" href="#resume">Experience</a></li>
-               <li><a className="smoothscroll" href="#portfolio">Projects</a></li>
-               <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-               <li><a className="smoothscroll" href="#contact">Contact</a></li>
-            </ul>
-         </nav>
-         <div className="row banner">
-            <div className="banner-text">
-               <h1 className="responsive-headline">I'm {name}</h1>
-               <h2>{occupation}</h2>
-               <h3>{description}</h3>
-               <hr />
-               <ul className="social">
-                  {networks}
+      <>
+         <nav className="site-nav" id="home">
+            <div className="site-nav-inner">
+               <a className="brand" href="#home" onClick={handleNav('#home')}>{name}</a>
+               <ul className="nav-links">
+                  {NAV_ITEMS.map((item) => (
+                     <li key={item.href}>
+                        <a href={item.href} onClick={handleNav(item.href)}>{item.label}</a>
+                     </li>
+                  ))}
                </ul>
+               <div className="nav-cta">
+                  <a className="btn btn-primary btn-text" href={`mailto:${email}`}>Get in touch</a>
+                  <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setMenuOpen((o) => !o)}>
+                     {menuOpen ? <IconClose /> : <IconMenu />}
+                  </button>
+               </div>
             </div>
-         </div>
-         <p className="scrolldown">
-            <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-         </p>
-      </header>
+            <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+               {NAV_ITEMS.map((item) => (
+                  <a key={item.href} href={item.href} onClick={handleNav(item.href)}>{item.label}</a>
+               ))}
+               <a href={`mailto:${email}`}>Get in touch</a>
+            </div>
+         </nav>
+
+         <header className="hero container-wide">
+            <span className="eyebrow">Founder · Data & AI</span>
+            <h1>I'm {name}<br />
+               <span className="accent-name">{occupation}</span>
+            </h1>
+            <p className="lede">{description}</p>
+            <div className="hero-actions">
+               <a className="btn btn-primary" href="#portfolio" onClick={handleNav('#portfolio')}>See what I'm building</a>
+               <a className="btn" href="#contact" onClick={handleNav('#contact')}>Get in touch</a>
+            </div>
+            <div className="hero-social">
+               {social.map((network) => (
+                  <a key={network.name} className="icon-btn" target="_blank" rel="noopener noreferrer" href={network.url} aria-label={network.name}>
+                     <SocialIcon name={network.name} />
+                  </a>
+               ))}
+            </div>
+         </header>
+      </>
    );
 };
 

@@ -1,22 +1,27 @@
 {
   "main": {
     "name": "Tobi Oladimeji",
-    "occupation": "Data & Analytics Professional",
-    "description": "I build reliable reporting, data quality, automation, and decision-support systems using Power BI, SQL, Python, and applied AI.",
+    "occupation": "Founder, Inscend & Data Fellows",
+    "description": "I build decision-intelligence products and work across data, AI, and analytics — five years in enterprise data before moving into founding companies.",
     "image": "headshot.jpg",
     "bio": [
-      "I am a data and analytics professional with 5+ years of experience across business intelligence, reporting, data operations, automation, and applied analytics.",
-      "My experience includes enterprise data migration and reporting at PwC, analytics and machine-learning workflows at ESGTree, and data quality, KPI, and automation systems for Granted Technologies. I work primarily with Power BI, SQL, Python, Excel, data quality frameworks, and AI-enabled automation.",
-      "I also founded Data Fellows, a global data and technology ecosystem with 1,500+ members across 15+ countries, and I am building Inscend, a decision-intelligence product. I am based in Waterloo Region, Ontario."
+      "I'm the founder of Inscend and Data Fellows, and I work across data, analytics, and applied AI.",
+      "Inscend is a decision-intelligence product for small retail businesses — moving from data to a recommended action, not another dashboard. Data Fellows is an applied data community and venture-building ecosystem with 1,500+ members across 15+ countries.",
+      "Before founding these, I spent 5+ years in enterprise data and analytics: enterprise data migration and reporting at PwC, analytics and ML workflows at ESGTree, and data quality and automation systems for Granted. I'm based in Waterloo Region, Ontario."
     ],
-    "contactmessage": "Let's connect and discuss how I can contribute to your team's analytics, reporting, and decision-support work.",
+    "stats": [
+      { "label": "Years in data & analytics", "value": "5+" },
+      { "label": "Companies founded", "value": "2" },
+      { "label": "Community members", "value": "1,500+" }
+    ],
+    "contactmessage": "Open to conversations about Inscend, Data Fellows, data/AI partnerships, or interesting problems in decision intelligence.",
     "email": "oluwatobilobadimeji@gmail.com",
-    "address": { "street": "", "city": "Waterloo Region", "state": "Ontario", "zip": "Canada" },
-    "website": "#",
-    "resumedownload": "https://www.linkedin.com/in/tobioladimeji/",
+    "address": { "city": "Waterloo Region", "state": "Ontario", "zip": "Canada" },
+    "linkedin": "https://www.linkedin.com/in/tobioladimeji/",
     "social": [
-      { "name": "linkedin", "url": "https://www.linkedin.com/in/tobioladimeji/", "className": "fa fa-linkedin" },
-      { "name": "github", "url": "https://github.com/tobiolad/", "className": "fa fa-github" }
+      { "name": "linkedin", "url": "https://www.linkedin.com/in/tobioladimeji/" },
+      { "name": "github", "url": "https://github.com/tobiolad/" },
+      { "name": "x", "url": "https://x.com/tobioladimeji_" }
     ]
   },
   "resume": {
@@ -26,6 +31,16 @@
       { "school": "Landmark University", "degree": "Bachelor of Science, Computer Science", "graduated": "2022", "description": "Nigeria" }
     ],
     "work": [
+      {
+        "company": "Data Fellows",
+        "title": "Founder & CEO",
+        "years": "August 2022 – Present",
+        "highlights": [
+          "Founded and grew a 1,500+ member data and technology ecosystem across 15+ countries.",
+          "Lead partnerships, learning programs, applied analytics initiatives, and cross-functional delivery of practical data and AI projects.",
+          "Incubated Inscend through product discovery, data strategy, and applied automation."
+        ]
+      },
       {
         "company": "Granted Technologies Inc.",
         "title": "Strategic Advisor, Data & Operations",
@@ -57,16 +72,6 @@
         ]
       },
       {
-        "company": "Data Fellows",
-        "title": "Founder & Strategy Lead",
-        "years": "August 2022 – Present",
-        "highlights": [
-          "Founded and grew a 1,500+ member data and technology ecosystem across 15+ countries.",
-          "Lead partnerships, learning programs, applied analytics initiatives, and cross-functional delivery of practical data and AI projects.",
-          "Incubated Inscend through product discovery, data strategy, and applied automation."
-        ]
-      },
-      {
         "company": "AgroMall",
         "title": "Data Analyst",
         "years": "March 2021 – August 2022",
@@ -85,6 +90,11 @@
     ]
   },
   "portfolio": {
+    "featured": [
+      { "title": "Inscend", "category": "Product", "description": "Decision intelligence for small retail businesses — moving from data to a recommended action, not another dashboard.", "url": "https://inscend.io", "cta": "Visit site" },
+      { "title": "Data Fellows", "category": "Product", "description": "Applied data community and venture-building ecosystem, 1,500+ members across 15+ countries. Next.js + Payload CMS.", "url": "https://datafellowsai.com", "cta": "Visit site" },
+      { "title": "AI Research Agents", "category": "AI & Automation", "description": "Gemini-powered sourcing agents built for Granted and Inscend — grant discovery and retail lead generation.", "url": "https://github.com/tobiolad/granted-source-agent", "cta": "View repository" }
+    ],
     "projects": [
       { "title": "M & E Dashboard", "category": "Power BI", "description": "Monitoring and evaluation dashboard providing visibility into visit status, geographic activity, pending fieldwork, and operational performance.", "image": "m & e.png", "url": "https://app.powerbi.com/view?r=eyJrIjoiOGYwZDU0MzYtNGYwOC00YTEzLTk1MjMtNDY3MmMwMGRjZGZlIiwidCI6IjQxZDdjZDQ4LWQ2MzQtNDIyZi1hNmNjLWVlNTUxNDFhOTJkNSJ9", "cta": "View Dashboard" },
       { "title": "AgroWallet Dashboard", "category": "Power BI", "description": "Operational reporting on farmer profiles, financial activity, loans, disbursements, repayments, agents, and farm characteristics.", "image": "agrowallet.png", "url": "https://app.powerbi.com/view?r=eyJrIjoiOTQ2ZTQ4NjYtZTQ4ZC00NzQ2LTkyOTMtZGVhYmM3NzcyMGRmIiwidCI6IjQxZDdjZDQ4LWQ2MzQtNDIyZi1hNmNjLWVlNTUxNDFhOTJkNSJ9", "cta": "View Dashboard" },
@@ -97,10 +107,10 @@
   },
   "testimonials": {
     "testimonials": [
-      { "text": "It was a great pleasure to have worked with Tobi. He is a very responsible, determined, and hard working profesional. Tobi really helped us in analyzing data and report generation for various clients,developing them in PowerBi and integrating databases. Constantly solved problems and proposed new ideas. Tobi was always a team player and was invested in making things work. Apart from being a great profesional he is a great person.", "user": "Edgardo Jaramillo" },
+      { "text": "It was a great pleasure to have worked with Tobi. He is a very responsible, determined, and hard working profesional. Tobi really helped us in analyzing data and report generation for various clients, developing them in PowerBi and integrating databases. Constantly solved problems and proposed new ideas. Tobi was always a team player and was invested in making things work. Apart from being a great profesional he is a great person.", "user": "Edgardo Jaramillo" },
       { "text": "Tobi's excepcional patience, professionalism, and capability to understand and work with disorganized data sets have turned him into an asset for our team. I admire his capacity to create reports from scratch in Power BI and connect various platforms to turn simple datasets added to a Google Sheets into meaningful reports for making informed decisions. Of course, he is a great coworker, and I can wholeheartedly recommend Tobi without any doubt.", "user": "Daniela Titus" },
-      { "text": "Tobi is an outstanding young professional with so much potential. During our time at PwC, I witnessed his dedication to mastering data analysis. Tobi's ability to tackle complex data challenges and his eagerness to learn set him apart. He's not just a team player but also brings a fresh perspective to every project. I highly recommend Tobi for his skills, passion, and the promise he holds in the field of data analytics", "user": "Andrew S Nevin" },
-      { "text": "I wholeheartedly recommend Tobi for his exceptional contributions at Rollbackally. From the moment he joined our team, it was clear that he possessed a remarkable ability to adapt, coupled with a strong work ethic that consistently translated into outstanding results. Tobi’s dedication to his work is truly commendable, and his talent shines through in all that he undertakes. He is not only a skilled professional but also a natural leader who knows how to guide the team effectively toward achieving our goals. I am confident that Tobi will continue to excel in any role he takes on in the future.", "user": "Santiago Guevara León" }
+      { "text": "Tobi is an outstanding young professional with so much potential. During our time at PwC, I witnessed his dedication to mastering data analysis. Tobi's ability to tackle complex data challenges and his eagerness to learn set him apart. He's not just a team player but also brings a fresh perspective to every project. I highly recommend Tobi for his skills, passion, and the promise he holds in the field of data analytics.", "user": "Andrew S Nevin" },
+      { "text": "I wholeheartedly recommend Tobi for his exceptional contributions at Rollbackally. From the moment he joined our team, it was clear that he possessed a remarkable ability to adapt, coupled with a strong work ethic that consistently translated into outstanding results. Tobi's dedication to his work is truly commendable, and his talent shines through in all that he undertakes. He is not only a skilled professional but also a natural leader who knows how to guide the team effectively toward achieving our goals. I am confident that Tobi will continue to excel in any role he takes on in the future.", "user": "Santiago Guevara León" }
     ]
   }
 }

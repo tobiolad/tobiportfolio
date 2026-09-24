@@ -1,27 +1,22 @@
+import { scrollToSection } from '../utilities';
+import { IconArrowUp, SocialIcon } from './Icons';
+import type { Main } from '../interfaces';
 
-const Footer = ({ data }: any) => {
-   const networks = data?.social.map((network: any) => (
-      <li key={network.name}>
-         <a href={network.url}>
-            <i className={network.className}></i>
-         </a>
-      </li>
-   ));
+const Footer = ({ data }: { data: Main }) => {
+   const { social, name } = data;
 
    return (
       <footer>
-         <div className="row">
-            <div className="twelve columns">
-               <ul className="social-links">
-                  {networks}
-               </ul>
-               <ul className="copyright">
-                  <li>&copy; Copyright {(new Date()).getFullYear()} Tobi Oladimeji</li>
-               </ul>
-            </div>
-            <div id="go-top">
-               <a className="smoothscroll" title="Back to Top" href="#home">
-                  <i className="icon-up-open"></i>
+         <div className="footer-inner">
+            <span className="footer-copy">&copy; {(new Date()).getFullYear()} {name}</span>
+            <div className="footer-social">
+               {social.map((network) => (
+                  <a key={network.name} className="icon-btn" target="_blank" rel="noopener noreferrer" href={network.url} aria-label={network.name}>
+                     <SocialIcon name={network.name} />
+                  </a>
+               ))}
+               <a className="icon-btn back-to-top" href="#home" onClick={scrollToSection('#home')} aria-label="Back to top">
+                  <IconArrowUp />
                </a>
             </div>
          </div>

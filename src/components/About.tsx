@@ -1,35 +1,32 @@
+import type { Main } from '../interfaces';
 
-const About = ({ data }: any) => {
-   const { name, image, bio, email, address, resumedownload } = data;
+const About = ({ data }: { data: Main }) => {
+   const { name, image, bio, stats } = data;
 
    return (
-      <section id="about">
-         <div className="row">
-            <div className="three columns">
-              <img className="profile-pic" src={`images/${image}`} alt="Tobi Oladimeji" />
+      <section id="about" className="container">
+         <div className="section-head">
+            <span className="eyebrow">About</span>
+            <h2>A bit of background</h2>
+         </div>
+         <div className="about-grid">
+            <div className="about-photo">
+               <img src={`/images/${image}`} alt={name} />
             </div>
-            <div className="nine columns main-col">
-               <h2>About Me</h2>
-               <div className="bio">
-                  {bio.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
+            <div>
+               <div className="about-bio">
+                  {bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                </div>
-               <div className="row">
-                  <div className="columns contact-details">
-                     <h2>Contact Details</h2>
-                     <p className="address">
-                        <span>{name}</span><br />
-                        <span>{address.city}, {address.state}, {address.zip}</span><br />
-                        <a href={`mailto:${email}`}>{email}</a>
-                     </p>
+               {stats.length > 0 && (
+                  <div className="stat-row">
+                     {stats.map((stat) => (
+                        <div key={stat.label}>
+                           <div className="stat-value">{stat.value}</div>
+                           <div className="stat-label">{stat.label}</div>
+                        </div>
+                     ))}
                   </div>
-                  <div className="columns download">
-                     <p>
-                        <a target="_blank" rel="noopener noreferrer" href={resumedownload} className="button">
-                           <i className="fa fa-linkedin"></i>View LinkedIn
-                        </a>
-                     </p>
-                  </div>
-               </div>
+               )}
             </div>
          </div>
       </section>

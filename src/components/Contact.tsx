@@ -1,28 +1,25 @@
-const Contact = ({ data }: any) => {
-   const { name, email, contactmessage, resumedownload, address } = data || {};
+import { IconMail, SocialIcon } from './Icons';
+import type { Main } from '../interfaces';
+
+const Contact = ({ data }: { data: Main }) => {
+   const { name, email, contactmessage, address, social } = data;
 
    return (
-      <section id="contact">
-         <div className="row contact-panel">
-            <div className="three columns header-col">
-               <h1><span>Get In Touch</span></h1>
-            </div>
-            <div className="nine columns contact-content">
-               <h2>Let's work together.</h2>
-               <p className="lead">{contactmessage}</p>
-               <p className="contact-location">
-                  {name}<br />
-                  {address.city}, {address.state}, {address.zip}
-               </p>
-               <div className="contact-actions">
-                  <a className="button primary" href={`mailto:${email}?subject=Portfolio inquiry for Tobi Oladimeji`}>
-                     <i className="fa fa-envelope"></i>Email Me
+      <section id="contact" className="container">
+         <div className="contact-panel">
+            <span className="eyebrow">Get in touch</span>
+            <h2>Let's talk.</h2>
+            <p className="lead">{contactmessage}</p>
+            <p className="contact-location">{name} &middot; {address.city}, {address.state}, {address.zip}</p>
+            <div className="contact-actions">
+               <a className="btn btn-primary" href={`mailto:${email}?subject=Hey Tobi`}>
+                  <IconMail /> Email me
+               </a>
+               {social.map((network) => (
+                  <a key={network.name} className="icon-btn" target="_blank" rel="noopener noreferrer" href={network.url} aria-label={network.name}>
+                     <SocialIcon name={network.name} />
                   </a>
-                  <a className="button" target="_blank" rel="noopener noreferrer" href={resumedownload}>
-                     <i className="fa fa-linkedin"></i>Connect on LinkedIn
-                  </a>
-               </div>
-               <a className="contact-email" href={`mailto:${email}`}>{email}</a>
+               ))}
             </div>
          </div>
       </section>

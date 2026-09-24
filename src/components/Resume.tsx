@@ -1,67 +1,56 @@
+import type { Resume as ResumeType } from '../interfaces';
 
-const Resume = ({ data }: any) => {
-  const { skillmessage, education, work, skillGroups } = data || {};
-
-  const educationItems = education ? education.map((edu: any) => (
-    <div key={edu.school}>
-      <h3>{edu.school}</h3>
-      <p className="info">
-        {edu.degree} <span>&bull;</span><em className="date">{edu.graduated}</em>
-      </p>
-      <p>{edu.description}</p>
-    </div>
-  )) : null;
-
-  const workItems = work ? work.map((job: any) => (
-    <div key={job.company}>
-      <h3>{job.company}</h3>
-      <p className="info">
-        {job.title} <span>&bull;</span> <em className="date">{job.years}</em>
-      </p>
-      <ul className="work-highlights">
-        {job.highlights.map((highlight: string) => <li key={highlight}>{highlight}</li>)}
-      </ul>
-    </div>
-  )) : null;
-
-  const skillItems = skillGroups ? skillGroups.map((group: any) => (
-    <div className="skill-group" key={group.name}>
-      <h3>{group.name}</h3>
-      <div className="skill-badges">
-        {group.skills.map((skill: string) => <span className="badge" key={skill}>{skill}</span>)}
-      </div>
-    </div>
-  )) : null;
+const Resume = ({ data }: { data: ResumeType }) => {
+  const { skillmessage, education, work, skillGroups } = data;
 
   return (
-    <section id="resume">
-      <div className="row education">
-        <div className="three columns header-col">
-          <h1><span>Education</span></h1>
-        </div>
-        <div className="nine columns main-col">
-          <div className="row item">
-            <div className="twelve columns">
-              {educationItems}
+    <section id="resume" className="container">
+      <div className="section-head">
+        <span className="eyebrow">Experience</span>
+        <h2>Background</h2>
+      </div>
+
+      <div className="exp-block">
+        <h3 className="block-title">Work</h3>
+        {work.map((job) => (
+          <div className="timeline-item" key={job.company}>
+            <div className="timeline-date">{job.years}</div>
+            <div>
+              <div className="timeline-role">{job.title}</div>
+              <div className="timeline-company">{job.company}</div>
+              <ul className="timeline-highlights">
+                {job.highlights.map((highlight: string) => <li key={highlight}>{highlight}</li>)}
+              </ul>
             </div>
           </div>
-        </div>
+        ))}
       </div>
-      <div className="row work">
-        <div className="three columns header-col">
-          <h1><span>Experience</span></h1>
-        </div>
-        <div className="nine columns main-col">
-          {workItems}
-        </div>
+
+      <div className="exp-block">
+        <h3 className="block-title">Education</h3>
+        {education.map((edu) => (
+          <div className="timeline-item" key={edu.school}>
+            <div className="timeline-date">{edu.graduated}</div>
+            <div>
+              <div className="timeline-role">{edu.school}</div>
+              <div className="timeline-company">{edu.degree} &middot; {edu.description}</div>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="row skill">
-        <div className="three columns header-col">
-          <h1><span>Skills</span></h1>
-        </div>
-        <div className="nine columns main-col">
-          <p>{skillmessage}</p>
-          <div className="skill-groups">{skillItems}</div>
+
+      <div className="exp-block">
+        <h3 className="block-title">Skills</h3>
+        <p className="section-sub" style={{ marginBottom: 24 }}>{skillmessage}</p>
+        <div className="skill-groups">
+          {skillGroups.map((group) => (
+            <div className="skill-group" key={group.name}>
+              <h4>{group.name}</h4>
+              <div className="skill-badges">
+                {group.skills.map((skill: string) => <span className="badge" key={skill}>{skill}</span>)}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
