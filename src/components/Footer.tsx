@@ -1,27 +1,15 @@
-import { scrollToSection } from '../utilities';
-import { IconArrowUp, SocialIcon } from './Icons';
-import type { Main } from '../interfaces';
+import { profile } from '../data/portfolio';
 
-const Footer = ({ data }: { data: Main }) => {
-   const { social, name } = data;
-
-   return (
-      <footer>
-         <div className="footer-inner">
-            <span className="footer-copy">&copy; {(new Date()).getFullYear()} {name}</span>
-            <div className="footer-social">
-               {social.map((network) => (
-                  <a key={network.name} className="icon-btn" target="_blank" rel="noopener noreferrer" href={network.url} aria-label={network.name}>
-                     <SocialIcon name={network.name} />
-                  </a>
-               ))}
-               <a className="icon-btn back-to-top" href="#home" onClick={scrollToSection('#home')} aria-label="Back to top">
-                  <IconArrowUp />
-               </a>
-            </div>
-         </div>
-      </footer>
-   );
-};
+const Footer = () => (
+   <footer className="footer shell">
+      <span className="brand"><span>TO</span></span>
+      <p>Data → context → decision → action.</p>
+      <div>
+         <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+         <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+         <a href="#top">Back to top</a>
+      </div>
+   </footer>
+);
 
 export default Footer;
