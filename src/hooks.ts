@@ -2,12 +2,19 @@ import { useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
 
+function readStoredTheme(): Theme | null {
+    const stored = localStorage.getItem('theme');
+    return stored === 'light' || stored === 'dark' ? stored : null;
+}
+
+function getSystemTheme(): Theme {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
 function getPreferredTheme(): Theme {
     const current = document.documentElement.getAttribute('data-theme');
     if (current === 'light' || current === 'dark') return current;
-    const stored = localStorage.getItem('theme');
-    if (stored === 'light' || stored === 'dark') return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return readStoredTheme() ?? getSystemTheme();
 }
 
 export function useTheme() {
@@ -19,16 +26,35 @@ export function useTheme() {
         }
     });
 
+    // Reflect the current theme in the DOM on every change, but don't write
+    // to storage here: a system-derived theme on first visit isn't a user
+    // preference yet, and persisting it would stop the site from following
+    // prefers-color-scheme once the OS switches. Only toggleTheme persists.
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
-        try {
-            localStorage.setItem('theme', theme);
-        } catch {
-            // ignore storage errors (private browsing, etc.)
-        }
     }, [theme]);
 
-    const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+    // Until the user makes an explicit choice, keep following the OS theme
+    // live (e.g. an automatic light/dark schedule).
+    useEffect(() => {
+        if (readStoredTheme()) return;
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        const onChange = (e: MediaQueryListEvent) => setTheme(e.matches ? 'dark' : 'light');
+        media.addEventListener('change', onChange);
+        return () => media.removeEventListener('change', onChange);
+    }, []);
+
+    const toggleTheme = () => {
+        setTheme((t) => {
+            const next: Theme = t === 'dark' ? 'light' : 'dark';
+            try {
+                localStorage.setItem('theme', next);
+            } catch {
+                // ignore storage errors (private browsing, etc.)
+            }
+            return next;
+        });
+    };
 
     return { theme, toggleTheme };
 }

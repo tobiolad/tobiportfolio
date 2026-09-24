@@ -17,6 +17,7 @@ const CommandPalette = ({ open, onClose, commands }: CommandPaletteProps) => {
   const [query, setQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const lastFocused = useRef<HTMLElement | null>(null);
 
   const results = useMemo(() => {
@@ -67,14 +68,36 @@ const CommandPalette = ({ open, onClose, commands }: CommandPaletteProps) => {
     }
   };
 
+  // Keep keyboard focus inside the dialog while it's open, per WAI-ARIA
+  // modal dialog practice: Tab/Shift+Tab wrap within its focusable elements
+  // instead of leaking into the (visually obscured) page behind it.
+  const trapFocus = (e: React.KeyboardEvent) => {
+    if (e.key !== 'Tab' || !dialogRef.current) return;
+    const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+      'input, a[href], button, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
+
   return (
     <div className="palette-backdrop" onMouseDown={onClose}>
       <div
+        ref={dialogRef}
         className="palette"
         role="dialog"
         aria-modal="true"
         aria-label="Quick navigation"
         onMouseDown={(e) => e.stopPropagation()}
+        onKeyDown={trapFocus}
       >
         <div className="palette-input">
           <IconSearch />
