@@ -1,32 +1,39 @@
-const Contact = ({ data }: any) => {
-   const { name, email, contactmessage, resumedownload, address } = data || {};
+import { useState } from 'react';
+import { IconMail, IconCopy, IconCheck, SocialIcon } from './Icons';
+import { profile } from '../data/portfolio';
+
+const Contact = () => {
+   const [copied, setCopied] = useState(false);
+
+   const copyEmail = async () => {
+      try {
+         await navigator.clipboard.writeText(profile.email);
+         setCopied(true);
+         setTimeout(() => setCopied(false), 2000);
+      } catch {
+         // clipboard unavailable; mailto link below still works
+      }
+   };
 
    return (
-      <section id="contact">
-         <div className="row contact-panel">
-            <div className="three columns header-col">
-               <h1><span>Get In Touch</span></h1>
-            </div>
-            <div className="nine columns contact-content">
-               <h2>Let's work together.</h2>
-               <p className="lead">{contactmessage}</p>
-               <p className="contact-location">
-                  {name}<br />
-                  {address.city}, {address.state}, {address.zip}
-               </p>
-               <div className="contact-actions">
-                  <a className="button primary" href={`mailto:${email}?subject=Portfolio inquiry for Tobi Oladimeji`}>
-                     <i className="fa fa-envelope"></i>Email Me
-                  </a>
-                  <a className="button" target="_blank" rel="noopener noreferrer" href={resumedownload}>
-                     <i className="fa fa-linkedin"></i>Connect on LinkedIn
-                  </a>
-               </div>
-               <a className="contact-email" href={`mailto:${email}`}>{email}</a>
-            </div>
+      <section id="contact" className="contact shell" data-reveal>
+         <p className="eyebrow">Contact</p>
+         <h2>Working on a hard data, AI, product, or decision problem?</h2>
+         <p>Open to data, AI, analytics, senior role opportunities, and strategic product conversations.</p>
+         <div className="actions">
+            <a className="button primary" href={`mailto:${profile.email}`}>
+               <IconMail /> Email me
+            </a>
+            <button className="button" onClick={copyEmail} type="button">
+               {copied ? <IconCheck /> : <IconCopy />} {copied ? 'Copied' : 'Copy email'}
+            </button>
+            <a className="button" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+               <SocialIcon name="linkedin" /> LinkedIn
+            </a>
          </div>
+         <small>{profile.location}</small>
       </section>
    );
-}
+};
 
 export default Contact;

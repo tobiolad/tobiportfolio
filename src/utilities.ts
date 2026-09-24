@@ -1,10 +1,6 @@
-export function makeDistinct(array: any) {
-    const seen = new Set();
-    return array.filter((value:any) => {
-        if (seen.has(value)) {
-            return false;
-        }
-        seen.add(value);
-        return true;
-    });
+export function scrollToSection(id: string) {
+    return (e: React.MouseEvent) => {
+        e.preventDefault();
+        document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+    };
 }
