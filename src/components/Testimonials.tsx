@@ -1,25 +1,21 @@
+import type { TestimonialsData } from '../interfaces';
 
-const Testimonials = ({ data }: any) => {
-   const testimonials = data ? data.testimonials.map((testimonial: any) => (
-      <li key={testimonial.user}>
-         <blockquote>
-            <p>{testimonial.text}</p>
-            <cite>{testimonial.user}</cite>
-         </blockquote>
-      </li>
-   )) : null;
+const Testimonials = ({ data }: { data: TestimonialsData }) => {
+   const testimonials = data.testimonials;
 
    return (
-      <section id="testimonials">
-         <div className="text-container">
-            <div className="row">
-               <div className="ten columns flex-container">
-                  <h2>Professional Recommendations</h2>
-                  <ul className="slides">
-                     {testimonials}
-                  </ul>
+      <section id="testimonials" className="container">
+         <div className="section-head">
+            <span className="eyebrow">Recommendations</span>
+            <h2>What people I've worked with say</h2>
+         </div>
+         <div className="testimonial-grid">
+            {testimonials.map((testimonial) => (
+               <div className="testimonial-card" key={testimonial.user}>
+                  <p>&ldquo;{testimonial.text}&rdquo;</p>
+                  <cite>{testimonial.user}</cite>
                </div>
-            </div>
+            ))}
          </div>
       </section>
    );

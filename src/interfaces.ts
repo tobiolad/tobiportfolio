@@ -1,81 +1,84 @@
-interface Portfolio {
+export interface ResumeData {
     main: Main;
     resume: Resume;
-    portfolio: Portfolio;
-    testimonials: Testimonials;
+    portfolio: PortfolioData;
+    testimonials: TestimonialsData;
 }
 
-interface Testimonials {
+export interface TestimonialsData {
     testimonials: Testimonial[];
 }
 
-interface Testimonial {
+export interface Testimonial {
     text: string;
     user: string;
 }
 
-interface Portfolio {
+export interface PortfolioData {
+    featured: Project[];
     projects: Project[];
 }
 
-interface Project {
+export interface Project {
     title: string;
     category: string;
     description: string;
-    image: string;
+    image?: string;
     url: string;
     cta: string;
 }
 
-interface Resume {
+export interface Resume {
     skillmessage: string;
     education: Education[];
     work: Work[];
     skillGroups: SkillGroup[];
 }
 
-interface SkillGroup {
+export interface SkillGroup {
     name: string;
     skills: string[];
 }
 
-interface Work {
+export interface Work {
     company: string;
     title: string;
     years: string;
     highlights: string[];
 }
 
-interface Education {
+export interface Education {
     school: string;
     degree: string;
     graduated: string;
     description: string;
 }
 
-interface Main {
+export interface Main {
     name: string;
     occupation: string;
     description: string;
     image: string;
     bio: string[];
+    stats: Stat[];
     contactmessage: string;
     email: string;
-    phone: string;
     address: Address;
-    website: string;
-    resumedownload: string;
+    linkedin: string;
     social: Social[];
 }
 
-interface Social {
-    name: string;
-    url: string;
-    className: string;
+export interface Stat {
+    label: string;
+    value: string;
 }
 
-interface Address {
-    street: string;
+export interface Social {
+    name: string;
+    url: string;
+}
+
+export interface Address {
     city: string;
     state: string;
     zip: string;

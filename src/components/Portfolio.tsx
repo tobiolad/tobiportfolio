@@ -1,54 +1,54 @@
-import { useEffect, useState } from 'react';
-import { makeDistinct } from '../utilities';
+import { IconArrowUpRight } from './Icons';
+import type { PortfolioData, Project } from '../interfaces';
 
+const initials = (title: string) => title.split(' ').map((w) => w[0]).slice(0, 2).join('').toUpperCase();
 
-const ProjectItem = ({ project }: any) => (
-  <div className="columns portfolio-item">
-    <div className="item-wrap">
-      <a target="_blank" rel="noopener noreferrer" href={project.url} title={project.title}>
-        <img alt={`${project.title} project preview`} src={project.image} loading="lazy" />
-        <div className="portfolio-item-meta">
-          <h5>{project.title}</h5>
-          <p>{project.description}</p>
-          <span className="project-cta">{project.cta} <i className="fa fa-external-link"></i></span>
-        </div>
-      </a>
+const ProjectCard = ({ project, dense }: { project: Project; dense?: boolean }) => (
+  <a
+    className="project-card"
+    target="_blank"
+    rel="noopener noreferrer"
+    href={project.url}
+    title={project.title}
+  >
+    <div className={`project-media ${project.image ? '' : 'placeholder'}`}>
+      {project.image
+        ? <img alt={`${project.title} preview`} src={`/images/portfolio/${project.image}`} loading="lazy" />
+        : <span>{initials(project.title)}</span>}
     </div>
-  </div>
-)
+    <div className="project-body">
+      <span className="project-tag">{project.category}</span>
+      <h4>{project.title}</h4>
+      {!dense && <p>{project.description}</p>}
+      <span className="project-cta">{project.cta} <IconArrowUpRight /></span>
+    </div>
+  </a>
+);
 
-const Portfolio = ({ data }: any) => {
-  const [projects, setProjects] = useState([])
-  const [categories, setCategories] = useState([])
-
-  useEffect(() => {
-    if (data) {
-      const categories = []
-      for (const project of data.projects) {
-        categories.push(project.category)
-      }
-      setCategories(makeDistinct(categories))
-      setProjects(data.projects.map((x: any) => ({ ...x, image: `images/portfolio/${x.image}` })))
-    }
-  }, [data])
-
+const Portfolio = ({ data }: { data: PortfolioData }) => {
+  const featured = data?.featured || [];
+  const projects = data?.projects || [];
 
   return (
-    <section id="portfolio">
-      <div className="portfolio-container">
-        <h1 className="section-heading">Selected Analytics Projects</h1>
-        <div id="portfolio-wrapper">
-          {categories.length > 0 && categories.map((category, j) => (
-            <div className='portfolio-category' key={j}>
-              <h2>{category}</h2>
-              <div className="portfolio-grid">
-                {projects.filter((proj: any) => proj.category === category).map((project: any) => <ProjectItem key={project.title} project={project} />)}
-              </div>
-            </div>
-          ))}
-        </div>
-
+    <section id="portfolio" className="container-wide">
+      <div className="section-head">
+        <span className="eyebrow">Selected work</span>
+        <h2>What I'm building</h2>
+        <p className="section-sub">Current companies and applied AI work, plus a sample of past data and analytics projects.</p>
       </div>
+
+      <div className="portfolio-grid">
+        {featured.map((project) => <ProjectCard key={project.title} project={project} />)}
+      </div>
+
+      {projects.length > 0 && (
+        <div className="portfolio-secondary">
+          <h3 className="subheading">Data & analytics projects</h3>
+          <div className="portfolio-grid dense">
+            {projects.map((project) => <ProjectCard key={project.title} project={project} dense />)}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
