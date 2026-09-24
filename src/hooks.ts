@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 type Theme = 'light' | 'dark';
 
 function getPreferredTheme(): Theme {
+    const current = document.documentElement.getAttribute('data-theme');
+    if (current === 'light' || current === 'dark') return current;
     const stored = localStorage.getItem('theme');
     if (stored === 'light' || stored === 'dark') return stored;
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -13,7 +15,7 @@ export function useTheme() {
         try {
             return getPreferredTheme();
         } catch {
-            return 'light';
+            return 'dark';
         }
     });
 
@@ -29,6 +31,25 @@ export function useTheme() {
     const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
     return { theme, toggleTheme };
+}
+
+export function useCommandPalette() {
+    const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        const handler = (e: KeyboardEvent) => {
+            if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                setOpen((v) => !v);
+            } else if (e.key === 'Escape') {
+                setOpen(false);
+            }
+        };
+        window.addEventListener('keydown', handler);
+        return () => window.removeEventListener('keydown', handler);
+    }, []);
+
+    return { open, setOpen };
 }
 
 export function useScrollReveal() {

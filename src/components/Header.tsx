@@ -1,78 +1,72 @@
-import { useState } from 'react';
 import { scrollToSection } from '../utilities';
-import { IconMenu, IconClose, SocialIcon } from './Icons';
+import { IconSearch, IconArrow, IconArrowUpRight, SocialIcon } from './Icons';
 import ThemeToggle from './ThemeToggle';
-import type { Main } from '../interfaces';
+import { profile, focus } from '../data/portfolio';
 
 const NAV_ITEMS = [
+   { href: '#work', label: 'Work' },
+   { href: '#experience', label: 'Experience' },
+   { href: '#writing', label: 'Writing' },
    { href: '#about', label: 'About' },
-   { href: '#resume', label: 'Experience' },
-   { href: '#portfolio', label: 'Work' },
-   { href: '#press', label: 'Press' },
-   { href: '#testimonials', label: 'Recommendations' },
    { href: '#contact', label: 'Contact' },
 ];
 
-const Header = ({ data }: { data: Main }) => {
-   const { name, occupation, description, availability, social, email } = data;
-   const [menuOpen, setMenuOpen] = useState(false);
-
+const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
    const handleNav = (href: string) => (e: React.MouseEvent) => {
-      setMenuOpen(false);
       scrollToSection(href)(e);
    };
 
    return (
       <>
-         <nav className="site-nav" id="home">
-            <div className="site-nav-inner">
-               <a className="brand" href="#home" onClick={handleNav('#home')}>{name}</a>
-               <ul className="nav-links">
-                  {NAV_ITEMS.map((item) => (
-                     <li key={item.href}>
-                        <a href={item.href} onClick={handleNav(item.href)}>{item.label}</a>
-                     </li>
-                  ))}
-               </ul>
-               <div className="nav-cta">
-                  <a className="btn btn-primary btn-text" href={`mailto:${email}`}>Get in touch</a>
-                  <ThemeToggle />
-                  <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setMenuOpen((o) => !o)}>
-                     {menuOpen ? <IconClose /> : <IconMenu />}
-                  </button>
-               </div>
-            </div>
-            <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+         <nav className="site-nav" id="top">
+            <a className="brand" href="#top" onClick={handleNav('#top')}>
+               <span>TO</span>
+               <strong>{profile.name}</strong>
+            </a>
+            <ul className="nav-links">
                {NAV_ITEMS.map((item) => (
-                  <a key={item.href} href={item.href} onClick={handleNav(item.href)}>{item.label}</a>
+                  <li key={item.href}>
+                     <a href={item.href} onClick={handleNav(item.href)}>{item.label}</a>
+                  </li>
                ))}
-               <a href={`mailto:${email}`}>Get in touch</a>
+            </ul>
+            <div className="nav-actions">
+               <button onClick={onOpenPalette} aria-label="Open quick navigation" className="palette-trigger">
+                  <IconSearch /><small>⌘K</small>
+               </button>
+               <ThemeToggle />
             </div>
          </nav>
 
-         <header className="hero container-wide">
-            <span className="eyebrow">Founder · Data & AI</span>
-            <h1>I'm {name}<br />
-               <span className="accent-name">{occupation}</span>
-            </h1>
-            <p className="lede">{description}</p>
-            {availability && (
-               <span className="status-pill">
-                  <span className="status-dot" />
-                  {availability}
-               </span>
-            )}
-            <div className="hero-actions">
-               <a className="btn btn-primary" href="#portfolio" onClick={handleNav('#portfolio')}>See what I'm building</a>
-               <a className="btn" href="#contact" onClick={handleNav('#contact')}>Get in touch</a>
-            </div>
-            <div className="hero-social">
-               {social.map((network) => (
-                  <a key={network.name} className="icon-btn" target="_blank" rel="noopener noreferrer" href={network.url} aria-label={network.name}>
-                     <SocialIcon name={network.name} />
+         <header className="hero shell" id="home">
+            <div className="hero-copy">
+               <p className="status"><i /> {profile.location}</p>
+               <p className="eyebrow">Data & AI operator · Product founder · Ecosystem builder</p>
+               <h1>{profile.headline}</h1>
+               <p className="lead">{profile.intro}</p>
+               <div className="actions">
+                  <a className="button primary" href="#work" onClick={handleNav('#work')}>
+                     Explore selected work <IconArrow />
                   </a>
-               ))}
+                  <a className="button" href={`mailto:${profile.email}`}>
+                     Start a conversation <IconArrowUpRight />
+                  </a>
+               </div>
+               <div className="socials">
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><SocialIcon name="linkedin" /> LinkedIn</a>
+                  <a href={profile.github} target="_blank" rel="noopener noreferrer"><SocialIcon name="github" /> GitHub</a>
+                  <a href={profile.x} target="_blank" rel="noopener noreferrer"><SocialIcon name="x" /> X</a>
+               </div>
             </div>
+            <aside className="portrait-card">
+               <img src="/images/headshot3.jpg" alt={profile.name} />
+               <div>
+                  <span className="eyebrow">Currently</span>
+                  <strong>{focus.title}</strong>
+                  <p>Decision intelligence for founder-led commerce.</p>
+                  <a href={focus.href} target="_blank" rel="noopener noreferrer">inscend.io <IconArrowUpRight /></a>
+               </div>
+            </aside>
          </header>
       </>
    );

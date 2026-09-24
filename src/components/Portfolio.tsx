@@ -1,54 +1,69 @@
+import { useMemo, useState } from 'react';
 import { IconArrowUpRight } from './Icons';
-import type { PortfolioData, Project } from '../interfaces';
+import { projects, type Project, type ProjectCategory } from '../data/portfolio';
 
-const initials = (title: string) => title.split(' ').map((w) => w[0]).slice(0, 2).join('').toUpperCase();
+const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'BI', 'Python / ML', 'SQL', 'Data'];
 
-const ProjectCard = ({ project, dense }: { project: Project; dense?: boolean }) => (
-  <a
-    className="project-card"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={project.url}
-    title={project.title}
-  >
-    <div className={`project-media ${project.image ? '' : 'placeholder'}`}>
-      {project.image
-        ? <img alt={`${project.title} preview`} src={`/images/portfolio/${project.image}`} loading="lazy" />
-        : <span>{initials(project.title)}</span>}
-    </div>
+const initials = (title: string) => title.slice(0, 2).toUpperCase();
+
+const ProjectCard = ({ project }: { project: Project }) => (
+  <article className="project-card">
+    {project.image ? (
+      <a className="project-image" href={project.href} target="_blank" rel="noopener noreferrer">
+        <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+      </a>
+    ) : (
+      <a className="project-visual" href={project.href} target="_blank" rel="noopener noreferrer">
+        <span>{initials(project.title)}</span>
+      </a>
+    )}
     <div className="project-body">
-      <span className="project-tag">{project.category}</span>
-      <h4>{project.title}</h4>
-      {!dense && <p>{project.description}</p>}
-      <span className="project-cta">{project.cta} <IconArrowUpRight /></span>
+      <div className="project-meta">
+        <span>{project.category}</span>
+        {project.featured && <span>Featured</span>}
+      </div>
+      <h3>{project.title}</h3>
+      <p>{project.blurb}</p>
+      <div className="tags">
+        {project.tags.map((t) => <span key={t}>{t}</span>)}
+      </div>
+      <a className="text-link" href={project.href} target="_blank" rel="noopener noreferrer">
+        View project <IconArrowUpRight />
+      </a>
     </div>
-  </a>
+  </article>
 );
 
-const Portfolio = ({ data }: { data: PortfolioData }) => {
-  const featured = data?.featured || [];
-  const projects = data?.projects || [];
+const Portfolio = () => {
+  const [filter, setFilter] = useState<(typeof FILTERS)[number]>('All');
+  const shown = useMemo(
+    () => (filter === 'All' ? projects : projects.filter((p) => p.category === filter)),
+    [filter]
+  );
 
   return (
-    <section id="portfolio" className="container-wide" data-reveal>
-      <div className="section-head">
-        <span className="eyebrow">Selected work</span>
-        <h2>What I'm building</h2>
-        <p className="section-sub">Current companies and applied AI work, plus a sample of past data and analytics projects.</p>
+    <section id="work" className="section shell" data-reveal>
+      <header className="section-head">
+        <p className="eyebrow">Selected work</p>
+        <h2>Products, systems, and analysis built to make decisions clearer.</h2>
+        <p>A mix of product, business intelligence, machine learning, SQL, and operational analytics.</p>
+      </header>
+      <div className="filters" role="tablist" aria-label="Filter projects by category">
+        {FILTERS.map((f) => (
+          <button
+            key={f}
+            role="tab"
+            aria-selected={f === filter}
+            className={f === filter ? 'active' : ''}
+            onClick={() => setFilter(f)}
+          >
+            {f}
+          </button>
+        ))}
       </div>
-
-      <div className="portfolio-grid">
-        {featured.map((project) => <ProjectCard key={project.title} project={project} />)}
+      <div className="project-grid">
+        {shown.map((p) => <ProjectCard key={p.title} project={p} />)}
       </div>
-
-      {projects.length > 0 && (
-        <div className="portfolio-secondary">
-          <h3 className="subheading">Data & analytics projects</h3>
-          <div className="portfolio-grid dense">
-            {projects.map((project) => <ProjectCard key={project.title} project={project} dense />)}
-          </div>
-        </div>
-      )}
     </section>
   );
 };
