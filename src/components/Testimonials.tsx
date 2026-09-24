@@ -4,7 +4,7 @@ const Testimonials = ({ data }: { data: TestimonialsData }) => {
    const testimonials = data.testimonials;
 
    return (
-      <section id="testimonials" className="container">
+      <section id="testimonials" className="container" data-reveal>
          <div className="section-head">
             <span className="eyebrow">Recommendations</span>
             <h2>What people I've worked with say</h2>

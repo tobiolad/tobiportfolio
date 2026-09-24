@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import { scrollToSection } from '../utilities';
 import { IconMenu, IconClose, SocialIcon } from './Icons';
+import ThemeToggle from './ThemeToggle';
 import type { Main } from '../interfaces';
 
 const NAV_ITEMS = [
    { href: '#about', label: 'About' },
    { href: '#resume', label: 'Experience' },
    { href: '#portfolio', label: 'Work' },
+   { href: '#press', label: 'Press' },
    { href: '#testimonials', label: 'Recommendations' },
    { href: '#contact', label: 'Contact' },
 ];
 
 const Header = ({ data }: { data: Main }) => {
-   const { name, occupation, description, social, email } = data;
+   const { name, occupation, description, availability, social, email } = data;
    const [menuOpen, setMenuOpen] = useState(false);
 
    const handleNav = (href: string) => (e: React.MouseEvent) => {
@@ -34,6 +36,7 @@ const Header = ({ data }: { data: Main }) => {
                </ul>
                <div className="nav-cta">
                   <a className="btn btn-primary btn-text" href={`mailto:${email}`}>Get in touch</a>
+                  <ThemeToggle />
                   <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setMenuOpen((o) => !o)}>
                      {menuOpen ? <IconClose /> : <IconMenu />}
                   </button>
@@ -53,6 +56,12 @@ const Header = ({ data }: { data: Main }) => {
                <span className="accent-name">{occupation}</span>
             </h1>
             <p className="lede">{description}</p>
+            {availability && (
+               <span className="status-pill">
+                  <span className="status-dot" />
+                  {availability}
+               </span>
+            )}
             <div className="hero-actions">
                <a className="btn btn-primary" href="#portfolio" onClick={handleNav('#portfolio')}>See what I'm building</a>
                <a className="btn" href="#contact" onClick={handleNav('#contact')}>Get in touch</a>

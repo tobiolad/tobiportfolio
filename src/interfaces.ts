@@ -2,7 +2,26 @@ export interface ResumeData {
     main: Main;
     resume: Resume;
     portfolio: PortfolioData;
+    press: PressData;
     testimonials: TestimonialsData;
+}
+
+export interface PressData {
+    recognition: PressItem[];
+    writing: WritingItem[];
+}
+
+export interface PressItem {
+    title: string;
+    org: string;
+    description: string;
+    url: string;
+}
+
+export interface WritingItem {
+    title: string;
+    outlet: string;
+    url: string;
 }
 
 export interface TestimonialsData {
@@ -58,6 +77,7 @@ export interface Main {
     name: string;
     occupation: string;
     description: string;
+    availability: string;
     image: string;
     bio: string[];
     stats: Stat[];

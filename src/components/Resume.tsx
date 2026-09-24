@@ -4,7 +4,7 @@ const Resume = ({ data }: { data: ResumeType }) => {
   const { skillmessage, education, work, skillGroups } = data;
 
   return (
-    <section id="resume" className="container">
+    <section id="resume" className="container" data-reveal>
       <div className="section-head">
         <span className="eyebrow">Experience</span>
         <h2>Background</h2>
