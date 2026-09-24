@@ -30,7 +30,7 @@ const Portfolio = ({ data }: { data: PortfolioData }) => {
   const projects = data?.projects || [];
 
   return (
-    <section id="portfolio" className="container-wide">
+    <section id="portfolio" className="container-wide" data-reveal>
       <div className="section-head">
         <span className="eyebrow">Selected work</span>
         <h2>What I'm building</h2>

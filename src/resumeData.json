@@ -3,18 +3,19 @@
     "name": "Tobi Oladimeji",
     "occupation": "Founder, Inscend & Data Fellows",
     "description": "I build decision-intelligence products and work across data, AI, and analytics — five years in enterprise data before moving into founding companies.",
+    "availability": "Open to senior data, AI & analytics roles",
     "image": "headshot.jpg",
     "bio": [
       "I'm the founder of Inscend and Data Fellows, and I work across data, analytics, and applied AI.",
-      "Inscend is a decision-intelligence product for small retail businesses — moving from data to a recommended action, not another dashboard. Data Fellows is an applied data community and venture-building ecosystem with 1,500+ members across 15+ countries.",
-      "Before founding these, I spent 5+ years in enterprise data and analytics: enterprise data migration and reporting at PwC, analytics and ML workflows at ESGTree, and data quality and automation systems for Granted. I'm based in Waterloo Region, Ontario."
+      "Inscend is the decision layer for founder-led commerce — for beauty and retail brands, it turns everyday shop data into a short list of prioritized, ready-to-complete actions instead of another dashboard. Data Fellows is an applied data community and venture-building ecosystem with 1,500+ members across 15+ countries.",
+      "Before founding these, I spent 5+ years in enterprise data and analytics: enterprise data migration and reporting at PwC, analytics and ML workflows at ESGTree, and data quality and automation systems for Granted. I'm based in Waterloo Region, Ontario, and selected for the League of Innovators, Canada's accelerator for founders under 30."
     ],
     "stats": [
       { "label": "Years in data & analytics", "value": "5+" },
       { "label": "Companies founded", "value": "2" },
       { "label": "Community members", "value": "1,500+" }
     ],
-    "contactmessage": "Open to conversations about Inscend, Data Fellows, data/AI partnerships, or interesting problems in decision intelligence.",
+    "contactmessage": "Open to conversations about Inscend, Data Fellows, senior data/AI roles, partnerships, or interesting problems in decision intelligence.",
     "email": "oluwatobilobadimeji@gmail.com",
     "address": { "city": "Waterloo Region", "state": "Ontario", "zip": "Canada" },
     "linkedin": "https://www.linkedin.com/in/tobioladimeji/",
@@ -91,7 +92,7 @@
   },
   "portfolio": {
     "featured": [
-      { "title": "Inscend", "category": "Product", "description": "Decision intelligence for small retail businesses — moving from data to a recommended action, not another dashboard.", "url": "https://inscend.io", "cta": "Visit site" },
+      { "title": "Inscend", "category": "Product", "description": "The decision layer for founder-led commerce — turns a brand's data and the context only a founder knows into a short daily list of prioritized, ready-to-complete actions.", "url": "https://inscend.io", "cta": "Visit site" },
       { "title": "Data Fellows", "category": "Product", "description": "Applied data community and venture-building ecosystem, 1,500+ members across 15+ countries. Next.js + Payload CMS.", "url": "https://datafellowsai.com", "cta": "Visit site" },
       { "title": "AI Research Agents", "category": "AI & Automation", "description": "Gemini-powered sourcing agents built for Granted and Inscend — grant discovery and retail lead generation.", "url": "https://github.com/tobiolad/granted-source-agent", "cta": "View repository" }
     ],
@@ -103,6 +104,19 @@
       { "title": "Library Management System", "category": "SQL", "description": "Relational database analysis of books, borrowers, branches, and loan activity to answer practical library operations questions.", "image": "library.png", "url": "https://medium.com/@Tobioladimeji_/testing-sql-skills-a-deep-dive-into-lms-databases-98d7dd808604", "cta": "View Analysis" },
       { "title": "Tire Price Analysis", "category": "Python", "description": "Python analysis of 4,350 tire records to identify pricing patterns, customer preferences, and actionable business insights for procurement and product decisions.", "image": "tire_price.jpg", "url": "https://github.com/tobiolad/tire-price-analysis", "cta": "View Repository" },
       { "title": "Real-Time Seismic Event Monitoring Solution", "category": "ArcGIS / Data", "description": "Real-time public-data ingestion and geospatial analysis solution using USGS data, with automated seismic monitoring and operational reporting.", "image": "seismic.png", "url": "https://medium.com/@Tobioladimeji_/exploring-geospatial-analysis-building-a-real-time-seismic-event-monitoring-solution-a0c197a52c61", "cta": "View Case Study" }
+    ]
+  },
+  "press": {
+    "recognition": [
+      { "title": "League of Innovators — 2024 Cohort", "org": "League of Innovators", "description": "Selected for Canada's free accelerator for founders under 30.", "url": "https://www.loi.ac/" },
+      { "title": "Championing Data-Driven Decision-Making for Small Businesses", "org": "AfriBlocks", "description": "Profiled by AfriBlocks, a Techstars-backed platform spotlighting high-impact African professionals.", "url": "https://blog.afriblocks.com/en/championing-data-driven-decision-making-for-small-businesses" },
+      { "title": "Beyond Data: How Tobi Oladimeji Is Redefining the Human Side of Innovation", "org": "IKONIK Magazine", "description": "Profile on decision intelligence, Data Fellows, and Inscend.", "url": "https://ikonikpress.com/beyond-data-how-tobi-oladimeji-is-redefining-the-human-side-of-innovation/" }
+    ],
+    "writing": [
+      { "title": "Avoiding Common Data Mistakes", "outlet": "IKONIK Magazine", "url": "https://ikonikpress.com/avoiding-common-data-mistakes-by-tobi-oladimeji-for-ikonik-magazine/" },
+      { "title": "Practical Ways Small Businesses Can Use Data to Grow", "outlet": "IKONIK Magazine", "url": "https://ikonikpress.com/practical-ways-small-businesses-can-use-data-to-grow/" },
+      { "title": "Library Management System: A Deep Dive into LMS Databases", "outlet": "Medium", "url": "https://medium.com/@Tobioladimeji_/testing-sql-skills-a-deep-dive-into-lms-databases-98d7dd808604" },
+      { "title": "Exploring Geospatial Analysis: Building a Real-Time Seismic Event Monitoring Solution", "outlet": "Medium", "url": "https://medium.com/@Tobioladimeji_/exploring-geospatial-analysis-building-a-real-time-seismic-event-monitoring-solution-a0c197a52c61" }
     ]
   },
   "testimonials": {

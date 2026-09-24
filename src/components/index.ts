@@ -5,3 +5,5 @@ export { default as Resume } from './Resume';
 export { default as Contact } from './Contact';
 export { default as Testimonials } from './Testimonials';
 export { default as Portfolio } from './Portfolio';
+export { default as Press } from './Press';
+export { default as ThemeToggle } from './ThemeToggle';

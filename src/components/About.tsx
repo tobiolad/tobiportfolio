@@ -4,7 +4,7 @@ const About = ({ data }: { data: Main }) => {
    const { name, image, bio, stats } = data;
 
    return (
-      <section id="about" className="container">
+      <section id="about" className="container" data-reveal>
          <div className="section-head">
             <span className="eyebrow">About</span>
             <h2>A bit of background</h2>

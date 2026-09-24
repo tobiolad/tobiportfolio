@@ -55,6 +55,38 @@ export const IconClose = ({ className }: IconProps) => (
   </svg>
 );
 
+export const IconSun = ({ className }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <circle cx="12" cy="12" r="4.5" />
+    <path d="M12 2.5v2.5M12 19v2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2.5 12H5M19 12h2.5M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" strokeLinecap="round" />
+  </svg>
+);
+
+export const IconMoon = ({ className }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M20.5 14.7A8.5 8.5 0 0 1 9.3 3.5a8.5 8.5 0 1 0 11.2 11.2z" />
+  </svg>
+);
+
+export const IconCopy = ({ className }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <rect x="8.5" y="8.5" width="12" height="12" rx="2" />
+    <path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H5A1.5 1.5 0 0 0 3.5 6v9A1.5 1.5 0 0 0 5 16.5h2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const IconCheck = ({ className }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <path d="m5 13 4 4 10-10" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const IconBadge = ({ className }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <path d="M12 2.5 14.4 7l4.98.72-3.6 3.51.85 4.96L12 13.8l-4.63 2.4.85-4.96-3.6-3.5L9.6 7 12 2.5Z" strokeLinejoin="round" />
+  </svg>
+);
+
 const ICONS: Record<string, (props: IconProps) => JSX.Element> = {
   linkedin: IconLinkedIn,
   github: IconGitHub,
