@@ -245,7 +245,7 @@
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   border-block: 1px solid var(--line);
 }
 
@@ -299,6 +299,9 @@
   }
   .metric:nth-last-child(-n+2) {
     border-bottom: 0;
+  }
+  .metric:last-child {
+    border-right: 0;
   }
 }
 
