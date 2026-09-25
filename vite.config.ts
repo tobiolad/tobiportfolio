@@ -43,6 +43,7 @@ function noscriptFallbackHtml(): string {
   return `<noscript>
     <main>
       <h1>${escapeHtml(profile.name)}</h1>
+      <p>${escapeHtml(profile.bio)}</p>
       <p>${escapeHtml(profile.headline)}</p>
       <p>${escapeHtml(profile.intro)}</p>
       <p>Location: ${escapeHtml(profile.location)}</p>

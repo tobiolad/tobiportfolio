@@ -1,4 +1,4 @@
-import { capabilities, education } from '../data/portfolio';
+import { capabilities, education, profile } from '../data/portfolio';
 
 const About = () => (
   <section id="about" className="section shell" data-reveal>
@@ -8,7 +8,8 @@ const About = () => (
     </header>
     <div className="about-grid">
       <div className="story">
-        <p className="lede">My work sits where data, operations, product, and human judgment meet.</p>
+        <p className="lede">{profile.bio}</p>
+        <p>My work sits where data, operations, product, and human judgment meet.</p>
         <p>I started in analytics and business intelligence, working with operational data, dashboards, validation, automation, and enterprise migration. Over time, the work pulled me toward a larger question: how do you help someone make a better decision, not merely give them another dashboard?</p>
         <p>That question now shapes Inscend, Data Fellows, and the way I approach AI-enabled systems.</p>
         <p className="human">Outside the work, I play saxophone and enjoy mentoring people early in their data and technology careers.</p>
