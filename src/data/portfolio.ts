@@ -82,7 +82,7 @@ export const profile: Profile = {
 
 export const metrics: Metric[] = [
   { value: '5+', label: 'years across data & analytics' },
-  { value: '1,500+', label: 'Data Fellows community members' },
+  { value: '1,600+', label: 'Data Fellows community members' },
   { value: '15+', label: 'countries reached' },
   { value: '30+', label: 'Python scripts delivered at PwC' },
   { value: '98%', label: 'data accuracy on enterprise migration' },
