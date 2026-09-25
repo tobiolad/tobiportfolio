@@ -1,4 +1,4 @@
-export type ProjectCategory = 'Product' | 'BI' | 'Python / ML' | 'SQL' | 'Data';
+export type ProjectCategory = 'Product' | 'AI Agents' | 'BI' | 'Python / ML' | 'SQL' | 'Data';
 export type WritingType = 'Article' | 'Profile' | 'Event' | 'Feature' | 'Recognition';
 
 export interface Profile {
@@ -132,7 +132,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: 'PwC',
-    role: 'Data Analytics Team Lead',
+    role: 'Data Analyst',
     period: 'Sep 2022 — Nov 2023',
     summary: 'Supported a Dynamics AX to Dynamics 365 F&O transformation, led mapping sessions, built Python validation scripts, and delivered reporting.',
     tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
@@ -151,6 +151,7 @@ export const projects: Project[] = [
     title: 'Inscend',
     category: 'Product',
     blurb: 'Decision intelligence for founder-led commerce businesses. Designed around a practical question: what should I do next, and what could it mean financially?',
+    logo: '/images/logos/inscend.jpg',
     href: 'https://www.inscend.io/',
     tags: ['AI', 'Decision Intelligence', 'Commerce'],
     featured: true,
@@ -159,9 +160,24 @@ export const projects: Project[] = [
     title: 'Data Fellows',
     category: 'Product',
     blurb: 'A global data and technology ecosystem built around practical learning, community, products, and making data useful to people and businesses.',
+    logo: '/images/logos/data-fellows.png',
     href: 'https://datafellowsai.com/',
     tags: ['Community', 'Education', 'Data'],
     featured: true,
+  },
+  {
+    title: 'Inscend Source Agent',
+    category: 'AI Agents',
+    blurb: 'AI-assisted lead discovery agent built for Inscend. Uses Gemini to find, score, and analyze beauty and skincare retail leads across Canada and Nigeria, surfacing signal strength, fit, and outreach angles.',
+    href: 'https://github.com/tobiolad/inscend-source-agent',
+    tags: ['AI Agents', 'Gemini API', 'React'],
+  },
+  {
+    title: 'Granted Source Agent',
+    category: 'AI Agents',
+    blurb: 'AI agent built for Granted that discovers, filters, analyzes, and exports non-dilutive funding opportunities across Canada and the US, using Gemini with Google Search grounding.',
+    href: 'https://github.com/tobiolad/granted-source-agent',
+    tags: ['AI Agents', 'Gemini API', 'Funding'],
   },
   {
     title: 'Monitoring & Evaluation Dashboard',
