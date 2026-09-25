@@ -86,7 +86,6 @@ export const metrics: Metric[] = [
   { value: '15+', label: 'countries reached' },
   { value: '30+', label: 'Python scripts delivered at PwC' },
   { value: '98%', label: 'data accuracy on enterprise migration' },
-  { value: '250+', label: 'people at LvlUp pitch day' },
 ];
 
 export const focus: Focus = {
@@ -151,7 +150,6 @@ export const projects: Project[] = [
     title: 'Inscend',
     category: 'Product',
     blurb: 'Decision intelligence for founder-led commerce businesses. Designed around a practical question: what should I do next, and what could it mean financially?',
-    logo: '/images/logos/inscend.jpg',
     href: 'https://www.inscend.io/',
     tags: ['AI', 'Decision Intelligence', 'Commerce'],
     featured: true,
@@ -160,7 +158,6 @@ export const projects: Project[] = [
     title: 'Data Fellows',
     category: 'Product',
     blurb: 'A global data and technology ecosystem built around practical learning, community, products, and making data useful to people and businesses.',
-    logo: '/images/logos/data-fellows.png',
     href: 'https://datafellowsai.com/',
     tags: ['Community', 'Education', 'Data'],
     featured: true,
