@@ -12,6 +12,10 @@ const ProjectCard = ({ project }: { project: Project }) => (
       <a className="project-image" href={project.href} target="_blank" rel="noopener noreferrer">
         <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
       </a>
+    ) : project.logo ? (
+      <a className="project-visual logo" href={project.href} target="_blank" rel="noopener noreferrer">
+        <img src={project.logo} alt={`${project.title} logo`} loading="lazy" />
+      </a>
     ) : (
       <a className="project-visual" href={project.href} target="_blank" rel="noopener noreferrer">
         <span>{initials(project.title)}</span>
