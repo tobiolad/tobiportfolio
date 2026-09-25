@@ -37,6 +37,8 @@ export interface Project {
   category: ProjectCategory;
   blurb: string;
   image?: string;
+  /** Square logo mark shown instead of the initials placeholder (e.g. for a company/product card). */
+  logo?: string;
   href: string;
   tags: string[];
   featured?: boolean;
@@ -186,11 +188,12 @@ export const projects: Project[] = [
     tags: ['Python', 'EDA', 'Excel'],
   },
   {
-    title: 'Dividend Policy Forecast',
+    title: 'Economic Freedom Analysis',
     category: 'Python / ML',
-    blurb: 'Machine-learning pipeline concept for predicting dividend policy changes across S&P 500 companies using financial and market features.',
-    href: 'https://github.com/tobiolad/Dividend-Policy-Forecast',
-    tags: ['Machine Learning', 'Finance', 'Feature Engineering'],
+    blurb: 'Python analysis of the Fraser Institute’s Economic Freedom dataset, examining Canada’s standing on legal system, sound money, and trade openness to make an evidence-based case for it as a stable, high-opportunity market.',
+    image: '/images/portfolio/canada_economic.jpeg',
+    href: 'https://github.com/tobiolad/Economic-Freedom',
+    tags: ['Python', 'Pandas', 'EDA'],
   },
   {
     title: 'Real-Time Seismic Monitoring',
@@ -209,12 +212,12 @@ export const projects: Project[] = [
     tags: ['SQL', 'Infrastructure', 'Analysis'],
   },
   {
-    title: 'Healthcare Power BI',
+    title: 'COVID-19 Pandemic Dashboard',
     category: 'BI',
-    blurb: 'Single-page COVID-19 reporting dashboard using Power BI, DAX, and visual design to communicate cases, recovery, and mortality patterns.',
+    blurb: 'Power BI dashboard tracking the global COVID-19 pandemic — countries affected, confirmed cases, and deaths.',
     image: '/images/portfolio/corona.png',
-    href: 'https://github.com/tobiolad/HealthCarePowerBI',
-    tags: ['Power BI', 'DAX', 'Figma'],
+    href: 'https://github.com/tobiolad/Corona-Viz',
+    tags: ['Power BI', 'DAX', 'Public Health'],
   },
   {
     title: 'Fake News Detection',
