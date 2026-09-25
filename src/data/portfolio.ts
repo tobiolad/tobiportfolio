@@ -1,4 +1,4 @@
-export type ProjectCategory = 'Product' | 'BI' | 'Python / ML' | 'SQL' | 'Data';
+export type ProjectCategory = 'Product' | 'AI Agents' | 'BI' | 'Python / ML' | 'SQL' | 'Data';
 export type WritingType = 'Article' | 'Profile' | 'Event' | 'Feature' | 'Recognition';
 
 export interface Profile {
@@ -164,6 +164,27 @@ export const projects: Project[] = [
     href: 'https://datafellowsai.com/',
     tags: ['Community', 'Education', 'Data'],
     featured: true,
+  },
+  {
+    title: 'Inscend Source Agent',
+    category: 'AI Agents',
+    blurb: 'AI-assisted lead discovery agent built for Inscend. Uses Gemini to find, score, and analyze beauty and skincare retail leads across Canada and Nigeria, surfacing signal strength, fit, and outreach angles.',
+    href: 'https://github.com/tobiolad/inscend-source-agent',
+    tags: ['AI Agents', 'Gemini API', 'React'],
+  },
+  {
+    title: 'Granted Source Agent',
+    category: 'AI Agents',
+    blurb: 'AI agent built for Granted that discovers, filters, analyzes, and exports non-dilutive funding opportunities across Canada and the US, using Gemini with Google Search grounding.',
+    href: 'https://github.com/tobiolad/granted-source-agent',
+    tags: ['AI Agents', 'Gemini API', 'Funding'],
+  },
+  {
+    title: 'Venture Learning Collective',
+    category: 'Product',
+    blurb: 'Application and program site for a founder-education initiative focused on funding readiness and decision intelligence.',
+    href: 'https://github.com/tobiolad/my-vlc',
+    tags: ['Founder Education', 'React'],
   },
   {
     title: 'Monitoring & Evaluation Dashboard',
