@@ -132,7 +132,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: 'PwC',
-    role: 'Data Analytics Team Lead',
+    role: 'Data Analyst',
     period: 'Sep 2022 — Nov 2023',
     summary: 'Supported a Dynamics AX to Dynamics 365 F&O transformation, led mapping sessions, built Python validation scripts, and delivered reporting.',
     tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
