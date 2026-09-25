@@ -10,6 +10,8 @@ export interface Profile {
   x: string;
   headline: string;
   intro: string;
+  /** Third-person summary for entity recognition (search/AI systems, not just human readers). */
+  bio: string;
 }
 
 export interface Metric {
@@ -78,6 +80,7 @@ export const profile: Profile = {
   x: 'https://x.com/tobioladimeji_',
   headline: 'I turn messy data into decisions people can act on.',
   intro: 'Data & AI operator, product founder, and ecosystem builder working across analytics, decision intelligence, automation, and early-stage product development.',
+  bio: 'Tobi Oladimeji is a data and AI operator and product founder based in Waterloo Region, Canada. He is the founder of Inscend and Data Fellows, working across decision intelligence, analytics, AI agents, and automation.',
 };
 
 export const metrics: Metric[] = [
