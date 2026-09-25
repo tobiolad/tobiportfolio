@@ -1,4 +1,4 @@
-import { scrollToSection } from '../utilities';
+import { scrollToSection, scrollToTop } from '../utilities';
 import { IconSearch, IconArrow, IconArrowUpRight, SocialIcon } from './Icons';
 import ThemeToggle from './ThemeToggle';
 import { profile, focus } from '../data/portfolio';
@@ -19,7 +19,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
    return (
       <>
          <nav className="site-nav" id="top">
-            <a className="brand" href="#top" onClick={handleNav('#top')}>
+            <a className="brand" href="#top" onClick={scrollToTop}>
                <span>TO</span>
                <strong>{profile.name}</strong>
             </a>
