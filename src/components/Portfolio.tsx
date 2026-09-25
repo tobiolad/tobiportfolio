@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { IconArrowUpRight } from './Icons';
 import { projects, type Project, type ProjectCategory } from '../data/portfolio';
 
-const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'BI', 'Python / ML', 'SQL', 'Data'];
+const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'AI Agents', 'BI', 'Python / ML', 'SQL', 'Data'];
 
 const initials = (title: string) => title.slice(0, 2).toUpperCase();
 
