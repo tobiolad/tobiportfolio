@@ -180,13 +180,6 @@ export const projects: Project[] = [
     tags: ['AI Agents', 'Gemini API', 'Funding'],
   },
   {
-    title: 'Venture Learning Collective',
-    category: 'Product',
-    blurb: 'Application and program site for a founder-education initiative focused on funding readiness and decision intelligence.',
-    href: 'https://github.com/tobiolad/my-vlc',
-    tags: ['Founder Education', 'React'],
-  },
-  {
     title: 'Monitoring & Evaluation Dashboard',
     category: 'BI',
     blurb: 'Power BI reporting for field operations, geographic activity, visit status, pending work, and monitoring performance.',
