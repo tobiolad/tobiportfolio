@@ -1,10 +1,5 @@
 import { profile } from '../data/portfolio';
-
-const scrollToTop = (e: React.MouseEvent) => {
-   e.preventDefault();
-   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-   window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
-};
+import { scrollToTop } from '../utilities';
 
 const Footer = () => (
    <footer className="footer shell">
