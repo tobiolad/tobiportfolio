@@ -287,13 +287,6 @@ export const writing: WritingItem[] = [
     blurb: 'A field guide to the data mistakes that quietly cost small businesses time, money, and trust.',
     href: 'https://ikonikpress.com/avoiding-common-data-mistakes-by-tobi-oladimeji-for-ikonik-magazine/',
   },
-  {
-    type: 'Event',
-    title: 'Beauty Founder Growth Lab: From First Customer to Repeat Buyer',
-    source: 'Startupfest Off Event',
-    blurb: 'Founder roundtable on acquisition, retention, positioning, metrics, customer feedback, and smarter growth decisions.',
-    href: 'https://luma.com/wuz330xj',
-  },
 ];
 
 export const capabilities: CapabilityGroup[] = [
