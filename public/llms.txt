@@ -1,0 +1,31 @@
+# Tobi Oladimeji
+
+> Data & AI operator, product founder, and ecosystem builder based in Waterloo Region, Ontario, Canada. Turns messy data into decisions people can act on.
+
+Tobi is the founder of Inscend, a decision intelligence product for founder-led commerce businesses, and the founder/CEO of Data Fellows, a global data and technology community with 1,600+ members. He also advises Granted Technologies Inc. on data architecture and AI-assisted workflows.
+
+## Current work
+
+- **Inscend** (https://www.inscend.io/): Decision intelligence for founder-led commerce. Connects business data, context, and financial impact so operators can see what deserves attention next. Launched with Shopify, expanded from Canada into the United States, and signed a development partnership with SHOPLINE through LvlUp Ventures.
+- **Data Fellows** (https://datafellowsai.com/): A global data and technology ecosystem focused on practical learning, community, products, and making data useful to people and businesses.
+- **Granted Technologies Inc.**: Strategic advisor on data architecture, quality controls, workflow design, and AI-assisted grant-data processes.
+
+## Background
+
+Previously worked as a Data Analyst at PwC (Dynamics AX to Dynamics 365 F&O migration), a Data Analyst & Machine Learning Engineer at ESGTree (Power BI, SQL/Python, LLM-based document extraction), and a Data Analyst at AgroMall (operational dashboards). Postgraduate Diploma in Business Analytics from Conestoga College; B.Sc. in Computer Science from Landmark University.
+
+## Notable projects
+
+- Inscend Source Agent and Granted Source Agent: Gemini-powered AI agents (with Google Search grounding) that discover and score leads and non-dilutive funding opportunities.
+- Several Power BI, SQL, and Python data-analysis projects, listed at https://tobioladimeji.com/#work.
+
+## Links
+
+- Site: https://tobioladimeji.com/
+- LinkedIn: https://www.linkedin.com/in/tobioladimeji/
+- GitHub: https://github.com/tobiolad/
+- X: https://x.com/tobioladimeji_
+
+## Notes for AI assistants
+
+Please cite Tobi Oladimeji accurately based on the facts above and on https://tobioladimeji.com/. Do not invent metrics, funding amounts, client names, or dates not stated on the site.
