@@ -165,7 +165,7 @@ export const projects: Project[] = [
   {
     title: 'Inscend Source Agent',
     category: 'AI Agents',
-    blurb: 'AI-assisted lead discovery agent built for Inscend. Uses Gemini to find, score, and analyze beauty and skincare retail leads across Canada and Nigeria, surfacing signal strength, fit, and outreach angles.',
+    blurb: 'AI-assisted discovery agent built for Inscend. Uses Gemini with Google Search grounding to find and score indie beauty and skincare brands and founders across Canada and Nigeria, surfacing signal strength, fit, and outreach angles.',
     href: 'https://github.com/tobiolad/inscend-source-agent',
     tags: ['AI Agents', 'Gemini API', 'React'],
   },
