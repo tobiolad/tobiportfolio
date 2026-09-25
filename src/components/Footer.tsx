@@ -2,7 +2,8 @@ import { profile } from '../data/portfolio';
 
 const scrollToTop = (e: React.MouseEvent) => {
    e.preventDefault();
-   window.scrollTo({ top: 0, behavior: 'smooth' });
+   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+   window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
 };
 
 const Footer = () => (
