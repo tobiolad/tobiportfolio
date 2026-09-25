@@ -86,7 +86,6 @@ export const metrics: Metric[] = [
   { value: '15+', label: 'countries reached' },
   { value: '30+', label: 'Python scripts delivered at PwC' },
   { value: '98%', label: 'data accuracy on enterprise migration' },
-  { value: '250+', label: 'people at LvlUp pitch day' },
 ];
 
 export const focus: Focus = {
