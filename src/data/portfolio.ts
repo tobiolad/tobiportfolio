@@ -112,6 +112,13 @@ export const experience: ExperienceItem[] = [
     tags: ['Decision Intelligence', 'AI', 'Product', 'Commerce'],
   },
   {
+    company: 'Data Fellows',
+    role: 'Founder & CEO',
+    period: 'Aug 2022 — Present',
+    summary: 'Founded and grew a global data and technology ecosystem focused on practical learning, collaboration, products, and access.',
+    tags: ['Community', 'Strategy', 'Partnerships'],
+  },
+  {
     company: 'Cohere',
     role: 'AI Data Specialist',
     period: 'Oct 2026 — Present · Independent Contractor',
@@ -124,13 +131,6 @@ export const experience: ExperienceItem[] = [
     period: 'Oct 2025 — Present',
     summary: 'Advising on data architecture, quality controls, workflow design, automation, operational KPIs, and AI-assisted grant-data processes.',
     tags: ['Data Quality', 'Automation', 'AI Workflows'],
-  },
-  {
-    company: 'Data Fellows',
-    role: 'Founder & CEO',
-    period: 'Aug 2022 — Present',
-    summary: 'Founded and grew a global data and technology ecosystem focused on practical learning, collaboration, products, and access.',
-    tags: ['Community', 'Strategy', 'Partnerships'],
   },
   {
     company: 'ESGTree',
