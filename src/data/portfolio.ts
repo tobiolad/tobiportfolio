@@ -112,6 +112,13 @@ export const experience: ExperienceItem[] = [
     tags: ['Decision Intelligence', 'AI', 'Product', 'Commerce'],
   },
   {
+    company: 'Cohere',
+    role: 'AI Data Specialist',
+    period: 'Oct 2026 — Present · Independent Contractor',
+    summary: 'Supporting AI model development through data annotation, ranking, auditing, evaluation, and quality feedback across text-based tasks.',
+    tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
+  },
+  {
     company: 'Granted Technologies Inc.',
     role: 'Strategic Advisor, Data & Operations',
     period: 'Oct 2025 — Present',
@@ -131,13 +138,6 @@ export const experience: ExperienceItem[] = [
     period: 'Feb 2024 — Sep 2024',
     summary: 'Built Power BI reporting, supported SQL/Python workflows, and developed LLM-based document extraction that reduced manual data input by approximately 30%.',
     tags: ['Power BI', 'Python', 'SQL', 'LLMs'],
-  },
-  {
-    company: 'Cohere',
-    role: 'Data Specialist',
-    period: 'Oct 2026 — Present · Independent Contractor',
-    summary: 'Supporting AI model development through data annotation, ranking, auditing, evaluation, and quality feedback across text-based tasks.',
-    tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
   },
   {
     company: 'PwC',
