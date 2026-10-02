@@ -93,22 +93,22 @@ export const metrics: Metric[] = [
 
 export const focus: Focus = {
   title: 'Building Inscend',
-  description: 'Decision intelligence for founder-led commerce. Inscend connects business data, context, and financial impact so operators can see what deserves attention next.',
+  description: 'Decision intelligence for founder-led retail and ecommerce businesses. Inscend watches what is happening across the business, investigates what deserves attention, and prepares the next step where it can so founders spend less time checking their store and more time running it.',
   href: 'https://www.inscend.io/',
   points: [
-    'Launched with Shopify',
-    'Expanded pilots from Canada into the United States',
-    'Signed a contract and development partnership with SHOPLINE through LvlUp Ventures',
-    'Placed 3rd out of 11 founders at LvlUp Ventures Power of the Pitch, B2B Emerging Day',
+    'Core idea: less time checking your store, more time running your business',
+    'Compressing the operating work from noticing a problem through action and outcome',
+    'Product strategy, decision intelligence, go-to-market, partnerships, and company building',
+    'A product of Data Fellows Inc.',
   ],
 };
 
 export const experience: ExperienceItem[] = [
   {
     company: 'Inscend',
-    role: 'Founder',
+    role: 'Founder & CEO',
     period: '2025 — Present',
-    summary: 'Building decision intelligence for founder-led commerce businesses, translating store data and business context into financially grounded actions.',
+    summary: 'Building decision intelligence for founder-led retail and ecommerce businesses. Inscend investigates what deserves attention, prepares the next step where it can, and brings founders in when their judgment, approval, or context is needed.',
     tags: ['Decision Intelligence', 'AI', 'Product', 'Commerce'],
   },
   {
@@ -159,7 +159,7 @@ export const projects: Project[] = [
   {
     title: 'Inscend',
     category: 'Product',
-    blurb: 'Decision intelligence for founder-led commerce businesses. Designed around a practical question: what should I do next, and what could it mean financially?',
+    blurb: 'Decision intelligence for founder-led retail and ecommerce businesses, designed to compress the operating work behind running a store from noticing a problem through investigation, action, and outcome.',
     href: 'https://www.inscend.io/',
     tags: ['AI', 'Decision Intelligence', 'Commerce'],
     featured: true,
