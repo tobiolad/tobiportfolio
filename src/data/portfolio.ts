@@ -133,6 +133,13 @@ export const experience: ExperienceItem[] = [
     tags: ['Power BI', 'Python', 'SQL', 'LLMs'],
   },
   {
+    company: 'Cohere',
+    role: 'Data Specialist',
+    period: 'Oct 2026 — Present · Independent Contractor',
+    summary: 'Supporting AI model development through data annotation, ranking, auditing, evaluation, and quality feedback across text-based tasks.',
+    tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
+  },
+  {
     company: 'PwC',
     role: 'Data Analyst',
     period: 'Sep 2022 — Nov 2023',
