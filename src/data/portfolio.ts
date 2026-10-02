@@ -122,7 +122,7 @@ export const experience: ExperienceItem[] = [
     company: 'Cohere',
     role: 'AI Data Specialist',
     period: 'Oct 2026 — Present · Independent Contractor',
-    summary: 'Supporting AI model development through data annotation, ranking, auditing, evaluation, and quality feedback across text-based tasks.',
+    summary: 'Supporting machine learning data quality and evaluation workflows through ranking, auditing, error analysis and correction, quality assessment, and optimization feedback across text-based AI tasks.',
     tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
   },
   {
