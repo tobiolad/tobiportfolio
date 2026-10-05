@@ -119,18 +119,18 @@ export const experience: ExperienceItem[] = [
     tags: ['Community', 'Strategy', 'Partnerships'],
   },
   {
-    company: 'Cohere',
-    role: 'Data Annotator',
-    period: 'Oct 2026 — Present · Independent Contractor',
-    summary: 'Supporting machine learning data quality and evaluation workflows through ranking, auditing, error analysis and correction, quality assessment, and optimization feedback across text-based AI tasks.',
-    tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
-  },
-  {
     company: 'Granted Technologies Inc.',
     role: 'Strategic Advisor, Data & Operations',
     period: 'Oct 2025 — Present',
     summary: 'Advising on data architecture, quality controls, workflow design, automation, operational KPIs, and AI-assisted grant-data processes.',
     tags: ['Data Quality', 'Automation', 'AI Workflows'],
+  },
+  {
+    company: 'Cohere',
+    role: 'Data Annotator',
+    period: 'Oct 2026 — Present · Independent Contractor',
+    summary: 'Supporting machine learning data quality and evaluation workflows through ranking, auditing, error analysis and correction, quality assessment, and optimization feedback across text-based AI tasks.',
+    tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
   },
   {
     company: 'ESGTree',
