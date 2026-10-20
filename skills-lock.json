@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "skills": {
+    "li-audit": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-audit/SKILL.md",
+      "computedHash": "da1138c3410b3514a0a85b455f3f33f8f44d3ea23f5b2302e2d87b2c42a8e386"
+    },
+    "li-carousel": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-carousel/SKILL.md",
+      "computedHash": "40cef8d0769716ecb57be2c80e647ac24e5129446b3e994769b95680f422f11d"
+    },
+    "li-comment": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-comment/SKILL.md",
+      "computedHash": "f66a350685581ece39deb8b2c7ed5a04b02fbe8d11d9292070585fefa7793b38"
+    },
+    "li-dm": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-dm/SKILL.md",
+      "computedHash": "fe9fc1aa62f56a96e37b3702aef65fcf9ba5a707bf656ff6bcfcb542e83244bf"
+    },
+    "li-human": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-human/SKILL.md",
+      "computedHash": "d67fb823311f906a00729974df270da4306b6dded96d0db393281ef176f07555"
+    },
+    "li-inbox": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-inbox/SKILL.md",
+      "computedHash": "7fce68dbadf246b943e8a01e2ea6ab3374f0b1876347c111cda1da96b7b33a5f"
+    },
+    "li-plan": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-plan/SKILL.md",
+      "computedHash": "332cbc86fea9e5cc0d87b528721636f64c88d7c88210851fe93391c499813d3d"
+    },
+    "li-post": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-post/SKILL.md",
+      "computedHash": "df4765a066282ffa7ed87aecd9acd1f3825703a8f5f4bd7416d7780aed9b7f8b"
+    },
+    "li-profile": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-profile/SKILL.md",
+      "computedHash": "4a09ac4d24c5b975e4ae2e8e88abccb054ceb742e77661949598dba4c0519b9e"
+    },
+    "li-reply": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-reply/SKILL.md",
+      "computedHash": "c78cbf73fde4eddf583501f070456846d406411007cdb5a2c62ad1d20a640ec6"
+    },
+    "li-repurpose": {
+      "source": "Jakeschincariol/linkedin-agent-skill",
+      "sourceType": "github",
+      "skillPath": "skills/li-repurpose/SKILL.md",
+      "computedHash": "347c6b5cdda4a662fb357eb9df2e950cebb24810a3a0ff6d4af369688a7e3ba9"
+    }
+  }
+}
