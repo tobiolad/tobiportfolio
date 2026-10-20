@@ -66,6 +66,12 @@
       "sourceType": "github",
       "skillPath": "skills/li-repurpose/SKILL.md",
       "computedHash": "347c6b5cdda4a662fb357eb9df2e950cebb24810a3a0ff6d4af369688a7e3ba9"
+    },
+    "presentation-design": {
+      "source": "blisse-code/presentation-design-skill",
+      "sourceType": "github",
+      "skillPath": "skill/SKILL.md",
+      "computedHash": "a6a1e1487bde9f89e2f5388f035646828810e936b912224f3db187a2bebb8e15"
     }
   }
 }
