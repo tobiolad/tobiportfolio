@@ -79,8 +79,8 @@ export const profile: Profile = {
   github: 'https://github.com/tobiolad',
   x: 'https://x.com/tobioladimeji_',
   headline: 'I turn messy data into decisions people can act on.',
-  intro: 'Data & AI operator, product founder, and ecosystem builder working across analytics, decision intelligence, automation, and early-stage product development.',
-  bio: 'Tobi Oladimeji is a data and AI operator and product founder based in Waterloo Region, Canada. He is the founder of Inscend and Data Fellows, working across decision intelligence, analytics, AI agents, and automation.',
+  intro: 'I’m a data and AI professional, product founder, and community builder. I’m currently building Inscend, helping founder-led beauty brands understand what’s affecting their products and get the work done to improve sales.',
+  bio: 'Tobi Oladimeji is a data and AI professional and product founder based in Waterloo Region, Canada. He is the founder of Inscend, helping founder-led beauty brands fix what’s holding their products back, and the founder of Data Fellows, a global data and AI community.',
 };
 
 export const metrics: Metric[] = [
@@ -93,7 +93,7 @@ export const metrics: Metric[] = [
 
 export const focus: Focus = {
   title: 'Building Inscend',
-  description: 'Decision intelligence for founder-led retail and ecommerce businesses. Inscend watches what is happening across the business, investigates what deserves attention, and prepares the next step where it can so founders spend less time checking their store and more time running it.',
+  description: 'Decision intelligence for founder-led beauty brands. Inscend watches what’s happening with your products, investigates what’s holding them back, and prepares the next step where it can — so founders spend less time checking their store and more time running the business.',
   href: 'https://www.inscend.io/',
   points: [
     'Core idea: less time checking your store, more time running your business',
@@ -108,7 +108,7 @@ export const experience: ExperienceItem[] = [
     company: 'Inscend',
     role: 'Founder & CEO',
     period: '2025 — Present',
-    summary: 'Building decision intelligence for founder-led retail and ecommerce businesses. Inscend investigates what deserves attention, prepares the next step where it can, and brings founders in when their judgment, approval, or context is needed.',
+    summary: 'Building Inscend to help founder-led beauty brands find what’s holding their products back and get help fixing it. Inscend combines product research with business operating context to investigate opportunities and prepare work that improves and protects product sales. Our focus includes product improvements, marketing, replenishment, customer recovery and fulfillment, with founders in control of consequential decisions.',
     tags: ['Decision Intelligence', 'AI', 'Product', 'Commerce'],
   },
   {
@@ -159,7 +159,7 @@ export const projects: Project[] = [
   {
     title: 'Inscend',
     category: 'Product',
-    blurb: 'Decision intelligence for founder-led retail and ecommerce businesses, designed to compress the operating work behind running a store from noticing a problem through investigation, action, and outcome.',
+    blurb: 'Find what’s holding your products back. Get help fixing it. Inscend helps founder-led beauty brands understand what’s affecting their products and prepare improvements worth acting on. It brings together product intelligence and business context to support better decisions and reduce manual operating work.',
     href: 'https://www.inscend.io/',
     tags: ['AI', 'Decision Intelligence', 'Commerce'],
     featured: true,
