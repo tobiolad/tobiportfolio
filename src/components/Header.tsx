@@ -41,7 +41,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
          <header className="hero shell" id="home">
             <div className="hero-copy">
                <p className="status"><i /> {profile.location}</p>
-               <p className="eyebrow">Data & AI operator · Product founder · Ecosystem builder</p>
+               <p className="eyebrow">Data & AI professional · Product founder · Community builder</p>
                <h1>{profile.headline}</h1>
                <p className="lead">{profile.intro}</p>
                <div className="actions">
@@ -63,7 +63,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                <div>
                   <span className="eyebrow">Currently</span>
                   <strong>{focus.title}</strong>
-                  <p>Decision intelligence for founder-led commerce.</p>
+                  <p>Decision intelligence for founder-led beauty brands.</p>
                   <a href={focus.href} target="_blank" rel="noopener noreferrer">inscend.io <IconArrowUpRight /></a>
                </div>
             </aside>
