@@ -1,12 +1,12 @@
 # Tobi Oladimeji
 
-> Data & AI operator, product founder, and ecosystem builder based in Waterloo Region, Ontario, Canada. Turns messy data into decisions people can act on.
+> Data and AI professional, product founder, and community builder based in Waterloo Region, Ontario, Canada. Turns messy data into decisions people can act on.
 
-Tobi is the founder of Inscend, a decision intelligence product for founder-led commerce businesses, and the founder/CEO of Data Fellows, a global data and technology community with 1,600+ members. He also advises Granted Technologies Inc. on data architecture and AI-assisted workflows.
+Tobi is the founder of Inscend, helping founder-led beauty brands find what's holding their products back and get help fixing it, and the founder/CEO of Data Fellows, a global data and technology community with 1,600+ members. He also advises Granted Technologies Inc. on data architecture and AI-assisted workflows.
 
 ## Current work
 
-- **Inscend** (https://www.inscend.io/): Decision intelligence for founder-led commerce. Connects business data, context, and financial impact so operators can see what deserves attention next. Launched with Shopify, expanded from Canada into the United States, and signed a development partnership with SHOPLINE through LvlUp Ventures.
+- **Inscend** (https://www.inscend.io/): Decision intelligence for founder-led beauty brands. Combines product research with business operating context to investigate what's holding products back and prepare work that improves and protects sales, with founders in control of consequential decisions.
 - **Data Fellows** (https://datafellowsai.com/): A global data and technology ecosystem focused on practical learning, community, products, and making data useful to people and businesses.
 - **Granted Technologies Inc.**: Strategic advisor on data architecture, quality controls, workflow design, and AI-assisted grant-data processes.
 

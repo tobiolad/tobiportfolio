@@ -9,9 +9,10 @@ const About = () => (
     <div className="about-grid">
       <div className="story">
         <p className="lede">{profile.bio}</p>
-        <p>My work sits where data, operations, product, and human judgment meet.</p>
-        <p>I started in analytics and business intelligence, working with operational data, dashboards, validation, automation, and enterprise migration. Over time, the work pulled me toward a larger question: how do you help someone make a better decision, not merely give them another dashboard?</p>
-        <p>That question now shapes Inscend, Data Fellows, and the way I approach AI-enabled systems.</p>
+        <p>I’ve spent years working with data, analytics and AI. One thing I’ve learned is that having more information doesn’t necessarily make decisions easier.</p>
+        <p>Today, I’m building Inscend to help beauty founders understand what’s affecting their products and take action.</p>
+        <p>I’m also the founder of Data Fellows, a global AI and data community focused on practical learning, opportunities and making technology more accessible.</p>
+        <p>My work brings together data, AI, product development and the people using these tools to solve everyday business problems.</p>
         <p className="human">Outside the work, I play saxophone and enjoy mentoring people early in their data and technology careers.</p>
       </div>
       <div className="capability-grid">
