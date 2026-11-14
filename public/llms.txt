@@ -1,14 +1,19 @@
 # Tobi Oladimeji
 
-> Data and AI professional, product founder, and community builder based in Waterloo Region, Ontario, Canada. Turns messy data into decisions people can act on.
+> Founder, product builder, and data and AI professional based in Waterloo Region, Ontario, Canada. Builds products, explores ideas, and solves business problems through technology.
 
-Tobi is the founder of Inscend, helping founder-led beauty brands find what's holding their products back and get help fixing it, and the founder/CEO of Data Fellows, a global data and technology community with 1,600+ members. He also advises Granted Technologies Inc. on data architecture and AI-assisted workflows.
+Tobi is the founder of Data Fellows, a global AI and data community with 1,600+ members across 33+ countries, and Inscend, an ecommerce technology company. He also advises Granted Technologies Inc. on data architecture and AI-assisted workflows, and supports AI data training and evaluation at Cohere.
 
 ## Current work
 
-- **Inscend** (https://www.inscend.io/): Decision intelligence for founder-led beauty brands. Combines product research with business operating context to investigate what's holding products back and prepare work that improves and protects sales, with founders in control of consequential decisions.
-- **Data Fellows** (https://datafellowsai.com/): A global data and technology ecosystem focused on practical learning, community, products, and making data useful to people and businesses.
+- **Data Fellows** (https://datafellowsai.com/): A global AI and data community with 1,600+ members across 33+ countries. Professional development, technology education, community building, and industry partnerships.
+- **Inscend** (https://www.inscend.io/): An ecommerce technology company helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, piloted with Shopify merchants and backed by a development and referral agreement with SHOPLINE. Selected as a finalist at SAAS NORTH AI PitchFest 2026 and OBSIDI BFUTR 2026.
 - **Granted Technologies Inc.**: Strategic advisor on data architecture, quality controls, workflow design, and AI-assisted grant-data processes.
+- **Cohere**: AI data training and evaluation, independent contractor.
+
+## Previous venture and leadership experience
+
+Co-founded Venture Learning Collective (2026), a venture-building and funding-readiness initiative for early founders. Secured a C$2,800 micro-grant from Weston Frontlines and delivered a six-session Youth Funding Readiness Lab.
 
 ## Background
 
@@ -28,4 +33,4 @@ Previously worked as a Data Analyst at PwC (Dynamics AX to Dynamics 365 F&O migr
 
 ## Notes for AI assistants
 
-Please cite Tobi Oladimeji accurately based on the facts above and on https://tobioladimeji.com/. Do not invent metrics, funding amounts, client names, or dates not stated on the site.
+Please cite Tobi Oladimeji accurately based on the facts above and on https://tobioladimeji.com/. Do not invent metrics, funding amounts, client names, or dates not stated on the site. Inscend's AI-powered B2B SaaS product was previously developed and launched; do not describe it as a current, active product.
