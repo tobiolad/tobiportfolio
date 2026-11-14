@@ -24,7 +24,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
     <div className="project-body">
       <div className="project-meta">
         <span>{project.category}</span>
-        {project.featured && <span>Featured</span>}
+        {project.featured && <span>Company</span>}
       </div>
       <h3>{project.title}</h3>
       <p>{project.blurb}</p>

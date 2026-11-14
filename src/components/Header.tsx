@@ -1,7 +1,7 @@
 import { scrollToSection, scrollToTop } from '../utilities';
 import { IconSearch, IconArrow, IconArrowUpRight, SocialIcon } from './Icons';
 import ThemeToggle from './ThemeToggle';
-import { profile, focus } from '../data/portfolio';
+import { profile } from '../data/portfolio';
 
 const NAV_ITEMS = [
    { href: '#work', label: 'Work' },
@@ -41,7 +41,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
          <header className="hero shell" id="home">
             <div className="hero-copy">
                <p className="status"><i /> {profile.location}</p>
-               <p className="eyebrow">Data & AI professional · Product founder · Community builder</p>
+               <p className="eyebrow">Founder · Product builder · Data & AI professional</p>
                <h1>{profile.headline}</h1>
                <p className="lead">{profile.intro}</p>
                <div className="actions">
@@ -60,12 +60,6 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
             </div>
             <aside className="portrait-card">
                <img src="/images/headshot3.jpg" alt={profile.name} />
-               <div>
-                  <span className="eyebrow">Currently</span>
-                  <strong>{focus.title}</strong>
-                  <p>Decision intelligence for founder-led beauty brands.</p>
-                  <a href={focus.href} target="_blank" rel="noopener noreferrer">inscend.io <IconArrowUpRight /></a>
-               </div>
             </aside>
          </header>
       </>

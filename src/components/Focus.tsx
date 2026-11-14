@@ -1,21 +1,18 @@
 import { IconArrowUpRight } from './Icons';
-import { focus } from '../data/portfolio';
+import { currentWork } from '../data/portfolio';
 
 const Focus = () => (
   <section className="focus shell" data-reveal>
-    <div>
-      <p className="eyebrow">Current focus</p>
-      <h2>{focus.title}</h2>
-      <p>{focus.description}</p>
-      <a className="text-link" href={focus.href} target="_blank" rel="noopener noreferrer">
-        Explore Inscend <IconArrowUpRight />
-      </a>
-    </div>
-    <div className="focus-points">
-      {focus.points.map((point) => (
-        <p key={point}><b>✓</b>{point}</p>
-      ))}
-    </div>
+    {currentWork.map((item) => (
+      <div key={item.company}>
+        <p className="eyebrow">Current work</p>
+        <h2>{item.company}</h2>
+        <p>{item.description}</p>
+        <a className="text-link" href={item.href} target="_blank" rel="noopener noreferrer">
+          {item.linkLabel} <IconArrowUpRight />
+        </a>
+      </div>
+    ))}
   </section>
 );
 
