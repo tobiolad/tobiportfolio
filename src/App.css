@@ -190,34 +190,6 @@
   border-radius: 20px;
 }
 
-.portrait-card > div {
-  padding: 16px 8px 8px;
-}
-
-.portrait-card strong {
-  display: block;
-  font-size: 18px;
-}
-
-.portrait-card p {
-  margin: 4px 0 8px;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.portrait-card a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.portrait-card a svg {
-  width: 12px;
-  height: 12px;
-}
-
 @media (max-width: 950px) {
   .hero {
     grid-template-columns: 1fr;
@@ -319,37 +291,14 @@
 }
 
 .focus h2 {
-  font-size: clamp(2.1rem, 4.5vw, 4rem);
-  line-height: 1.04;
-  letter-spacing: -0.045em;
-  margin: 10px 0 17px;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 10px 0 14px;
 }
 
 .focus > div > p:not(.eyebrow) {
   color: var(--muted);
-}
-
-.focus-points {
-  align-self: center;
-}
-
-.focus-points p {
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  gap: 10px;
-  margin: 0;
-  padding: 15px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.focus-points p:last-child {
-  border-bottom: 0;
-}
-
-.focus-points b {
-  color: var(--accent);
 }
 
 @media (max-width: 950px) {

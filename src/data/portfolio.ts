@@ -19,11 +19,11 @@ export interface Metric {
   label: string;
 }
 
-export interface Focus {
-  title: string;
+export interface CurrentWorkItem {
+  company: string;
   description: string;
   href: string;
-  points: string[];
+  linkLabel: string;
 }
 
 export interface ExperienceItem {
@@ -74,42 +74,45 @@ export interface Testimonial {
 export const profile: Profile = {
   name: 'Tobi Oladimeji',
   location: 'Waterloo Region, Ontario, Canada',
-  email: 'oluwatobilobadimeji@gmail.com',
+  email: 'tobi@datafellowsai.com',
   linkedin: 'https://www.linkedin.com/in/tobioladimeji/',
   github: 'https://github.com/tobiolad',
   x: 'https://x.com/tobioladimeji_',
-  headline: 'I turn messy data into decisions people can act on.',
-  intro: 'I’m a data and AI professional, product founder, and community builder. I’m currently building Inscend, helping founder-led beauty brands understand what’s affecting their products and get the work done to improve sales.',
-  bio: 'Tobi Oladimeji is a data and AI professional and product founder based in Waterloo Region, Canada. He is the founder of Inscend, helping founder-led beauty brands fix what’s holding their products back, and the founder of Data Fellows, a global data and AI community.',
+  headline: 'Building products, exploring ideas, and solving business problems through technology.',
+  intro: 'I’m Tobi Oladimeji, a founder with a background in computer science, data analytics, AI, and product development. My work spans building software, growing communities, and helping businesses make better use of technology.',
+  bio: 'Tobi Oladimeji is a founder, product builder, and data and AI professional based in Waterloo Region, Canada. He is the founder of Data Fellows, a global AI and data community, and Inscend, an ecommerce technology company.',
 };
 
 export const metrics: Metric[] = [
   { value: '5+', label: 'years across data & analytics' },
   { value: '1,600+', label: 'Data Fellows community members' },
-  { value: '15+', label: 'countries reached' },
+  { value: '33+', label: 'countries reached' },
   { value: '30+', label: 'Python scripts delivered at PwC' },
   { value: '98%', label: 'data accuracy on enterprise migration' },
 ];
 
-export const focus: Focus = {
-  title: 'Building Inscend',
-  description: 'Decision intelligence for founder-led beauty brands. Inscend watches what’s happening with your products, investigates what’s holding them back, and prepares the next step where it can — so founders spend less time checking their store and more time running the business.',
-  href: 'https://www.inscend.io/',
-  points: [
-    'Core idea: less time checking your store, more time running your business',
-    'Compressing the operating work from noticing a problem through action and outcome',
-    'Product strategy, decision intelligence, go-to-market, partnerships, and company building',
-    'A product of Data Fellows Inc.',
-  ],
-};
+export const currentWork: CurrentWorkItem[] = [
+  {
+    company: 'Data Fellows',
+    description: 'A global AI and data community with 1,600+ members across 33+ countries. Professional development, technology education, community building, and industry partnerships.',
+    href: 'https://datafellowsai.com/',
+    linkLabel: 'Visit datafellowsai.com',
+  },
+  {
+    company: 'Inscend',
+    description: 'An ecommerce technology company focused on helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, piloted with Shopify merchants and backed by a development and referral agreement with SHOPLINE.',
+    href: 'https://www.inscend.io/',
+    linkLabel: 'Visit inscend.io',
+  },
+];
 
 export const experience: ExperienceItem[] = [
   {
     company: 'Inscend',
-    role: 'Founder & CEO',
+    role: 'Founder',
     period: '2025 — Present',
-    summary: 'Building Inscend to help founder-led beauty brands find what’s holding their products back and get help fixing it. Inscend combines product research with business operating context to investigate opportunities and prepare work that improves and protects product sales. Our focus includes product improvements, marketing, replenishment, customer recovery and fulfillment, with founders in control of consequential decisions.',
-    tags: ['Decision Intelligence', 'AI', 'Product', 'Commerce'],
+    summary: 'Founded Inscend, an ecommerce technology company focused on helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, leading a distributed engineering team, engaging 50+ founders through customer discovery and Shopify merchant pilots, generating initial sales, and securing a development and referral agreement with SHOPLINE. Inscend was selected as a finalist at SAAS NORTH AI PitchFest 2026 and OBSIDI BFUTR 2026.',
+    tags: ['Ecommerce Technology', 'Product', 'Team Leadership'],
   },
   {
     company: 'Data Fellows',
@@ -131,6 +134,13 @@ export const experience: ExperienceItem[] = [
     period: 'Oct 2026 — Present · Independent Contractor',
     summary: 'Supporting machine learning data quality and evaluation workflows through ranking, auditing, error analysis and correction, quality assessment, and optimization feedback across text-based AI tasks.',
     tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
+  },
+  {
+    company: 'Venture Learning Collective',
+    role: 'Co-Founder',
+    period: '2026',
+    summary: 'Co-founded a venture-building and funding-readiness initiative for early founders. Secured a C$2,800 micro-grant from Weston Frontlines and delivered a six-session Youth Funding Readiness Lab.',
+    tags: ['Founder Education', 'Funding Readiness', 'Community'],
   },
   {
     company: 'ESGTree',
@@ -159,15 +169,15 @@ export const projects: Project[] = [
   {
     title: 'Inscend',
     category: 'Product',
-    blurb: 'Find what’s holding your products back. Get help fixing it. Inscend helps founder-led beauty brands understand what’s affecting their products and prepare improvements worth acting on. It brings together product intelligence and business context to support better decisions and reduce manual operating work.',
+    blurb: 'An ecommerce technology company helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, piloted with Shopify merchants and backed by a development and referral agreement with SHOPLINE.',
     href: 'https://www.inscend.io/',
-    tags: ['AI', 'Decision Intelligence', 'Commerce'],
+    tags: ['Ecommerce', 'Product', 'Shopify'],
     featured: true,
   },
   {
     title: 'Data Fellows',
     category: 'Product',
-    blurb: 'A global data and technology ecosystem built around practical learning, community, products, and making data useful to people and businesses.',
+    blurb: 'A global AI and data community with 1,600+ members across 33+ countries, focused on professional development, technology education, community building, and industry partnerships.',
     href: 'https://datafellowsai.com/',
     tags: ['Community', 'Education', 'Data'],
     featured: true,
