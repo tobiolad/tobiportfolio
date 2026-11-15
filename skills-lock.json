@@ -1,71 +1,101 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "83485963700bcf11d5bf78118facb301676b69d918fee2e45a95e7f1a2840f6c"
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "ef491197f40a60e4e6b2ef7b71b7959bd919d9f173a4e591e6212b3ec8037b04"
+    },
     "li-audit": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-audit/SKILL.md",
-      "computedHash": "da1138c3410b3514a0a85b455f3f33f8f44d3ea23f5b2302e2d87b2c42a8e386"
+      "computedHash": "eca485b63627dbe6c24357d89b453d2d26603fd51c63e847635614737fbef8d4"
     },
     "li-carousel": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-carousel/SKILL.md",
-      "computedHash": "40cef8d0769716ecb57be2c80e647ac24e5129446b3e994769b95680f422f11d"
+      "computedHash": "ced784622187d9abc134affe3f9dce47c79a3a4db8ccb9aabf21dbe8828af065"
     },
     "li-comment": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-comment/SKILL.md",
-      "computedHash": "f66a350685581ece39deb8b2c7ed5a04b02fbe8d11d9292070585fefa7793b38"
+      "computedHash": "760f9434dad616408516988a9ecb11aa3e6825097561a9b715ac78f7168fa084"
     },
     "li-dm": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-dm/SKILL.md",
-      "computedHash": "fe9fc1aa62f56a96e37b3702aef65fcf9ba5a707bf656ff6bcfcb542e83244bf"
+      "computedHash": "8e336054ee381dbc502610224ca00c15df21d769a0f42573a4ce74a2bbfaac89"
     },
     "li-human": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-human/SKILL.md",
-      "computedHash": "d67fb823311f906a00729974df270da4306b6dded96d0db393281ef176f07555"
+      "computedHash": "beae3f67b78f0be72b7026fec0df546ed001bc95a77685b007052310d6a19ab7"
     },
     "li-inbox": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-inbox/SKILL.md",
-      "computedHash": "7fce68dbadf246b943e8a01e2ea6ab3374f0b1876347c111cda1da96b7b33a5f"
+      "computedHash": "0a9bc4318319984c65ae0f00c81801b6dc73953a4e3c132d0345ae9f80e9cf01"
     },
     "li-plan": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-plan/SKILL.md",
-      "computedHash": "332cbc86fea9e5cc0d87b528721636f64c88d7c88210851fe93391c499813d3d"
+      "computedHash": "2510672c046cf3408191006787388e373cca3b330987abed6638dd7cb34841c2"
     },
     "li-post": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-post/SKILL.md",
-      "computedHash": "df4765a066282ffa7ed87aecd9acd1f3825703a8f5f4bd7416d7780aed9b7f8b"
+      "computedHash": "86e90c1d446f1cba9d45f6ba420a9886fd3d91177b1850f6e2f18b1899905329"
     },
     "li-profile": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-profile/SKILL.md",
-      "computedHash": "4a09ac4d24c5b975e4ae2e8e88abccb054ceb742e77661949598dba4c0519b9e"
+      "computedHash": "776c3e284204bdb9d875677138a45662271fc63370f23aad870155758bc8efc6"
     },
     "li-reply": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-reply/SKILL.md",
-      "computedHash": "c78cbf73fde4eddf583501f070456846d406411007cdb5a2c62ad1d20a640ec6"
+      "computedHash": "9433dcc6259798344ed12834c18544cf259df521fc4bfd3492e7bac488a71491"
     },
     "li-repurpose": {
       "source": "Jakeschincariol/linkedin-agent-skill",
       "sourceType": "github",
       "skillPath": "skills/li-repurpose/SKILL.md",
-      "computedHash": "347c6b5cdda4a662fb357eb9df2e950cebb24810a3a0ff6d4af369688a7e3ba9"
+      "computedHash": "3e5e1758960f189055e7aeea102f96f25d05d4f639edef6ee64d5183185c8fa6"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "7991ed4fbecdac23f47c1a40c243e00a212a9e7f3604db93959b3ae11dffe299"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "4f68ae07187fb0d1fb78c88b503d089da4cf5a9d9625d1f2e425b1590bf96d92"
+    },
+    "webapp-testing": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/webapp-testing/SKILL.md",
+      "computedHash": "48cd9a742a59250edec6db89cf081ef5465f365e2133f6d6c5e29c380b754b7d"
     }
   }
 }
