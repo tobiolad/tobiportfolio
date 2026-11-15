@@ -150,6 +150,12 @@
   overflow: hidden;
   vertical-align: top;
   padding-right: 0.22em;
+  /* Fraunces italic's descenders (the tail on "j", "g", "y") need more room
+     than the tight line-height above leaves inside this overflow:hidden
+     mask, or they get clipped. Pad the box, then pull the extra space back
+     with a negative margin so the lines above/below don't drift apart. */
+  padding-bottom: 0.26em;
+  margin-bottom: -0.26em;
 }
 
 .word-inner {
