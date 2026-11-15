@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { IconArrowUpRight } from './Icons';
 import { projects, type Project, type ProjectCategory } from '../data/portfolio';
 
-const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'AI Agents', 'BI', 'Python / ML', 'SQL', 'Data'];
+const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'Experiment', 'AI Agents', 'BI', 'Python / ML', 'SQL', 'Data'];
 
 const initials = (title: string) => title.slice(0, 2).toUpperCase();
 
@@ -24,7 +24,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
     <div className="project-body">
       <div className="project-meta">
         <span>{project.category}</span>
-        {project.featured && <span>Company</span>}
+        {project.badge && <span>{project.badge}</span>}
       </div>
       <h3>{project.title}</h3>
       <p>{project.blurb}</p>

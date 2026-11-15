@@ -6,7 +6,7 @@ import { profile } from '../data/portfolio';
 const NAV_ITEMS = [
    { href: '#work', label: 'Work' },
    { href: '#experience', label: 'Experience' },
-   { href: '#writing', label: 'Writing' },
+   { href: '#publications', label: 'Publications' },
    { href: '#about', label: 'About' },
    { href: '#contact', label: 'Contact' },
 ];
@@ -44,12 +44,13 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                <p className="eyebrow">Founder · Product builder · Data & AI professional</p>
                <h1>{profile.headline}</h1>
                <p className="lead">{profile.intro}</p>
+               <p className="tagline">{profile.tagline}</p>
                <div className="actions">
                   <a className="button primary" href="#work" onClick={handleNav('#work')}>
-                     Explore selected work <IconArrow />
+                     Explore My Work <IconArrow />
                   </a>
-                  <a className="button" href={`mailto:${profile.email}`}>
-                     Start a conversation <IconArrowUpRight />
+                  <a className="button" href="#contact" onClick={handleNav('#contact')}>
+                     Get in Touch <IconArrowUpRight />
                   </a>
                </div>
                <div className="socials">

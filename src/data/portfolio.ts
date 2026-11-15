@@ -1,5 +1,5 @@
-export type ProjectCategory = 'Product' | 'AI Agents' | 'BI' | 'Python / ML' | 'SQL' | 'Data';
-export type WritingType = 'Article' | 'Profile' | 'Event' | 'Feature' | 'Recognition';
+export type ProjectCategory = 'Product' | 'AI Agents' | 'BI' | 'Python / ML' | 'SQL' | 'Data' | 'Experiment';
+export type PublicationType = 'Article' | 'Profile' | 'Feature' | 'Recognition' | 'Video';
 
 export interface Profile {
   name: string;
@@ -9,6 +9,7 @@ export interface Profile {
   github: string;
   x: string;
   headline: string;
+  tagline: string;
   intro: string;
   /** Third-person summary for entity recognition (search/AI systems, not just human readers). */
   bio: string;
@@ -20,7 +21,8 @@ export interface Metric {
 }
 
 export interface CurrentWorkItem {
-  company: string;
+  eyebrow: string;
+  title: string;
   description: string;
   href: string;
   linkLabel: string;
@@ -43,15 +45,32 @@ export interface Project {
   logo?: string;
   href: string;
   tags: string[];
-  featured?: boolean;
+  /** Short label shown on the card, e.g. "Active Venture" or "Past Venture". */
+  badge?: string;
 }
 
-export interface WritingItem {
-  type: WritingType;
+export interface Publication {
+  type: PublicationType;
   title: string;
   source: string;
+  date?: string;
   blurb: string;
   href: string;
+  thumbnail?: string;
+}
+
+export interface NewsletterEdition {
+  title: string;
+  date: string;
+  href?: string;
+}
+
+export interface Newsletter {
+  title: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+  editions: NewsletterEdition[];
 }
 
 export interface CapabilityGroup {
@@ -79,8 +98,9 @@ export const profile: Profile = {
   github: 'https://github.com/tobiolad',
   x: 'https://x.com/tobioladimeji_',
   headline: 'Building products, exploring ideas, and solving business problems through technology.',
-  intro: 'I’m Tobi Oladimeji, a founder with a background in computer science, data analytics, AI, and product development. My work spans building software, growing communities, and helping businesses make better use of technology.',
-  bio: 'Tobi Oladimeji is a founder, product builder, and data and AI professional based in Waterloo Region, Canada. He is the founder of Data Fellows, a global AI and data community, and Inscend, an ecommerce technology company.',
+  tagline: 'Exploring hard problems worth building a company around.',
+  intro: 'I’m Tobi Oladimeji, a founder with a background in computer science, data analytics, AI, and product development. I’ve built software, led teams, and grown communities across companies and ventures.',
+  bio: 'Tobi Oladimeji is a founder and product builder with a background in data analytics and AI. He founded Data Fellows and built Inscend, and is currently exploring his next opportunity in product, data, and AI.',
 };
 
 export const metrics: Metric[] = [
@@ -93,40 +113,28 @@ export const metrics: Metric[] = [
 
 export const currentWork: CurrentWorkItem[] = [
   {
-    company: 'Data Fellows',
-    description: 'A global AI and data community with 1,600+ members across 33+ countries. Professional development, technology education, community building, and industry partnerships.',
+    eyebrow: 'Current work',
+    title: 'Data Fellows',
+    description: 'A global AI and data community with 1,600+ members across 33+ countries. Learning programs, professional development, industry partnerships, and community events.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
   {
-    company: 'Inscend',
-    description: 'An ecommerce technology company focused on helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, piloted with Shopify merchants and backed by a development and referral agreement with SHOPLINE.',
-    href: 'https://www.inscend.io/',
-    linkLabel: 'Visit inscend.io',
+    eyebrow: 'Exploring next',
+    title: 'What’s next',
+    description: 'Exploring hard problems worth building a company around. Open to product, data, and AI roles, and to new venture opportunities where I can build, lead, or contribute.',
+    href: '#contact',
+    linkLabel: 'Get in touch',
   },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    company: 'Inscend',
-    role: 'Founder',
-    period: '2025 — Present',
-    summary: 'Founded Inscend, an ecommerce technology company focused on helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, leading a distributed engineering team, engaging 50+ founders through customer discovery and Shopify merchant pilots, generating initial sales, and securing a development and referral agreement with SHOPLINE. Inscend was selected as a finalist at SAAS NORTH AI PitchFest 2026 and OBSIDI BFUTR 2026.',
-    tags: ['Ecommerce Technology', 'Product', 'Team Leadership'],
-  },
-  {
     company: 'Data Fellows',
     role: 'Founder & CEO',
     period: 'Aug 2022 — Present',
-    summary: 'Founded and grew a global data and technology ecosystem focused on practical learning, collaboration, products, and access.',
+    summary: 'Founded Data Fellows, a global AI and data community with over 1,600 members across 33+ countries. Led learning programs, professional development initiatives, industry partnerships, and community events, bringing together professionals and organizations to make opportunities in technology more accessible.',
     tags: ['Community', 'Strategy', 'Partnerships'],
-  },
-  {
-    company: 'Granted Technologies Inc.',
-    role: 'Strategic Advisor, Data & Operations',
-    period: 'Oct 2025 — Present',
-    summary: 'Advising on data architecture, quality controls, workflow design, automation, operational KPIs, and AI-assisted grant-data processes.',
-    tags: ['Data Quality', 'Automation', 'AI Workflows'],
   },
   {
     company: 'Cohere',
@@ -136,11 +144,32 @@ export const experience: ExperienceItem[] = [
     tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
   },
   {
+    company: 'Inscend',
+    role: 'Founder',
+    period: 'Nov 2025 — Nov 2026',
+    summary: 'Founded and launched an AI-powered B2B SaaS platform for ecommerce merchants. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    tags: ['Ecommerce Technology', 'Product', 'Team Leadership'],
+  },
+  {
+    company: 'Granted Technologies Inc.',
+    role: 'Advisor',
+    period: 'Oct 2025 — Aug 2026',
+    summary: 'Advised on data architecture, quality controls, workflow design, automation, operational KPIs, and AI-assisted grant-data processes.',
+    tags: ['Data Quality', 'Automation', 'AI Workflows'],
+  },
+  {
     company: 'Venture Learning Collective',
     role: 'Co-Founder',
-    period: '2026',
-    summary: 'Co-founded a venture-building and funding-readiness initiative for early founders. Secured a C$2,800 micro-grant from Weston Frontlines and delivered a six-session Youth Funding Readiness Lab.',
+    period: 'Feb 2026 — Jul 2026',
+    summary: 'Helped establish Venture Learning Collective to support entrepreneurship education and funding readiness. Secured a C$2,800 micro-grant through Weston Frontlines and delivered the Youth Funding Readiness Lab with GRANTED. The program ran May 27 to June 25, 2026, with six virtual sessions and a final showcase, serving a core cohort of 10 participants, eight of whom remained active throughout. Final reporting took place in July 2026.',
     tags: ['Founder Education', 'Funding Readiness', 'Community'],
+  },
+  {
+    company: 'Founder in Residence / Accelerator Programs',
+    role: 'Founder in Residence',
+    period: '2024 — 2026',
+    summary: 'Participated in accelerator and founder-in-residence programs including BHive GEIP, Accelerator Centre RevLab, and League of Innovators, building founder skills alongside Data Fellows and Inscend.',
+    tags: ['Accelerator', 'Founder Development'],
   },
   {
     company: 'ESGTree',
@@ -157,9 +186,37 @@ export const experience: ExperienceItem[] = [
     tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
   },
   {
-    company: 'AgroMall',
+    company: 'Rollback Ally',
+    role: 'Lead Data Analyst',
+    period: 'Feb 2023 — Sep 2023',
+    summary: 'Led data analysis and reporting work at Rollback Ally.',
+    tags: ['Data Analysis', 'Reporting'],
+  },
+  {
+    company: 'Metridash',
+    role: 'Business Intelligence Analyst',
+    period: 'Jan 2023 — May 2023',
+    summary: 'Business intelligence and reporting work at Metridash.',
+    tags: ['Business Intelligence', 'Reporting'],
+  },
+  {
+    company: 'Analytic Company GmbH',
     role: 'Data Analyst',
-    period: 'Mar 2021 — Aug 2022',
+    period: 'May 2022 — Nov 2022',
+    summary: 'Data analysis work at Analytic Company GmbH.',
+    tags: ['Data Analysis'],
+  },
+  {
+    company: 'Quantum Analytics NG',
+    role: 'Data Analyst Intern',
+    period: 'Sep 2021 — Nov 2021',
+    summary: 'Data analyst internship at Quantum Analytics NG.',
+    tags: ['Data Analysis'],
+  },
+  {
+    company: 'AgroMall',
+    role: 'Business Intelligence Analyst Intern',
+    period: 'Jun 2021 — Oct 2021',
     summary: 'Built operational dashboards and recurring reports across agricultural and financial workflows while improving validation and automation.',
     tags: ['Power BI', 'SQL', 'Excel', 'Python'],
   },
@@ -169,10 +226,10 @@ export const projects: Project[] = [
   {
     title: 'Inscend',
     category: 'Product',
-    blurb: 'An ecommerce technology company helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, piloted with Shopify merchants and backed by a development and referral agreement with SHOPLINE.',
+    blurb: 'An AI-powered B2B SaaS platform for ecommerce merchants, founded and launched Nov 2025 — Nov 2026. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
     href: 'https://www.inscend.io/',
     tags: ['Ecommerce', 'Product', 'Shopify'],
-    featured: true,
+    badge: 'Past Venture',
   },
   {
     title: 'Data Fellows',
@@ -180,7 +237,14 @@ export const projects: Project[] = [
     blurb: 'A global AI and data community with 1,600+ members across 33+ countries, focused on professional development, technology education, community building, and industry partnerships.',
     href: 'https://datafellowsai.com/',
     tags: ['Community', 'Education', 'Data'],
-    featured: true,
+    badge: 'Active Venture',
+  },
+  {
+    title: 'BizPilot AI',
+    category: 'Experiment',
+    blurb: 'An early experiment built through Data Fellows, started in 2025. It initially explored a marketplace connecting businesses with data professionals, then shifted toward AI-powered decision intelligence for small businesses. That work later informed Inscend.',
+    href: 'https://www.producthunt.com/products/data-fellows',
+    tags: ['AI', 'Decision Intelligence', 'Data Fellows'],
   },
   {
     title: 'Inscend Source Agent',
@@ -261,13 +325,54 @@ export const projects: Project[] = [
   },
 ];
 
-export const writing: WritingItem[] = [
+export const publications: Publication[] = [
   {
     type: 'Article',
-    title: 'Four Months Later, I Am Building Differently',
-    source: 'LinkedIn',
-    blurb: 'Notes from Startupfest, customer calls, collaboration, narrowing Inscend’s focus, launching with Shopify, and learning what earns trust.',
-    href: 'https://www.linkedin.com/pulse/four-months-later-i-am-building-differently-tobi-oladimeji-zuwmc',
+    title: 'Building a Lean and Affordable Data Strategy',
+    source: 'IKONIK Magazine',
+    date: 'Nov 11, 2026',
+    blurb: 'Why small businesses and entrepreneurs don’t need expensive tools or large teams to use data well, and how to start with a simple, sustainable routine.',
+    href: 'https://ikonikpress.com/building-a-lean-and-affordable-data-strategy/',
+  },
+  {
+    type: 'Profile',
+    title: 'Beyond Data: How Tobi Oladimeji Is Redefining the Human Side of Innovation',
+    source: 'IKONIK Magazine',
+    date: 'Nov 23, 2025',
+    blurb: 'A profile and Q&A on founding Data Fellows, building Inscend, and making data practical for small business owners across dozens of countries.',
+    href: 'https://ikonikpress.com/beyond-data-how-tobi-oladimeji-is-redefining-the-human-side-of-innovation/',
+  },
+  {
+    type: 'Article',
+    title: 'Avoiding Common Data Mistakes',
+    source: 'IKONIK Magazine',
+    date: 'Oct 22, 2025',
+    blurb: 'Frequent data-handling errors small business owners make, and practical fixes for each.',
+    href: 'https://ikonikpress.com/avoiding-common-data-mistakes-by-tobi-oladimeji-for-ikonik-magazine/',
+  },
+  {
+    type: 'Article',
+    title: 'Practical Ways Small Businesses Can Use Data to Grow',
+    source: 'IKONIK Magazine',
+    date: 'Jun 30, 2025',
+    blurb: 'Simple, practical ways small businesses can use the data they already have, without advanced tools.',
+    href: 'https://ikonikpress.com/practical-ways-small-businesses-can-use-data-to-grow/',
+  },
+  {
+    type: 'Feature',
+    title: 'Championing Data-Driven Decision-Making for Small Businesses',
+    source: 'AfriBlocks',
+    date: 'Jul 12, 2024',
+    blurb: 'Profiled by AfriBlocks, a Techstars-backed platform spotlighting high-impact African professionals.',
+    href: 'https://blog.afriblocks.com/en/championing-data-driven-decision-making-for-small-businesses',
+  },
+  {
+    type: 'Video',
+    title: 'Data Too Complex? This AI Makes It Simple for Small Biz!',
+    source: 'CanadianSME Small Business Magazine',
+    blurb: 'Video appearance on the CanadianSME Small Business Magazine YouTube channel, discussing making data and AI practical for small businesses.',
+    href: 'https://www.youtube.com/watch?v=kegYSA9PtAM',
+    thumbnail: 'https://i.ytimg.com/vi/kegYSA9PtAM/hqdefault.jpg',
   },
   {
     type: 'Recognition',
@@ -277,40 +382,40 @@ export const writing: WritingItem[] = [
     href: 'https://www.loi.ac/',
   },
   {
-    type: 'Feature',
-    title: 'Championing Data-Driven Decision-Making for Small Businesses',
-    source: 'AfriBlocks',
-    blurb: 'Profiled by AfriBlocks, a Techstars-backed platform spotlighting high-impact African professionals.',
-    href: 'https://blog.afriblocks.com/en/championing-data-driven-decision-making-for-small-businesses',
+    type: 'Recognition',
+    title: 'SAAS NORTH AI PitchFest — Finalist',
+    source: 'SAAS NORTH',
+    blurb: 'Finalist for the 9th annual SAAS NORTH Conference AI PitchFest, pitching Inscend in Ottawa.',
+    href: 'https://www.linkedin.com/posts/tobioladimeji_saasnorth-pitchfestai-inscend-share-7513323612762955777-EkPp/',
   },
   {
-    type: 'Profile',
-    title: 'Beyond Data: How Tobi Oladimeji Is Redefining the Human Side of Innovation',
-    source: 'IKONIK Magazine',
-    blurb: 'A profile on decision intelligence, community building, entrepreneurship, and making data useful to small businesses.',
-    href: 'https://ikonikpress.com/beyond-data-how-tobi-oladimeji-is-redefining-the-human-side-of-innovation/',
-  },
-  {
-    type: 'Article',
-    title: 'Practical Ways Small Businesses Can Use Data to Grow',
-    source: 'IKONIK Magazine',
-    blurb: 'A practical guide to using everyday business data without expensive or complicated tooling.',
-    href: 'https://ikonikpress.com/practical-ways-small-businesses-can-use-data-to-grow/',
-  },
-  {
-    type: 'Article',
-    title: 'Avoiding Common Data Mistakes',
-    source: 'IKONIK Magazine',
-    blurb: 'A field guide to the data mistakes that quietly cost small businesses time, money, and trust.',
-    href: 'https://ikonikpress.com/avoiding-common-data-mistakes-by-tobi-oladimeji-for-ikonik-magazine/',
+    type: 'Recognition',
+    title: 'OBSIDI BFUTR 2026 — Pitch Finalist',
+    source: 'OBSIDI',
+    blurb: 'Pitched Inscend at BFUTR 2026 in Mississauga, competing for up to $350,000.',
+    href: 'https://www.linkedin.com/posts/tobioladimeji_bfutr2026-blackfounders-inscend-share-7521118285040623616-ALE-/',
   },
 ];
+
+export const newsletter: Newsletter = {
+  title: 'Data Made Simple',
+  description: 'Data Made Simple is a weekly note on how data, analytics, and AI show up in real work, based on lessons I’ve learned.',
+  href: 'https://www.linkedin.com/newsletters/data-made-simple-7416025825822617600',
+  linkLabel: 'Read on LinkedIn',
+  editions: [
+    { title: 'Four Months Later, I Am Building Differently', date: 'Jul 22, 2026', href: 'https://www.linkedin.com/pulse/four-months-later-i-am-building-differently-tobi-oladimeji-zuwmc' },
+    { title: 'What Your First 100 Customers Are Quietly Teaching You', date: 'Mar 23, 2026' },
+    { title: 'Most Founders Don’t Have a Data Problem. They Have a Question Problem.', date: 'Mar 16, 2026' },
+    { title: 'Small Businesses Have the Advantage. They Just Don’t Realize It.', date: 'Mar 9, 2026' },
+    { title: 'Why We Optimize for the Wrong Test', date: 'Mar 2, 2026' },
+  ],
+};
 
 export const capabilities: CapabilityGroup[] = [
   { label: 'Analytics & BI', items: ['Power BI', 'SQL', 'Advanced Excel', 'Tableau', 'KPI design', 'Executive reporting'] },
   { label: 'Data & Engineering', items: ['Python', 'ETL', 'Data quality', 'Validation', 'PostgreSQL', 'Microsoft SQL Server'] },
   { label: 'AI & Automation', items: ['LLM workflows', 'Document extraction', 'AI evaluation', 'Workflow automation', 'Decision systems'] },
-  { label: 'Product & Strategy', items: ['Product discovery', 'Founder research', 'Requirements', 'Stakeholder engagement', 'Partnerships'] },
+  { label: 'Product & Strategy', items: ['Product discovery', 'Customer research', 'Business strategy', 'Team leadership', 'Community development'] },
 ];
 
 export const education: EducationItem[] = [
