@@ -1,7 +1,23 @@
 import { useState } from 'react';
-import { experience } from '../data/portfolio';
+import { experience, type ProgramLogo } from '../data/portfolio';
 
 const VISIBLE_COUNT = 8;
+
+const ProgramChip = ({ program }: { program: ProgramLogo }) => {
+  const [imgOk, setImgOk] = useState(true);
+  const content = program.logo && imgOk ? (
+    <img src={program.logo} alt={program.name} loading="lazy" onError={() => setImgOk(false)} />
+  ) : (
+    <span>{program.name}</span>
+  );
+  return program.href ? (
+    <a className="job-logo" href={program.href} target="_blank" rel="noopener noreferrer" title={program.name}>
+      {content}
+    </a>
+  ) : (
+    <span className="job-logo" title={program.name}>{content}</span>
+  );
+};
 
 const Resume = () => {
   const [showAll, setShowAll] = useState(false);
@@ -26,6 +42,11 @@ const Resume = () => {
               <div className="tags">
                 {job.tags.map((t) => <span key={t}>{t}</span>)}
               </div>
+              {job.logos && (
+                <div className="job-logos">
+                  {job.logos.map((p) => <ProgramChip key={p.name} program={p} />)}
+                </div>
+              )}
             </div>
           </article>
         ))}
