@@ -28,12 +28,23 @@ export interface CurrentWorkItem {
   linkLabel: string;
 }
 
+export interface ProgramLogo {
+  name: string;
+  /** Path to the program's real logo; omitted falls back to a plain text chip rather than a placeholder. */
+  logo?: string;
+  href?: string;
+  /** True when the logo's own artwork (e.g. white text) only reads on a dark chip background. */
+  dark?: boolean;
+}
+
 export interface ExperienceItem {
   company: string;
   role: string;
   period: string;
   summary: string;
   tags: string[];
+  /** Real logos of the specific programs/companies named in this entry, shown as a chip row. */
+  logos?: ProgramLogo[];
 }
 
 export interface ProjectCaseStudy {
@@ -189,8 +200,15 @@ export const experience: ExperienceItem[] = [
     company: 'Founder in Residence / Accelerator Programs',
     role: 'Founder in Residence',
     period: '2024 — 2026',
-    summary: 'Participated in accelerator and founder-in-residence programs including BHive GEIP, Accelerator Centre RevLab, and League of Innovators, building founder skills alongside Data Fellows and Inscend.',
+    summary: 'Selected into multiple global and Canadian accelerator programs supporting product development, growth, and fundraising: BHive (GEIP), Accelerator Centre (RevLab), League of Innovators (LOI), Emerging Leaders Collective (ELC), and LvlUp Ventures (Labs), building founder skills alongside Data Fellows and Inscend.',
     tags: ['Accelerator', 'Founder Development'],
+    logos: [
+      { name: 'BHive (GEIP)', logo: '/images/programs/bhive.png' },
+      { name: 'Accelerator Centre (RevLab)', logo: '/images/programs/accelerator-centre.svg', href: 'https://www.acceleratorcentre.com/' },
+      { name: 'League of Innovators (LOI)', logo: '/images/programs/league-of-innovators.png', href: 'https://www.loi.ac/' },
+      { name: 'Emerging Leaders Collective (ELC)', logo: '/images/programs/elc.png' },
+      { name: 'LvlUp Ventures (Labs)', logo: '/images/programs/lvlup-ventures.png', dark: true },
+    ],
   },
   {
     company: 'ESGTree',
@@ -425,9 +443,9 @@ export const publications: Publication[] = [
   },
   {
     type: 'Recognition',
-    title: 'OBSIDI BFUTR 2026 — Pitch Finalist',
+    title: 'OBSIDI BFUTR 2026 — Finalist',
     source: 'OBSIDI',
-    blurb: 'Pitched Inscend at BFUTR 2026 in Mississauga, competing for up to $350,000.',
+    blurb: 'Selected as a finalist for BFUTR 2026 in Mississauga.',
     href: 'https://www.linkedin.com/posts/tobioladimeji_bfutr2026-blackfounders-inscend-share-7521118285040623616-ALE-/',
   },
 ];
