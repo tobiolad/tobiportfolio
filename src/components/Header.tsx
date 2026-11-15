@@ -71,7 +71,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                </div>
             </div>
             <aside className="portrait-frame" ref={portraitRef}>
-               <img src="/images/headshot3.jpg" alt={profile.name} />
+               <img src="/images/headshot3.jpg" alt={profile.name} width={1333} height={2000} fetchPriority="high" />
             </aside>
          </header>
       </>
