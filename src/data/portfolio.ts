@@ -33,6 +33,8 @@ export interface ProgramLogo {
   /** Path to the program's real logo; omitted falls back to a plain text chip rather than a placeholder. */
   logo?: string;
   href?: string;
+  /** True when the logo's own artwork (e.g. white text) only reads on a dark chip background. */
+  dark?: boolean;
 }
 
 export interface ExperienceItem {
@@ -205,7 +207,7 @@ export const experience: ExperienceItem[] = [
       { name: 'Accelerator Centre (RevLab)', logo: '/images/programs/accelerator-centre.svg', href: 'https://www.acceleratorcentre.com/' },
       { name: 'League of Innovators (LOI)', logo: '/images/programs/league-of-innovators.png', href: 'https://www.loi.ac/' },
       { name: 'Emerging Leaders Collective (ELC)', logo: '/images/programs/elc.png' },
-      { name: 'LvlUp Ventures (Labs)' },
+      { name: 'LvlUp Ventures (Labs)', logo: '/images/programs/lvlup-ventures.png', dark: true },
     ],
   },
   {
