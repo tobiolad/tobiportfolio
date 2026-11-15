@@ -5,17 +5,19 @@ const VISIBLE_COUNT = 8;
 
 const ProgramChip = ({ program }: { program: ProgramLogo }) => {
   const [imgOk, setImgOk] = useState(true);
-  const content = program.logo && imgOk ? (
+  const showImg = program.logo && imgOk;
+  const className = `job-logo${program.dark && showImg ? ' dark' : ''}`;
+  const content = showImg ? (
     <img src={program.logo} alt={program.name} loading="lazy" onError={() => setImgOk(false)} />
   ) : (
     <span>{program.name}</span>
   );
   return program.href ? (
-    <a className="job-logo" href={program.href} target="_blank" rel="noopener noreferrer" title={program.name}>
+    <a className={className} href={program.href} target="_blank" rel="noopener noreferrer" title={program.name}>
       {content}
     </a>
   ) : (
-    <span className="job-logo" title={program.name}>{content}</span>
+    <span className={className} title={program.name}>{content}</span>
   );
 };
 

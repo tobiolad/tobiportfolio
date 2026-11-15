@@ -631,6 +631,11 @@ button.text-link:hover {
   display: block;
 }
 
+.job-logo.dark {
+  background: #0d0d10;
+  border-color: #0d0d10;
+}
+
 .job-logo span {
   color: #11161c;
   font-size: 12px;
