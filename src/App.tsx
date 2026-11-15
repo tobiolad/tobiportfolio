@@ -1,13 +1,14 @@
 import './App.css'
-import { About, Contact, Footer, Header, Portfolio, Metrics, Focus, Resume, Testimonials, Writing, CommandPalette } from './components'
+import { About, Contact, Footer, Header, Portfolio, Metrics, Focus, Resume, Recommendations, Publications, CommandPalette } from './components'
 import type { Command } from './components/CommandPalette'
-import { profile, projects, writing } from './data/portfolio'
+import { profile, projects, publications } from './data/portfolio'
 import { useScrollReveal, useCommandPalette } from './hooks'
 
 const NAV_COMMANDS: Command[] = [
   { label: 'Work', group: 'Section', href: '#work' },
   { label: 'Experience', group: 'Section', href: '#experience' },
-  { label: 'Writing', group: 'Section', href: '#writing' },
+  { label: 'Publications', group: 'Section', href: '#publications' },
+  { label: 'Recommendations', group: 'Section', href: '#recommendations' },
   { label: 'About', group: 'Section', href: '#about' },
   { label: 'Contact', group: 'Section', href: '#contact' },
 ]
@@ -19,7 +20,7 @@ function App() {
   const commands: Command[] = [
     ...NAV_COMMANDS,
     ...projects.map((p) => ({ label: p.title, group: 'Project', href: p.href })),
-    ...writing.map((w) => ({ label: w.title, group: 'Writing', href: w.href })),
+    ...publications.map((w) => ({ label: w.title, group: 'Publication', href: w.href })),
     { label: 'LinkedIn', group: 'Link', href: profile.linkedin },
     { label: 'GitHub', group: 'Link', href: profile.github },
     { label: 'X', group: 'Link', href: profile.x },
@@ -35,9 +36,9 @@ function App() {
         <Focus />
         <Portfolio />
         <Resume />
-        <Writing />
+        <Publications />
+        <Recommendations />
         <About />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />
