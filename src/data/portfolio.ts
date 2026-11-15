@@ -28,12 +28,21 @@ export interface CurrentWorkItem {
   linkLabel: string;
 }
 
+export interface ProgramLogo {
+  name: string;
+  /** Path to the program's real logo; omitted falls back to a plain text chip rather than a placeholder. */
+  logo?: string;
+  href?: string;
+}
+
 export interface ExperienceItem {
   company: string;
   role: string;
   period: string;
   summary: string;
   tags: string[];
+  /** Real logos of the specific programs/companies named in this entry, shown as a chip row. */
+  logos?: ProgramLogo[];
 }
 
 export interface ProjectCaseStudy {
@@ -191,6 +200,13 @@ export const experience: ExperienceItem[] = [
     period: '2024 — 2026',
     summary: 'Selected into multiple global and Canadian accelerator programs supporting product development, growth, and fundraising: BHive (GEIP), Accelerator Centre (RevLab), League of Innovators (LOI), Emerging Leaders Collective (ELC), and LvlUp Ventures (Labs), building founder skills alongside Data Fellows and Inscend.',
     tags: ['Accelerator', 'Founder Development'],
+    logos: [
+      { name: 'BHive (GEIP)', logo: '/images/programs/bhive.png' },
+      { name: 'Accelerator Centre (RevLab)', logo: '/images/programs/accelerator-centre.svg', href: 'https://www.acceleratorcentre.com/' },
+      { name: 'League of Innovators (LOI)', logo: '/images/programs/league-of-innovators.png', href: 'https://www.loi.ac/' },
+      { name: 'Emerging Leaders Collective (ELC)', logo: '/images/programs/elc.png' },
+      { name: 'LvlUp Ventures (Labs)' },
+    ],
   },
   {
     company: 'ESGTree',
