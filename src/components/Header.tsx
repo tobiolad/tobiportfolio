@@ -44,7 +44,6 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                <p className="eyebrow">Founder · Product builder · Data & AI professional</p>
                <h1>{profile.headline}</h1>
                <p className="lead">{profile.intro}</p>
-               <p className="tagline">{profile.tagline}</p>
                <div className="actions">
                   <a className="button primary" href="#work" onClick={handleNav('#work')}>
                      Explore My Work <IconArrow />
