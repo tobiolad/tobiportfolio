@@ -95,9 +95,20 @@ export interface EducationItem {
   location: string;
 }
 
-export interface Testimonial {
-  quote: string;
+export type RecommendationCategory = 'Managers & Senior Colleagues' | 'Teammates' | 'Educators & Mentors' | 'Clients & Collaborators';
+
+export interface Recommendation {
   name: string;
+  title: string;
+  relationship: string;
+  category: RecommendationCategory;
+  date: string;
+  quote: string;
+  photo: string;
+  /** True when the source screenshot cut the quote off mid-sentence and the full text could not be recovered. */
+  isExcerpt?: boolean;
+  /** True for the curated homepage selection. */
+  featured?: boolean;
 }
 
 export const profile: Profile = {
@@ -447,8 +458,215 @@ export const education: EducationItem[] = [
   { school: 'Landmark University', degree: 'B.Sc., Computer Science', year: '2022', location: 'Nigeria' },
 ];
 
-export const testimonials: Testimonial[] = [
-  { quote: 'Tobi really helped us in analyzing data and report generation for various clients, developing them in Power BI and integrating databases. He constantly solved problems and proposed new ideas.', name: 'Edgardo Jaramillo' },
-  { quote: 'His patience, professionalism, and capability to understand and work with disorganized datasets have turned him into an asset for our team.', name: 'Daniela Titus' },
-  { quote: 'Tobi’s ability to tackle complex data challenges and his eagerness to learn set him apart. He brings a fresh perspective to every project.', name: 'Andrew S. Nevin' },
+export const recommendations: Recommendation[] = [
+  // Category A — Managers & Senior Colleagues
+  {
+    name: 'Andrew S. Nevin, PhD',
+    title: 'Partner, Financial Services Leader and Chief Economist, PwC',
+    relationship: 'Senior colleague at PwC; did not manage Tobi directly',
+    category: 'Managers & Senior Colleagues',
+    date: 'Feb 8, 2024',
+    quote: 'Tobi is an outstanding young professional with so much potential. During our time at PwC, I witnessed his dedication to mastering data analysis. Tobi’s ability to tackle complex data challenges and his eagerness to learn set him apart. He’s not just a team player but also brings a fresh perspective to every project. I highly recommend Tobi for his skills, passion, and the promise he holds in the field of data analytics.',
+    photo: '/images/recommendations/andrew-nevin.jpg',
+    featured: true,
+  },
+  {
+    name: 'Edgardo Jaramillo',
+    title: 'CEO, Rollback Ally',
+    relationship: 'Managed Tobi directly',
+    category: 'Managers & Senior Colleagues',
+    date: 'Sep 27, 2023',
+    quote: 'It was a great pleasure to have worked with Tobi. He is a very responsible, determined, and hard working professional. Tobi really helped us in analyzing data and report generation for various clients, developing them in PowerBi and integrating databases. Constantly solved problems and proposed new ideas. Tobi was always a team player and was invested in making things work. Apart from being a great professional he is a great person.',
+    photo: '/images/recommendations/edgardo-jaramillo.jpg',
+    featured: true,
+  },
+  // Category B — Teammates
+  {
+    name: 'Daniela Titus',
+    title: 'Executive Assistant, Servi-Tek Facility Solutions',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Sep 15, 2023',
+    quote: 'Tobi’s exceptional patience, professionalism, and capability to understand and work with disorganized data sets have turned him into an asset for our team. I admire his capacity to create reports from scratch in Power BI and connect various platforms to turn simple datasets added to a Google Sheets into meaningful reports for making informed decisions. Of course, he is a great coworker, and I can wholeheartedly recommend Tobi without any doubt.',
+    photo: '/images/recommendations/daniela-titus.jpg',
+    featured: true,
+  },
+  {
+    name: 'Santiago Guevara León',
+    title: 'Ticketing Specialist, Tuboleta',
+    relationship: 'Worked with Tobi on the same team, at Rollback Ally',
+    category: 'Teammates',
+    date: 'Sep 14, 2023',
+    quote: 'I wholeheartedly recommend Tobi for his exceptional contributions at Rollbackally. From the moment he joined our team, it was clear that he possessed a remarkable ability to adapt, coupled with a strong work ethic that consistently translated into outstanding results. Tobi’s dedication to his work is truly commendable, and his talent shines through in all that he undertakes. He is not only a skilled professional but also a natural leader who knows how to guide the team effectively toward achieving our goals. I am confident that Tobi will continue to excel in any role he takes on in the future.',
+    photo: '/images/recommendations/santiago-guevara-leon.jpg',
+    featured: true,
+  },
+  {
+    name: 'Princess Chiamaka Eze',
+    title: 'Social Media Manager, Ella’s Administrative Consult Ltd.',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 10, 2023',
+    quote: 'I’ve known Tobi for a while and he has proven himself to be a professional data analyst... He’s a cool person to work with both on a professional and individual level and he always delivers any job given to him before the deadline. I recommend him without any reservation because he will be a valuable asset to any organization that hires him.',
+    photo: '/images/recommendations/chiamaka-eze.jpg',
+  },
+  {
+    name: 'Salamatu Alabi',
+    title: 'Content Writer and SEO Specialist, AGPAYTECH LTD.',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 2, 2023',
+    quote: 'I have known Tobi for some time now and during that time, I have been consistently impressed by his competence. He has a proven track record of achievements or skills and has demonstrated positive character traits in both personal/professional settings. I have no doubt that Tobi would be an asset to any organization lucky enough to have him on their team. He has a strong work ethic, excellent communication skills, and a commitment to delivering exceptional results. I recommend Tobi without reservation and am confident that he will make a valuable contribution to any organization he joins.',
+    photo: '/images/recommendations/salamatu-alabi.jpg',
+  },
+  {
+    name: 'Betty Orji',
+    title: 'Director, Bettybnks Business Consult',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 2, 2023',
+    quote: 'Tobi is an incredibly valuable resource. I had the privilege to work with him. He is so passionate about his job as a data analyst and works exceptionally well alone or with a team. I highly recommend his services!',
+    photo: '/images/recommendations/betty-orji.jpg',
+  },
+  {
+    name: 'Praise Oluwatosin Alagbe, AICMC',
+    title: 'Program Coordinator & Virtual Assistant, Lis School of Business Recovery Ltd.',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 1, 2023',
+    quote: 'Tobi Oladimeji has proven to be very sound in Data Analysis. His aim to help businesses improve on their data analysis and make sound decisions is very applaudable. I recommend him for any opportunity related to this field.',
+    photo: '/images/recommendations/praise-alagbe.jpg',
+  },
+  {
+    name: 'Sherley Mercelie P. M Eugene',
+    title: 'Interpreter (Creole–Spanish), UNHCR',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 1, 2023',
+    quote: 'Tobi is a young professional so passionate about data. He is competent, efficient, and proactive. I’ve never met someone so committed to data as Tobi. Tobi is a leader also. He uses his knowledge for the better good and invests himself in social projects that will also benefit his community. I believe that having access to quality knowledge is good, and being brilliant is inspiring. But social retribution is what makes any professional stand out for me. Tobi is all that. He will be an asset to any team.',
+    photo: '/images/recommendations/sherley-eugene.jpg',
+  },
+  {
+    name: 'Gloria Olaniyan',
+    title: 'CEO & Founder, TRACK Africa',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 1, 2023',
+    quote: 'I highly recommend Tobi for his exceptional ability to interpret complex data sets and provide actionable insights, as well as his excellent communication skills which have been instrumental in driving successful collaborations and decision-making processes within an organization. Tobi has demonstrated exceptional skills in analyzing data, identifying trends and patterns, and...',
+    photo: '/images/recommendations/gloria-olaniyan.jpg',
+    isExcerpt: true,
+    featured: true,
+  },
+  {
+    name: 'Pranav Mahesan',
+    title: 'Quant Risk Analyst, Dolidol',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Sep 28, 2022',
+    quote: 'Tobi is very hard working and result oriented individual. He is a great team player and possess strong leadership and communication skills.',
+    photo: '/images/recommendations/pranav-mahesan.jpg',
+  },
+  {
+    name: 'Oyindamola Victor',
+    title: 'QA (Backend), Turing',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Sep 28, 2022',
+    quote: 'Tobi is a great and critical thinker in the world of analytics, his passion and skills go beyond the scope of work but also ensuring value is added...',
+    photo: '/images/recommendations/oyindamola-victor.jpg',
+    isExcerpt: true,
+  },
+  // Category C — Educators & Mentors
+  {
+    name: 'Vinod Thomas',
+    title: 'Vice President, Cybersecurity, M&T Bank',
+    relationship: 'Was Tobi’s teacher, Diagnostic Analysis at Conestoga College',
+    category: 'Educators & Mentors',
+    date: 'Oct 11, 2024',
+    quote: 'I had the pleasure of teaching Tobi in my Diagnostic Analysis course at Conestoga College, and I am confident he is a standout professional. His exceptional critical thinking and problem-solving skills were evident throughout the course, but what truly sets Tobi apart is his strong entrepreneurial spirit. Tobi consistently approached complex problems with creativity, determination, and a remarkable ability to see opportunities where others might see obstacles. His technical expertise, combined with a passion for innovative solutions and a drive to understand the broader business implications of his work, made him a natural leader in group projects. He has that rare combination of analytical rigor and forward-thinking that is crucial in today’s rapidly evolving landscape. Beyond his technical abilities, Tobi’s work ethic and commitment to excellence were outstanding. He regularly exceeded expectations, offering insights that enhanced discussions and group collaborations. His entrepreneurial mindset is reflected in his proactive approach to problem-solving and his eagerness to take on new challenges. I am confident that Tobi will excel in any professional or entrepreneurial endeavor he pursues. His ability to merge strategic thinking with practical execution makes him an invaluable asset to any team or organization. I highly recommend him to anyone looking for a dedicated, innovative, and driven professional.',
+    photo: '/images/recommendations/vinod-thomas.jpg',
+    featured: true,
+  },
+  {
+    name: 'Chandeep Sharma',
+    title: 'Data Specialist, Definity',
+    relationship: 'Was Tobi’s teacher',
+    category: 'Educators & Mentors',
+    date: 'Sep 5, 2024',
+    quote: 'Toby is sincere and has a zeal for learning and seeks opportunities to apply AI concepts and tools. His dedication in his deliverables truly shows his commitment. I would recommend him and wish best for his future endeavours.',
+    photo: '/images/recommendations/chandeep-sharma.jpg',
+  },
+  {
+    name: 'Dr. Ganesh Subramanian',
+    title: 'Cyber Security Analyst & AWS Cloud Specialist',
+    relationship: 'Was Tobi’s teacher, Business Intelligence Tools',
+    category: 'Educators & Mentors',
+    date: 'Apr 24, 2024',
+    quote: 'Tobi was an exceptional student in my Business Intelligence Tools course. He demonstrated a strong understanding of analytical methods and models, excelled in data visualization techniques, and showcased a keen grasp of probability theory. Tobi’s dedication, proactive approach to learning, and collaborative spirit made him a standout in the class. I highly recommend him for any opportunities where his analytical skills and expertise in business intelligence and statistics are needed.',
+    photo: '/images/recommendations/ganesh-subramanian.jpg',
+  },
+  {
+    name: 'Timothy Laleye',
+    title: 'Professor, Conestoga College',
+    relationship: 'Was Tobi’s teacher, SQL',
+    category: 'Educators & Mentors',
+    date: 'Apr 24, 2024',
+    quote: 'I had the pleasure of teaching Tobi SQL, and I wholeheartedly recommend him. Tobi consistently demonstrated a strong grasp of complex concepts, coupled with a dedicated work ethic and a collaborative spirit. His passion for SQL and his ability to apply it to real-world scenarios make him an asset to any team. I have no doubt that Tobi will continue to excel in his career and make significant contributions wherever he goes.',
+    photo: '/images/recommendations/timothy-laleye.jpg',
+  },
+  {
+    name: 'Marvi Shaikh',
+    title: 'Senior Business Data Analyst, Sun Life',
+    relationship: 'Was Tobi’s teacher',
+    category: 'Educators & Mentors',
+    date: 'Apr 23, 2024',
+    quote: 'Toby is highly proficient in Python and advanced data analysis, specializing in predictive modelling. Throughout the course, his dedication and hardworking nature were evident in his approach to assignments and projects. Toby’s exceptional communication and presentation skills, coupled with his strong teamwork, attention to detail, and evident passion for data, make him a valuable asset to any team or organization.',
+    photo: '/images/recommendations/marvi-shaikh.jpg',
+  },
+  {
+    name: 'Roseline Oluwaseun Ogundokun',
+    title: 'Senior Lecturer',
+    relationship: 'Was Tobi’s teacher',
+    category: 'Educators & Mentors',
+    date: 'Sep 30, 2022',
+    quote: 'I have know Tobi for 4 years and for those years, he impressed me with intense focus and commitment. I understand your organisation was made for persons who are deligent. Hardworking and have demonstrated relevant research and leadership skills. Tobi is no exception. Due to Tobi commitments to his research and academic work, he came out with a good grade in his first degree. He is indeed a talented and mature-minded student. I am certain and believe that Tobi is a perfect fit for your organisation and I give my highest recommendation for him.',
+    photo: '/images/recommendations/roseline-ogundokun.jpg',
+  },
+  // Category D — Clients & Collaborators
+  {
+    name: 'Iwalola Adetunji-Odogwu, PhD',
+    title: 'Principal Information Officer, Federal Ministry of Information and National Orientation',
+    relationship: 'Was Tobi’s client',
+    category: 'Clients & Collaborators',
+    date: 'Mar 2, 2023',
+    quote: 'Tobi Oladimeji is a highly professional individual with a keen interest in data analysis. He believes data is life and therefore pays keen attention to making the mundane tasks of analysing data become readable and usable for businesses and individuals. With other commendable skills like storytelling abilities and an impeccable grasp of data analysis tools like Excel, I find working with him easy and stress free. I highly recommend him for business consultations.',
+    photo: '/images/recommendations/iwalola-adetunji-odogwu.jpg',
+  },
+  {
+    name: 'Karimah Lawal',
+    title: 'Business Development Manager, VestarCoffeeNG',
+    relationship: 'Worked with Tobi, but on different teams',
+    category: 'Clients & Collaborators',
+    date: 'Mar 1, 2023',
+    quote: 'Tobi is a highly skilled Data Analyst with great skills in Python and many other relatable skills. He’s commendable for breaking down complex data into forms that will turn into valuable insights for any organization and increase revenue. He is bold in his declaration of his skills and it shows in his job management too. He is a perfect fit for any organization seeking a brilliant Data Analyst with a root understanding of his job.',
+    photo: '/images/recommendations/karimah-lawal.jpg',
+  },
+  {
+    name: 'Alerechi Ordu',
+    title: 'Engineering Manager, Oxygen X Finance (Access Holding)',
+    relationship: 'Worked with Tobi, but on different teams',
+    category: 'Clients & Collaborators',
+    date: 'Mar 1, 2023',
+    quote: 'Tobi is a highly skilled Data Analyst with proven relevant experience over the years. He’s a tech enthusiast with strong networking and collaborative skill. I highly recommend him because I have had an encounter with him.',
+    photo: '/images/recommendations/alerechi-ordu.jpg',
+  },
+  {
+    name: 'Aaron Duniya',
+    title: 'Founder, Jabari Quest Solutions',
+    relationship: 'Worked with Tobi, but they were at different companies',
+    category: 'Clients & Collaborators',
+    date: 'Mar 1, 2023',
+    quote: 'Some say Data is Life. Truly, Tobi exemplifies this saying in how he gives life to his work as a Data Analyst. Tobi can utilize his skills, in helping you understand trends and what you need to move your business from where it is, to where you want it to be. I recommend Tobi to any Person or Company that needs his services.',
+    photo: '/images/recommendations/aaron-duniya.jpg',
+  },
 ];

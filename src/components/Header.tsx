@@ -42,7 +42,8 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
             <div className="hero-copy">
                <p className="status"><i /> {profile.location}</p>
                <p className="eyebrow">Founder · Product builder · Data & AI professional</p>
-               <h1>{profile.headline}</h1>
+               <h1 className="hero-name">{profile.name}</h1>
+               <p className="hero-sub">{profile.headline}</p>
                <p className="lead">{profile.intro}</p>
                <div className="actions">
                   <a className="button primary" href="#work" onClick={handleNav('#work')}>
@@ -58,7 +59,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                   <a href={profile.x} target="_blank" rel="noopener noreferrer"><SocialIcon name="x" /> X</a>
                </div>
             </div>
-            <aside className="portrait-card">
+            <aside className="portrait-frame">
                <img src="/images/headshot3.jpg" alt={profile.name} />
             </aside>
          </header>
