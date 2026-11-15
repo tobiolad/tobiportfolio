@@ -55,8 +55,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                      </span>
                   ))}
                </h1>
-               <p className="hero-sub" data-hero-item>{profile.headline}</p>
-               <p className="lead" data-hero-item>{profile.intro}</p>
+               <p className="lead" data-hero-item>{profile.headline} {profile.intro}</p>
                <div className="actions" data-hero-item>
                   <a className="button primary" href="#work" onClick={handleNav('#work')}>
                      Explore My Work <IconArrow />
