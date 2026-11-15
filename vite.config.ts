@@ -1,6 +1,6 @@
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
-import { profile, experience, projects, education, writing } from './src/data/portfolio'
+import { profile, experience, projects, education, publications, newsletter } from './src/data/portfolio'
 
 const escapeHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -33,11 +33,15 @@ function noscriptFallbackHtml(): string {
     .map((e) => `<li>${escapeHtml(e.degree)}, ${escapeHtml(e.school)} (${escapeHtml(e.year)})</li>`)
     .join('');
 
-  const writingItems = writing
+  const writingItems = publications
     .map(
       (w) =>
-        `<li>${escapeHtml(w.title)} — ${escapeHtml(w.source)}: ${escapeHtml(w.blurb)} <a href="${escapeHtml(w.href)}">${escapeHtml(w.href)}</a></li>`
+        `<li>${escapeHtml(w.title)} (${escapeHtml(w.type)}) — ${escapeHtml(w.source)}${w.date ? `, ${escapeHtml(w.date)}` : ''}: ${escapeHtml(w.blurb)} <a href="${escapeHtml(w.href)}">${escapeHtml(w.href)}</a></li>`
     )
+    .join('');
+
+  const newsletterItems = newsletter.editions
+    .map((ed) => `<li>${escapeHtml(ed.title)} (${escapeHtml(ed.date)})</li>`)
     .join('');
 
   return `<noscript>
@@ -55,6 +59,9 @@ function noscriptFallbackHtml(): string {
       <ul>${educationItems}</ul>
       <h2>Writing &amp; recognition</h2>
       <ul>${writingItems}</ul>
+      <h2>${escapeHtml(newsletter.title)} (newsletter)</h2>
+      <p>${escapeHtml(newsletter.description)} <a href="${escapeHtml(newsletter.href)}">${escapeHtml(newsletter.href)}</a></p>
+      <ul>${newsletterItems}</ul>
       <p>
         <a href="${escapeHtml(profile.linkedin)}">LinkedIn</a> ·
         <a href="${escapeHtml(profile.github)}">GitHub</a> ·
