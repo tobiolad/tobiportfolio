@@ -6,37 +6,68 @@ const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'Experiment',
 
 const initials = (title: string) => title.slice(0, 2).toUpperCase();
 
-const ProjectCard = ({ project }: { project: Project }) => (
-  <article className="project-card">
-    {project.image ? (
-      <a className="project-image" href={project.href} target="_blank" rel="noopener noreferrer">
-        <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
-      </a>
-    ) : project.logo ? (
-      <a className="project-visual logo" href={project.href} target="_blank" rel="noopener noreferrer">
-        <img src={project.logo} alt={`${project.title} logo`} loading="lazy" />
-      </a>
-    ) : (
-      <a className="project-visual" href={project.href} target="_blank" rel="noopener noreferrer">
-        <span>{initials(project.title)}</span>
-      </a>
-    )}
-    <div className="project-body">
-      <div className="project-meta">
-        <span>{project.category}</span>
-        {project.badge && <span>{project.badge}</span>}
+const CASE_STUDY_LABELS = [
+  ['context', 'Context'],
+  ['problem', 'Problem'],
+  ['contribution', 'My Contribution'],
+  ['approach', 'Approach'],
+  ['outcome', 'Outcome'],
+] as const;
+
+const ProjectCard = ({ project }: { project: Project }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <article className="project-card">
+      {project.image ? (
+        <a className="project-image" href={project.href} target="_blank" rel="noopener noreferrer">
+          <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+        </a>
+      ) : project.logo ? (
+        <a className="project-visual logo" href={project.href} target="_blank" rel="noopener noreferrer">
+          <img src={project.logo} alt={`${project.title} logo`} loading="lazy" />
+        </a>
+      ) : (
+        <a className="project-visual" href={project.href} target="_blank" rel="noopener noreferrer">
+          <span>{initials(project.title)}</span>
+        </a>
+      )}
+      <div className="project-body">
+        <div className="project-meta">
+          <span>{project.category}</span>
+          {project.badge && <span>{project.badge}</span>}
+        </div>
+        <h3>{project.title}</h3>
+        <p>{project.blurb}</p>
+        <div className="tags">
+          {project.tags.map((t) => <span key={t}>{t}</span>)}
+        </div>
+
+        {project.caseStudy && expanded && (
+          <dl className="case-study">
+            {CASE_STUDY_LABELS.map(([key, label]) => (
+              <div key={key}>
+                <dt>{label}</dt>
+                <dd>{project.caseStudy![key]}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+
+        <div className="project-links">
+          <a className="text-link" href={project.href} target="_blank" rel="noopener noreferrer">
+            View project <IconArrowUpRight />
+          </a>
+          {project.caseStudy && (
+            <button type="button" className="text-link ghost" onClick={() => setExpanded((v) => !v)}>
+              {expanded ? 'Hide case study' : 'Read full case study'}
+            </button>
+          )}
+        </div>
       </div>
-      <h3>{project.title}</h3>
-      <p>{project.blurb}</p>
-      <div className="tags">
-        {project.tags.map((t) => <span key={t}>{t}</span>)}
-      </div>
-      <a className="text-link" href={project.href} target="_blank" rel="noopener noreferrer">
-        View project <IconArrowUpRight />
-      </a>
-    </div>
-  </article>
-);
+    </article>
+  );
+};
 
 const Portfolio = () => {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>('All');

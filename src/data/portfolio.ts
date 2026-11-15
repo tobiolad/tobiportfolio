@@ -36,6 +36,14 @@ export interface ExperienceItem {
   tags: string[];
 }
 
+export interface ProjectCaseStudy {
+  context: string;
+  problem: string;
+  contribution: string;
+  approach: string;
+  outcome: string;
+}
+
 export interface Project {
   title: string;
   category: ProjectCategory;
@@ -47,6 +55,8 @@ export interface Project {
   tags: string[];
   /** Short label shown on the card, e.g. "Active Venture" or "Past Venture". */
   badge?: string;
+  /** Full Context/Problem/Contribution/Approach/Outcome breakdown, shown only for significant projects. */
+  caseStudy?: ProjectCaseStudy;
 }
 
 export interface Publication {
@@ -99,7 +109,7 @@ export const profile: Profile = {
   x: 'https://x.com/tobioladimeji_',
   headline: 'Building products, exploring ideas, and solving business problems through technology.',
   tagline: 'Exploring hard problems worth building a company around.',
-  intro: 'I’m Tobi Oladimeji, a founder with a background in computer science, data analytics, AI, and product development. I’ve built software, led teams, and grown communities across companies and ventures.',
+  intro: 'I’ve worked across data, AI, and product development, from enterprise projects to building my own software products and businesses. I’m exploring new full-time roles in product, data, and AI, and open to building again when the right problem comes along.',
   bio: 'Tobi Oladimeji is a founder and product builder with a background in data analytics and AI. He founded Data Fellows and built Inscend, and is currently exploring his next opportunity in product, data, and AI.',
 };
 
@@ -230,6 +240,13 @@ export const projects: Project[] = [
     href: 'https://www.inscend.io/',
     tags: ['Ecommerce', 'Product', 'Shopify'],
     badge: 'Past Venture',
+    caseStudy: {
+      context: 'Independent merchants running ecommerce stores, often on Shopify, need to continuously track what’s affecting their sales and operations, but rarely have the time or tooling to do it well.',
+      problem: 'Founders were spending time manually checking their stores instead of acting on what actually needed their attention.',
+      contribution: 'Founded Inscend and led a distributed engineering team building the product end to end.',
+      approach: 'Built an AI-powered B2B SaaS platform that monitors store activity, surfaces what needs attention, and prepares next steps, bringing the founder in when judgment is required. Validated the approach through customer discovery with 50+ founders and Shopify merchant pilots.',
+      outcome: 'Secured early paying customers and a development and referral agreement with SHOPLINE. Selected as a finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    },
   },
   {
     title: 'Data Fellows',
@@ -238,6 +255,13 @@ export const projects: Project[] = [
     href: 'https://datafellowsai.com/',
     tags: ['Community', 'Education', 'Data'],
     badge: 'Active Venture',
+    caseStudy: {
+      context: 'Many data and AI professionals, especially outside major tech hubs, lack access to structured learning, mentorship, and industry connections.',
+      problem: 'Opportunities in data and AI weren’t evenly accessible, and there was no single place bringing practitioners together across regions.',
+      contribution: 'Founded and lead Data Fellows, building its programs, partnerships, and community operations from the ground up.',
+      approach: 'Built learning programs, professional development initiatives, industry partnerships, and community events, bringing together professionals and organizations across countries.',
+      outcome: 'Grew it into a global AI and data community with 1,600+ members across 33+ countries.',
+    },
   },
   {
     title: 'BizPilot AI',
