@@ -425,9 +425,9 @@ export const publications: Publication[] = [
   },
   {
     type: 'Recognition',
-    title: 'OBSIDI BFUTR 2026 — Pitch Finalist',
+    title: 'OBSIDI BFUTR 2026 — Finalist',
     source: 'OBSIDI',
-    blurb: 'Pitched Inscend at BFUTR 2026 in Mississauga, competing for up to $350,000.',
+    blurb: 'Selected as a finalist for BFUTR 2026 in Mississauga, competing for up to $350,000.',
     href: 'https://www.linkedin.com/posts/tobioladimeji_bfutr2026-blackfounders-inscend-share-7521118285040623616-ALE-/',
   },
 ];
