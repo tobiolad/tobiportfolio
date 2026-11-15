@@ -165,14 +165,6 @@
   display: inline-block;
 }
 
-.hero-sub {
-  max-width: 560px;
-  font-size: clamp(1rem, 1.6vw, 1.18rem);
-  font-weight: 500;
-  color: var(--muted);
-  margin-bottom: 18px;
-}
-
 .lead {
   max-width: 720px;
   color: var(--muted);
