@@ -3,7 +3,7 @@ import { scrollToSection, scrollToTop } from '../utilities';
 import { IconSearch, IconArrow, IconArrowUpRight, SocialIcon } from './Icons';
 import ThemeToggle from './ThemeToggle';
 import { profile } from '../data/portfolio';
-import { useHeroIntro } from '../motion';
+import { useHeroIntro, useTiltPortrait } from '../motion';
 
 const NAV_ITEMS = [
    { href: '#work', label: 'Work' },
@@ -18,7 +18,9 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
       scrollToSection(href)(e);
    };
    const heroRef = useRef<HTMLElement>(null);
+   const portraitRef = useRef<HTMLElement>(null);
    useHeroIntro(heroRef);
+   useTiltPortrait(portraitRef);
 
    return (
       <>
@@ -69,7 +71,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                   <a href={profile.x} target="_blank" rel="noopener noreferrer"><SocialIcon name="x" /> X</a>
                </div>
             </div>
-            <aside className="portrait-frame">
+            <aside className="portrait-frame" ref={portraitRef}>
                <img src="/images/headshot3.jpg" alt={profile.name} />
             </aside>
          </header>

@@ -216,6 +216,7 @@
   object-fit: cover;
   object-position: center 18%;
   filter: grayscale(0.15) contrast(1.04);
+  will-change: transform;
 }
 
 @media (max-width: 950px) {
