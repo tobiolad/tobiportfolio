@@ -1,5 +1,5 @@
-export type ProjectCategory = 'Product' | 'AI Agents' | 'BI' | 'Python / ML' | 'SQL' | 'Data';
-export type WritingType = 'Article' | 'Profile' | 'Event' | 'Feature' | 'Recognition';
+export type ProjectCategory = 'Product' | 'AI Agents' | 'BI' | 'Python / ML' | 'SQL' | 'Data' | 'Experiment';
+export type PublicationType = 'Article' | 'Profile' | 'Feature' | 'Recognition' | 'Video';
 
 export interface Profile {
   name: string;
@@ -9,6 +9,7 @@ export interface Profile {
   github: string;
   x: string;
   headline: string;
+  tagline: string;
   intro: string;
   /** Third-person summary for entity recognition (search/AI systems, not just human readers). */
   bio: string;
@@ -20,7 +21,8 @@ export interface Metric {
 }
 
 export interface CurrentWorkItem {
-  company: string;
+  eyebrow: string;
+  title: string;
   description: string;
   href: string;
   linkLabel: string;
@@ -34,6 +36,14 @@ export interface ExperienceItem {
   tags: string[];
 }
 
+export interface ProjectCaseStudy {
+  context: string;
+  problem: string;
+  contribution: string;
+  approach: string;
+  outcome: string;
+}
+
 export interface Project {
   title: string;
   category: ProjectCategory;
@@ -43,15 +53,34 @@ export interface Project {
   logo?: string;
   href: string;
   tags: string[];
-  featured?: boolean;
+  /** Short label shown on the card, e.g. "Active Venture" or "Past Venture". */
+  badge?: string;
+  /** Full Context/Problem/Contribution/Approach/Outcome breakdown, shown only for significant projects. */
+  caseStudy?: ProjectCaseStudy;
 }
 
-export interface WritingItem {
-  type: WritingType;
+export interface Publication {
+  type: PublicationType;
   title: string;
   source: string;
+  date?: string;
   blurb: string;
   href: string;
+  thumbnail?: string;
+}
+
+export interface NewsletterEdition {
+  title: string;
+  date: string;
+  href?: string;
+}
+
+export interface Newsletter {
+  title: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+  editions: NewsletterEdition[];
 }
 
 export interface CapabilityGroup {
@@ -66,9 +95,20 @@ export interface EducationItem {
   location: string;
 }
 
-export interface Testimonial {
-  quote: string;
+export type RecommendationCategory = 'Managers & Senior Colleagues' | 'Teammates' | 'Educators & Mentors' | 'Clients & Collaborators';
+
+export interface Recommendation {
   name: string;
+  title: string;
+  relationship: string;
+  category: RecommendationCategory;
+  date: string;
+  quote: string;
+  photo: string;
+  /** True when the source screenshot cut the quote off mid-sentence and the full text could not be recovered. */
+  isExcerpt?: boolean;
+  /** True for the curated homepage selection. */
+  featured?: boolean;
 }
 
 export const profile: Profile = {
@@ -79,8 +119,9 @@ export const profile: Profile = {
   github: 'https://github.com/tobiolad',
   x: 'https://x.com/tobioladimeji_',
   headline: 'Building products, exploring ideas, and solving business problems through technology.',
-  intro: 'I’m Tobi Oladimeji, a founder with a background in computer science, data analytics, AI, and product development. My work spans building software, growing communities, and helping businesses make better use of technology.',
-  bio: 'Tobi Oladimeji is a founder, product builder, and data and AI professional based in Waterloo Region, Canada. He is the founder of Data Fellows, a global AI and data community, and Inscend, an ecommerce technology company.',
+  tagline: 'Exploring hard problems worth building a company around.',
+  intro: 'I’ve worked across data, AI, and product development, from enterprise projects to building my own software products and businesses. I’m exploring new full-time roles in product, data, and AI, and open to building again when the right problem comes along.',
+  bio: 'Tobi Oladimeji is a founder and product builder with a background in data analytics and AI. He founded Data Fellows and built Inscend, and is currently exploring his next opportunity in product, data, and AI.',
 };
 
 export const metrics: Metric[] = [
@@ -93,40 +134,28 @@ export const metrics: Metric[] = [
 
 export const currentWork: CurrentWorkItem[] = [
   {
-    company: 'Data Fellows',
-    description: 'A global AI and data community with 1,600+ members across 33+ countries. Professional development, technology education, community building, and industry partnerships.',
+    eyebrow: 'Current work',
+    title: 'Data Fellows',
+    description: 'A global AI and data community with 1,600+ members across 33+ countries. Learning programs, professional development, industry partnerships, and community events.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
   {
-    company: 'Inscend',
-    description: 'An ecommerce technology company focused on helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, piloted with Shopify merchants and backed by a development and referral agreement with SHOPLINE.',
-    href: 'https://www.inscend.io/',
-    linkLabel: 'Visit inscend.io',
+    eyebrow: 'Exploring next',
+    title: 'What’s next',
+    description: 'Exploring hard problems worth building a company around. Open to product, data, and AI roles, and to new venture opportunities where I can build, lead, or contribute.',
+    href: '#contact',
+    linkLabel: 'Get in touch',
   },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    company: 'Inscend',
-    role: 'Founder',
-    period: '2025 — Present',
-    summary: 'Founded Inscend, an ecommerce technology company focused on helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, leading a distributed engineering team, engaging 50+ founders through customer discovery and Shopify merchant pilots, generating initial sales, and securing a development and referral agreement with SHOPLINE. Inscend was selected as a finalist at SAAS NORTH AI PitchFest 2026 and OBSIDI BFUTR 2026.',
-    tags: ['Ecommerce Technology', 'Product', 'Team Leadership'],
-  },
-  {
     company: 'Data Fellows',
     role: 'Founder & CEO',
     period: 'Aug 2022 — Present',
-    summary: 'Founded and grew a global data and technology ecosystem focused on practical learning, collaboration, products, and access.',
+    summary: 'Founded Data Fellows, a global AI and data community with over 1,600 members across 33+ countries. Led learning programs, professional development initiatives, industry partnerships, and community events, bringing together professionals and organizations to make opportunities in technology more accessible.',
     tags: ['Community', 'Strategy', 'Partnerships'],
-  },
-  {
-    company: 'Granted Technologies Inc.',
-    role: 'Strategic Advisor, Data & Operations',
-    period: 'Oct 2025 — Present',
-    summary: 'Advising on data architecture, quality controls, workflow design, automation, operational KPIs, and AI-assisted grant-data processes.',
-    tags: ['Data Quality', 'Automation', 'AI Workflows'],
   },
   {
     company: 'Cohere',
@@ -136,11 +165,32 @@ export const experience: ExperienceItem[] = [
     tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
   },
   {
+    company: 'Inscend',
+    role: 'Founder',
+    period: 'Nov 2025 — Nov 2026',
+    summary: 'Founded and launched an AI-powered B2B SaaS platform for ecommerce merchants. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    tags: ['Ecommerce Technology', 'Product', 'Team Leadership'],
+  },
+  {
+    company: 'Granted Technologies Inc.',
+    role: 'Advisor',
+    period: 'Oct 2025 — Aug 2026',
+    summary: 'Advised on data architecture, quality controls, workflow design, automation, operational KPIs, and AI-assisted grant-data processes.',
+    tags: ['Data Quality', 'Automation', 'AI Workflows'],
+  },
+  {
     company: 'Venture Learning Collective',
     role: 'Co-Founder',
-    period: '2026',
-    summary: 'Co-founded a venture-building and funding-readiness initiative for early founders. Secured a C$2,800 micro-grant from Weston Frontlines and delivered a six-session Youth Funding Readiness Lab.',
+    period: 'Feb 2026 — Jul 2026',
+    summary: 'Helped establish Venture Learning Collective to support entrepreneurship education and funding readiness. Secured a C$2,800 micro-grant through Weston Frontlines and delivered the Youth Funding Readiness Lab with GRANTED. The program ran May 27 to June 25, 2026, with six virtual sessions and a final showcase, serving a core cohort of 10 participants, eight of whom remained active throughout. Final reporting took place in July 2026.',
     tags: ['Founder Education', 'Funding Readiness', 'Community'],
+  },
+  {
+    company: 'Founder in Residence / Accelerator Programs',
+    role: 'Founder in Residence',
+    period: '2024 — 2026',
+    summary: 'Participated in accelerator and founder-in-residence programs including BHive GEIP, Accelerator Centre RevLab, and League of Innovators, building founder skills alongside Data Fellows and Inscend.',
+    tags: ['Accelerator', 'Founder Development'],
   },
   {
     company: 'ESGTree',
@@ -157,9 +207,37 @@ export const experience: ExperienceItem[] = [
     tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
   },
   {
-    company: 'AgroMall',
+    company: 'Rollback Ally',
+    role: 'Lead Data Analyst',
+    period: 'Feb 2023 — Sep 2023',
+    summary: 'Led data analysis and reporting work at Rollback Ally.',
+    tags: ['Data Analysis', 'Reporting'],
+  },
+  {
+    company: 'Metridash',
+    role: 'Business Intelligence Analyst',
+    period: 'Jan 2023 — May 2023',
+    summary: 'Business intelligence and reporting work at Metridash.',
+    tags: ['Business Intelligence', 'Reporting'],
+  },
+  {
+    company: 'Analytic Company GmbH',
     role: 'Data Analyst',
-    period: 'Mar 2021 — Aug 2022',
+    period: 'May 2022 — Nov 2022',
+    summary: 'Data analysis work at Analytic Company GmbH.',
+    tags: ['Data Analysis'],
+  },
+  {
+    company: 'Quantum Analytics NG',
+    role: 'Data Analyst Intern',
+    period: 'Sep 2021 — Nov 2021',
+    summary: 'Data analyst internship at Quantum Analytics NG.',
+    tags: ['Data Analysis'],
+  },
+  {
+    company: 'AgroMall',
+    role: 'Business Intelligence Analyst Intern',
+    period: 'Jun 2021 — Oct 2021',
     summary: 'Built operational dashboards and recurring reports across agricultural and financial workflows while improving validation and automation.',
     tags: ['Power BI', 'SQL', 'Excel', 'Python'],
   },
@@ -169,10 +247,17 @@ export const projects: Project[] = [
   {
     title: 'Inscend',
     category: 'Product',
-    blurb: 'An ecommerce technology company helping independent merchants understand, adopt, and make better use of technology. Previously developed and launched an AI-powered B2B SaaS product, piloted with Shopify merchants and backed by a development and referral agreement with SHOPLINE.',
+    blurb: 'An AI-powered B2B SaaS platform for ecommerce merchants, founded and launched Nov 2025 — Nov 2026. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
     href: 'https://www.inscend.io/',
     tags: ['Ecommerce', 'Product', 'Shopify'],
-    featured: true,
+    badge: 'Past Venture',
+    caseStudy: {
+      context: 'Independent merchants running ecommerce stores, often on Shopify, need to continuously track what’s affecting their sales and operations, but rarely have the time or tooling to do it well.',
+      problem: 'Founders were spending time manually checking their stores instead of acting on what actually needed their attention.',
+      contribution: 'Founded Inscend and led a distributed engineering team building the product end to end.',
+      approach: 'Built an AI-powered B2B SaaS platform that monitors store activity, surfaces what needs attention, and prepares next steps, bringing the founder in when judgment is required. Validated the approach through customer discovery with 50+ founders and Shopify merchant pilots.',
+      outcome: 'Secured early paying customers and a development and referral agreement with SHOPLINE. Selected as a finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    },
   },
   {
     title: 'Data Fellows',
@@ -180,7 +265,21 @@ export const projects: Project[] = [
     blurb: 'A global AI and data community with 1,600+ members across 33+ countries, focused on professional development, technology education, community building, and industry partnerships.',
     href: 'https://datafellowsai.com/',
     tags: ['Community', 'Education', 'Data'],
-    featured: true,
+    badge: 'Active Venture',
+    caseStudy: {
+      context: 'Many data and AI professionals, especially outside major tech hubs, lack access to structured learning, mentorship, and industry connections.',
+      problem: 'Opportunities in data and AI weren’t evenly accessible, and there was no single place bringing practitioners together across regions.',
+      contribution: 'Founded and lead Data Fellows, building its programs, partnerships, and community operations from the ground up.',
+      approach: 'Built learning programs, professional development initiatives, industry partnerships, and community events, bringing together professionals and organizations across countries.',
+      outcome: 'Grew it into a global AI and data community with 1,600+ members across 33+ countries.',
+    },
+  },
+  {
+    title: 'BizPilot AI',
+    category: 'Experiment',
+    blurb: 'An early experiment built through Data Fellows, started in 2025. It initially explored a marketplace connecting businesses with data professionals, then shifted toward AI-powered decision intelligence for small businesses. That work later informed Inscend.',
+    href: 'https://www.producthunt.com/products/data-fellows',
+    tags: ['AI', 'Decision Intelligence', 'Data Fellows'],
   },
   {
     title: 'Inscend Source Agent',
@@ -261,13 +360,54 @@ export const projects: Project[] = [
   },
 ];
 
-export const writing: WritingItem[] = [
+export const publications: Publication[] = [
   {
     type: 'Article',
-    title: 'Four Months Later, I Am Building Differently',
-    source: 'LinkedIn',
-    blurb: 'Notes from Startupfest, customer calls, collaboration, narrowing Inscend’s focus, launching with Shopify, and learning what earns trust.',
-    href: 'https://www.linkedin.com/pulse/four-months-later-i-am-building-differently-tobi-oladimeji-zuwmc',
+    title: 'Building a Lean and Affordable Data Strategy',
+    source: 'IKONIK Magazine',
+    date: 'Nov 11, 2026',
+    blurb: 'Why small businesses and entrepreneurs don’t need expensive tools or large teams to use data well, and how to start with a simple, sustainable routine.',
+    href: 'https://ikonikpress.com/building-a-lean-and-affordable-data-strategy/',
+  },
+  {
+    type: 'Profile',
+    title: 'Beyond Data: How Tobi Oladimeji Is Redefining the Human Side of Innovation',
+    source: 'IKONIK Magazine',
+    date: 'Nov 23, 2025',
+    blurb: 'A profile and Q&A on founding Data Fellows, building Inscend, and making data practical for small business owners across dozens of countries.',
+    href: 'https://ikonikpress.com/beyond-data-how-tobi-oladimeji-is-redefining-the-human-side-of-innovation/',
+  },
+  {
+    type: 'Article',
+    title: 'Avoiding Common Data Mistakes',
+    source: 'IKONIK Magazine',
+    date: 'Oct 22, 2025',
+    blurb: 'Frequent data-handling errors small business owners make, and practical fixes for each.',
+    href: 'https://ikonikpress.com/avoiding-common-data-mistakes-by-tobi-oladimeji-for-ikonik-magazine/',
+  },
+  {
+    type: 'Article',
+    title: 'Practical Ways Small Businesses Can Use Data to Grow',
+    source: 'IKONIK Magazine',
+    date: 'Jun 30, 2025',
+    blurb: 'Simple, practical ways small businesses can use the data they already have, without advanced tools.',
+    href: 'https://ikonikpress.com/practical-ways-small-businesses-can-use-data-to-grow/',
+  },
+  {
+    type: 'Feature',
+    title: 'Championing Data-Driven Decision-Making for Small Businesses',
+    source: 'AfriBlocks',
+    date: 'Jul 12, 2024',
+    blurb: 'Profiled by AfriBlocks, a Techstars-backed platform spotlighting high-impact African professionals.',
+    href: 'https://blog.afriblocks.com/en/championing-data-driven-decision-making-for-small-businesses',
+  },
+  {
+    type: 'Video',
+    title: 'Data Too Complex? This AI Makes It Simple for Small Biz!',
+    source: 'CanadianSME Small Business Magazine',
+    blurb: 'Video appearance on the CanadianSME Small Business Magazine YouTube channel, discussing making data and AI practical for small businesses.',
+    href: 'https://www.youtube.com/watch?v=kegYSA9PtAM',
+    thumbnail: 'https://i.ytimg.com/vi/kegYSA9PtAM/hqdefault.jpg',
   },
   {
     type: 'Recognition',
@@ -277,40 +417,40 @@ export const writing: WritingItem[] = [
     href: 'https://www.loi.ac/',
   },
   {
-    type: 'Feature',
-    title: 'Championing Data-Driven Decision-Making for Small Businesses',
-    source: 'AfriBlocks',
-    blurb: 'Profiled by AfriBlocks, a Techstars-backed platform spotlighting high-impact African professionals.',
-    href: 'https://blog.afriblocks.com/en/championing-data-driven-decision-making-for-small-businesses',
+    type: 'Recognition',
+    title: 'SAAS NORTH AI PitchFest — Finalist',
+    source: 'SAAS NORTH',
+    blurb: 'Finalist for the 9th annual SAAS NORTH Conference AI PitchFest, pitching Inscend in Ottawa.',
+    href: 'https://www.linkedin.com/posts/tobioladimeji_saasnorth-pitchfestai-inscend-share-7513323612762955777-EkPp/',
   },
   {
-    type: 'Profile',
-    title: 'Beyond Data: How Tobi Oladimeji Is Redefining the Human Side of Innovation',
-    source: 'IKONIK Magazine',
-    blurb: 'A profile on decision intelligence, community building, entrepreneurship, and making data useful to small businesses.',
-    href: 'https://ikonikpress.com/beyond-data-how-tobi-oladimeji-is-redefining-the-human-side-of-innovation/',
-  },
-  {
-    type: 'Article',
-    title: 'Practical Ways Small Businesses Can Use Data to Grow',
-    source: 'IKONIK Magazine',
-    blurb: 'A practical guide to using everyday business data without expensive or complicated tooling.',
-    href: 'https://ikonikpress.com/practical-ways-small-businesses-can-use-data-to-grow/',
-  },
-  {
-    type: 'Article',
-    title: 'Avoiding Common Data Mistakes',
-    source: 'IKONIK Magazine',
-    blurb: 'A field guide to the data mistakes that quietly cost small businesses time, money, and trust.',
-    href: 'https://ikonikpress.com/avoiding-common-data-mistakes-by-tobi-oladimeji-for-ikonik-magazine/',
+    type: 'Recognition',
+    title: 'OBSIDI BFUTR 2026 — Pitch Finalist',
+    source: 'OBSIDI',
+    blurb: 'Pitched Inscend at BFUTR 2026 in Mississauga, competing for up to $350,000.',
+    href: 'https://www.linkedin.com/posts/tobioladimeji_bfutr2026-blackfounders-inscend-share-7521118285040623616-ALE-/',
   },
 ];
+
+export const newsletter: Newsletter = {
+  title: 'Data Made Simple',
+  description: 'Data Made Simple is a weekly note on how data, analytics, and AI show up in real work, based on lessons I’ve learned.',
+  href: 'https://www.linkedin.com/newsletters/data-made-simple-7416025825822617600',
+  linkLabel: 'Read on LinkedIn',
+  editions: [
+    { title: 'Four Months Later, I Am Building Differently', date: 'Jul 22, 2026', href: 'https://www.linkedin.com/pulse/four-months-later-i-am-building-differently-tobi-oladimeji-zuwmc' },
+    { title: 'What Your First 100 Customers Are Quietly Teaching You', date: 'Mar 23, 2026' },
+    { title: 'Most Founders Don’t Have a Data Problem. They Have a Question Problem.', date: 'Mar 16, 2026' },
+    { title: 'Small Businesses Have the Advantage. They Just Don’t Realize It.', date: 'Mar 9, 2026' },
+    { title: 'Why We Optimize for the Wrong Test', date: 'Mar 2, 2026' },
+  ],
+};
 
 export const capabilities: CapabilityGroup[] = [
   { label: 'Analytics & BI', items: ['Power BI', 'SQL', 'Advanced Excel', 'Tableau', 'KPI design', 'Executive reporting'] },
   { label: 'Data & Engineering', items: ['Python', 'ETL', 'Data quality', 'Validation', 'PostgreSQL', 'Microsoft SQL Server'] },
   { label: 'AI & Automation', items: ['LLM workflows', 'Document extraction', 'AI evaluation', 'Workflow automation', 'Decision systems'] },
-  { label: 'Product & Strategy', items: ['Product discovery', 'Founder research', 'Requirements', 'Stakeholder engagement', 'Partnerships'] },
+  { label: 'Product & Strategy', items: ['Product discovery', 'Customer research', 'Business strategy', 'Team leadership', 'Community development'] },
 ];
 
 export const education: EducationItem[] = [
@@ -318,8 +458,215 @@ export const education: EducationItem[] = [
   { school: 'Landmark University', degree: 'B.Sc., Computer Science', year: '2022', location: 'Nigeria' },
 ];
 
-export const testimonials: Testimonial[] = [
-  { quote: 'Tobi really helped us in analyzing data and report generation for various clients, developing them in Power BI and integrating databases. He constantly solved problems and proposed new ideas.', name: 'Edgardo Jaramillo' },
-  { quote: 'His patience, professionalism, and capability to understand and work with disorganized datasets have turned him into an asset for our team.', name: 'Daniela Titus' },
-  { quote: 'Tobi’s ability to tackle complex data challenges and his eagerness to learn set him apart. He brings a fresh perspective to every project.', name: 'Andrew S. Nevin' },
+export const recommendations: Recommendation[] = [
+  // Category A — Managers & Senior Colleagues
+  {
+    name: 'Andrew S. Nevin, PhD',
+    title: 'Partner, Financial Services Leader and Chief Economist, PwC',
+    relationship: 'Senior colleague at PwC; did not manage Tobi directly',
+    category: 'Managers & Senior Colleagues',
+    date: 'Feb 8, 2024',
+    quote: 'Tobi is an outstanding young professional with so much potential. During our time at PwC, I witnessed his dedication to mastering data analysis. Tobi’s ability to tackle complex data challenges and his eagerness to learn set him apart. He’s not just a team player but also brings a fresh perspective to every project. I highly recommend Tobi for his skills, passion, and the promise he holds in the field of data analytics.',
+    photo: '/images/recommendations/andrew-nevin.jpg',
+    featured: true,
+  },
+  {
+    name: 'Edgardo Jaramillo',
+    title: 'CEO, Rollback Ally',
+    relationship: 'Managed Tobi directly',
+    category: 'Managers & Senior Colleagues',
+    date: 'Sep 27, 2023',
+    quote: 'It was a great pleasure to have worked with Tobi. He is a very responsible, determined, and hard working professional. Tobi really helped us in analyzing data and report generation for various clients, developing them in PowerBi and integrating databases. Constantly solved problems and proposed new ideas. Tobi was always a team player and was invested in making things work. Apart from being a great professional he is a great person.',
+    photo: '/images/recommendations/edgardo-jaramillo.jpg',
+    featured: true,
+  },
+  // Category B — Teammates
+  {
+    name: 'Daniela Titus',
+    title: 'Executive Assistant, Servi-Tek Facility Solutions',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Sep 15, 2023',
+    quote: 'Tobi’s exceptional patience, professionalism, and capability to understand and work with disorganized data sets have turned him into an asset for our team. I admire his capacity to create reports from scratch in Power BI and connect various platforms to turn simple datasets added to a Google Sheets into meaningful reports for making informed decisions. Of course, he is a great coworker, and I can wholeheartedly recommend Tobi without any doubt.',
+    photo: '/images/recommendations/daniela-titus.jpg',
+    featured: true,
+  },
+  {
+    name: 'Santiago Guevara León',
+    title: 'Ticketing Specialist, Tuboleta',
+    relationship: 'Worked with Tobi on the same team, at Rollback Ally',
+    category: 'Teammates',
+    date: 'Sep 14, 2023',
+    quote: 'I wholeheartedly recommend Tobi for his exceptional contributions at Rollbackally. From the moment he joined our team, it was clear that he possessed a remarkable ability to adapt, coupled with a strong work ethic that consistently translated into outstanding results. Tobi’s dedication to his work is truly commendable, and his talent shines through in all that he undertakes. He is not only a skilled professional but also a natural leader who knows how to guide the team effectively toward achieving our goals. I am confident that Tobi will continue to excel in any role he takes on in the future.',
+    photo: '/images/recommendations/santiago-guevara-leon.jpg',
+    featured: true,
+  },
+  {
+    name: 'Princess Chiamaka Eze',
+    title: 'Social Media Manager, Ella’s Administrative Consult Ltd.',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 10, 2023',
+    quote: 'I’ve known Tobi for a while and he has proven himself to be a professional data analyst... He’s a cool person to work with both on a professional and individual level and he always delivers any job given to him before the deadline. I recommend him without any reservation because he will be a valuable asset to any organization that hires him.',
+    photo: '/images/recommendations/chiamaka-eze.jpg',
+  },
+  {
+    name: 'Salamatu Alabi',
+    title: 'Content Writer and SEO Specialist, AGPAYTECH LTD.',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 2, 2023',
+    quote: 'I have known Tobi for some time now and during that time, I have been consistently impressed by his competence. He has a proven track record of achievements or skills and has demonstrated positive character traits in both personal/professional settings. I have no doubt that Tobi would be an asset to any organization lucky enough to have him on their team. He has a strong work ethic, excellent communication skills, and a commitment to delivering exceptional results. I recommend Tobi without reservation and am confident that he will make a valuable contribution to any organization he joins.',
+    photo: '/images/recommendations/salamatu-alabi.jpg',
+  },
+  {
+    name: 'Betty Orji',
+    title: 'Director, Bettybnks Business Consult',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 2, 2023',
+    quote: 'Tobi is an incredibly valuable resource. I had the privilege to work with him. He is so passionate about his job as a data analyst and works exceptionally well alone or with a team. I highly recommend his services!',
+    photo: '/images/recommendations/betty-orji.jpg',
+  },
+  {
+    name: 'Praise Oluwatosin Alagbe, AICMC',
+    title: 'Program Coordinator & Virtual Assistant, Lis School of Business Recovery Ltd.',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 1, 2023',
+    quote: 'Tobi Oladimeji has proven to be very sound in Data Analysis. His aim to help businesses improve on their data analysis and make sound decisions is very applaudable. I recommend him for any opportunity related to this field.',
+    photo: '/images/recommendations/praise-alagbe.jpg',
+  },
+  {
+    name: 'Sherley Mercelie P. M Eugene',
+    title: 'Interpreter (Creole–Spanish), UNHCR',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 1, 2023',
+    quote: 'Tobi is a young professional so passionate about data. He is competent, efficient, and proactive. I’ve never met someone so committed to data as Tobi. Tobi is a leader also. He uses his knowledge for the better good and invests himself in social projects that will also benefit his community. I believe that having access to quality knowledge is good, and being brilliant is inspiring. But social retribution is what makes any professional stand out for me. Tobi is all that. He will be an asset to any team.',
+    photo: '/images/recommendations/sherley-eugene.jpg',
+  },
+  {
+    name: 'Gloria Olaniyan',
+    title: 'CEO & Founder, TRACK Africa',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Mar 1, 2023',
+    quote: 'I highly recommend Tobi for his exceptional ability to interpret complex data sets and provide actionable insights, as well as his excellent communication skills which have been instrumental in driving successful collaborations and decision-making processes within an organization. Tobi has demonstrated exceptional skills in analyzing data, identifying trends and patterns, and...',
+    photo: '/images/recommendations/gloria-olaniyan.jpg',
+    isExcerpt: true,
+    featured: true,
+  },
+  {
+    name: 'Pranav Mahesan',
+    title: 'Quant Risk Analyst, Dolidol',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Sep 28, 2022',
+    quote: 'Tobi is very hard working and result oriented individual. He is a great team player and possess strong leadership and communication skills.',
+    photo: '/images/recommendations/pranav-mahesan.jpg',
+  },
+  {
+    name: 'Oyindamola Victor',
+    title: 'QA (Backend), Turing',
+    relationship: 'Worked with Tobi on the same team',
+    category: 'Teammates',
+    date: 'Sep 28, 2022',
+    quote: 'Tobi is a great and critical thinker in the world of analytics, his passion and skills go beyond the scope of work but also ensuring value is added...',
+    photo: '/images/recommendations/oyindamola-victor.jpg',
+    isExcerpt: true,
+  },
+  // Category C — Educators & Mentors
+  {
+    name: 'Vinod Thomas',
+    title: 'Vice President, Cybersecurity, M&T Bank',
+    relationship: 'Was Tobi’s teacher, Diagnostic Analysis at Conestoga College',
+    category: 'Educators & Mentors',
+    date: 'Oct 11, 2024',
+    quote: 'I had the pleasure of teaching Tobi in my Diagnostic Analysis course at Conestoga College, and I am confident he is a standout professional. His exceptional critical thinking and problem-solving skills were evident throughout the course, but what truly sets Tobi apart is his strong entrepreneurial spirit. Tobi consistently approached complex problems with creativity, determination, and a remarkable ability to see opportunities where others might see obstacles. His technical expertise, combined with a passion for innovative solutions and a drive to understand the broader business implications of his work, made him a natural leader in group projects. He has that rare combination of analytical rigor and forward-thinking that is crucial in today’s rapidly evolving landscape. Beyond his technical abilities, Tobi’s work ethic and commitment to excellence were outstanding. He regularly exceeded expectations, offering insights that enhanced discussions and group collaborations. His entrepreneurial mindset is reflected in his proactive approach to problem-solving and his eagerness to take on new challenges. I am confident that Tobi will excel in any professional or entrepreneurial endeavor he pursues. His ability to merge strategic thinking with practical execution makes him an invaluable asset to any team or organization. I highly recommend him to anyone looking for a dedicated, innovative, and driven professional.',
+    photo: '/images/recommendations/vinod-thomas.jpg',
+    featured: true,
+  },
+  {
+    name: 'Chandeep Sharma',
+    title: 'Data Specialist, Definity',
+    relationship: 'Was Tobi’s teacher',
+    category: 'Educators & Mentors',
+    date: 'Sep 5, 2024',
+    quote: 'Toby is sincere and has a zeal for learning and seeks opportunities to apply AI concepts and tools. His dedication in his deliverables truly shows his commitment. I would recommend him and wish best for his future endeavours.',
+    photo: '/images/recommendations/chandeep-sharma.jpg',
+  },
+  {
+    name: 'Dr. Ganesh Subramanian',
+    title: 'Cyber Security Analyst & AWS Cloud Specialist',
+    relationship: 'Was Tobi’s teacher, Business Intelligence Tools',
+    category: 'Educators & Mentors',
+    date: 'Apr 24, 2024',
+    quote: 'Tobi was an exceptional student in my Business Intelligence Tools course. He demonstrated a strong understanding of analytical methods and models, excelled in data visualization techniques, and showcased a keen grasp of probability theory. Tobi’s dedication, proactive approach to learning, and collaborative spirit made him a standout in the class. I highly recommend him for any opportunities where his analytical skills and expertise in business intelligence and statistics are needed.',
+    photo: '/images/recommendations/ganesh-subramanian.jpg',
+  },
+  {
+    name: 'Timothy Laleye',
+    title: 'Professor, Conestoga College',
+    relationship: 'Was Tobi’s teacher, SQL',
+    category: 'Educators & Mentors',
+    date: 'Apr 24, 2024',
+    quote: 'I had the pleasure of teaching Tobi SQL, and I wholeheartedly recommend him. Tobi consistently demonstrated a strong grasp of complex concepts, coupled with a dedicated work ethic and a collaborative spirit. His passion for SQL and his ability to apply it to real-world scenarios make him an asset to any team. I have no doubt that Tobi will continue to excel in his career and make significant contributions wherever he goes.',
+    photo: '/images/recommendations/timothy-laleye.jpg',
+  },
+  {
+    name: 'Marvi Shaikh',
+    title: 'Senior Business Data Analyst, Sun Life',
+    relationship: 'Was Tobi’s teacher',
+    category: 'Educators & Mentors',
+    date: 'Apr 23, 2024',
+    quote: 'Toby is highly proficient in Python and advanced data analysis, specializing in predictive modelling. Throughout the course, his dedication and hardworking nature were evident in his approach to assignments and projects. Toby’s exceptional communication and presentation skills, coupled with his strong teamwork, attention to detail, and evident passion for data, make him a valuable asset to any team or organization.',
+    photo: '/images/recommendations/marvi-shaikh.jpg',
+  },
+  {
+    name: 'Roseline Oluwaseun Ogundokun',
+    title: 'Senior Lecturer',
+    relationship: 'Was Tobi’s teacher',
+    category: 'Educators & Mentors',
+    date: 'Sep 30, 2022',
+    quote: 'I have know Tobi for 4 years and for those years, he impressed me with intense focus and commitment. I understand your organisation was made for persons who are deligent. Hardworking and have demonstrated relevant research and leadership skills. Tobi is no exception. Due to Tobi commitments to his research and academic work, he came out with a good grade in his first degree. He is indeed a talented and mature-minded student. I am certain and believe that Tobi is a perfect fit for your organisation and I give my highest recommendation for him.',
+    photo: '/images/recommendations/roseline-ogundokun.jpg',
+  },
+  // Category D — Clients & Collaborators
+  {
+    name: 'Iwalola Adetunji-Odogwu, PhD',
+    title: 'Principal Information Officer, Federal Ministry of Information and National Orientation',
+    relationship: 'Was Tobi’s client',
+    category: 'Clients & Collaborators',
+    date: 'Mar 2, 2023',
+    quote: 'Tobi Oladimeji is a highly professional individual with a keen interest in data analysis. He believes data is life and therefore pays keen attention to making the mundane tasks of analysing data become readable and usable for businesses and individuals. With other commendable skills like storytelling abilities and an impeccable grasp of data analysis tools like Excel, I find working with him easy and stress free. I highly recommend him for business consultations.',
+    photo: '/images/recommendations/iwalola-adetunji-odogwu.jpg',
+  },
+  {
+    name: 'Karimah Lawal',
+    title: 'Business Development Manager, VestarCoffeeNG',
+    relationship: 'Worked with Tobi, but on different teams',
+    category: 'Clients & Collaborators',
+    date: 'Mar 1, 2023',
+    quote: 'Tobi is a highly skilled Data Analyst with great skills in Python and many other relatable skills. He’s commendable for breaking down complex data into forms that will turn into valuable insights for any organization and increase revenue. He is bold in his declaration of his skills and it shows in his job management too. He is a perfect fit for any organization seeking a brilliant Data Analyst with a root understanding of his job.',
+    photo: '/images/recommendations/karimah-lawal.jpg',
+  },
+  {
+    name: 'Alerechi Ordu',
+    title: 'Engineering Manager, Oxygen X Finance (Access Holding)',
+    relationship: 'Worked with Tobi, but on different teams',
+    category: 'Clients & Collaborators',
+    date: 'Mar 1, 2023',
+    quote: 'Tobi is a highly skilled Data Analyst with proven relevant experience over the years. He’s a tech enthusiast with strong networking and collaborative skill. I highly recommend him because I have had an encounter with him.',
+    photo: '/images/recommendations/alerechi-ordu.jpg',
+  },
+  {
+    name: 'Aaron Duniya',
+    title: 'Founder, Jabari Quest Solutions',
+    relationship: 'Worked with Tobi, but they were at different companies',
+    category: 'Clients & Collaborators',
+    date: 'Mar 1, 2023',
+    quote: 'Some say Data is Life. Truly, Tobi exemplifies this saying in how he gives life to his work as a Data Analyst. Tobi can utilize his skills, in helping you understand trends and what you need to move your business from where it is, to where you want it to be. I recommend Tobi to any Person or Company that needs his services.',
+    photo: '/images/recommendations/aaron-duniya.jpg',
+  },
 ];
