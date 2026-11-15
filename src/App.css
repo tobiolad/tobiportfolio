@@ -72,6 +72,12 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: transform 0.12s ease;
+}
+
+.palette-trigger:active {
+  transform: scale(0.95);
+  transition-duration: 0.08s;
 }
 
 .palette-trigger svg {
@@ -399,6 +405,12 @@
   color: var(--muted);
   font-size: 11px;
   font-weight: 700;
+  transition: transform 0.12s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.filters button:active {
+  transform: scale(0.95);
+  transition-duration: 0.08s;
 }
 
 .filters button.active {
@@ -435,7 +447,13 @@
   transition: transform 0.35s ease;
 }
 
-.project-card:hover .project-image img {
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-image img {
+    transform: scale(1.025);
+  }
+}
+
+.project-card:active .project-image img, .project-card:active .project-visual img {
   transform: scale(1.025);
 }
 
@@ -669,9 +687,17 @@ button.text-link:hover {
   animation-delay: calc(var(--i, 0) * 70ms);
 }
 
-.writing-card:hover {
-  transform: translateY(-3px);
+@media (hover: hover) and (pointer: fine) {
+  .writing-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--strong);
+  }
+}
+
+.writing-card:active {
+  transform: scale(0.98);
   border-color: var(--strong);
+  transition-duration: 0.08s;
 }
 
 .writing-card h3 {
@@ -719,9 +745,11 @@ button.text-link:hover {
   transition: border-color 0.18s ease, transform 0.18s ease;
 }
 
-.video-card:hover {
-  border-color: var(--strong);
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .video-card:hover {
+    border-color: var(--strong);
+    transform: translateY(-2px);
+  }
 }
 
 .video-thumb {
@@ -738,7 +766,19 @@ button.text-link:hover {
   transition: transform 0.35s ease;
 }
 
-.video-card:hover .video-thumb img {
+@media (hover: hover) and (pointer: fine) {
+  .video-card:hover .video-thumb img {
+    transform: scale(1.04);
+  }
+}
+
+.video-card:active {
+  border-color: var(--strong);
+  transform: scale(0.99);
+  transition-duration: 0.08s;
+}
+
+.video-card:active .video-thumb img {
   transform: scale(1.04);
 }
 
@@ -1057,10 +1097,19 @@ blockquote footer {
   background: transparent;
   display: grid;
   place-items: center;
+  transition: border-color 0.18s ease, transform 0.12s ease;
 }
 
-.rec-nav button:hover {
+@media (hover: hover) and (pointer: fine) {
+  .rec-nav button:hover {
+    border-color: var(--strong);
+  }
+}
+
+.rec-nav button:active {
   border-color: var(--strong);
+  transform: scale(0.88);
+  transition-duration: 0.08s;
 }
 
 .rec-nav svg {
@@ -1123,6 +1172,12 @@ blockquote footer {
   line-height: 1;
   display: grid;
   place-items: center;
+  transition: transform 0.12s ease;
+}
+
+.rec-modal-close:active {
+  transform: scale(0.88);
+  transition-duration: 0.08s;
 }
 
 .rec-modal .filters {

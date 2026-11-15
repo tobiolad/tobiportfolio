@@ -13,6 +13,12 @@
       "skillPath": "agent-skills/web-design/build-awwwards-quality-sites/SKILL.md",
       "computedHash": "8a661b539323c08d28ece1b242de7285403469bfc0a09028f783cfc9338dcae6"
     },
+    "emil-design-eng": {
+      "source": "jaimejunr/claude-code-frontend-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/emil-design-eng/skills/emil-design-eng/SKILL.md",
+      "computedHash": "55735a70a886326ee8ba1dd4d1ee040e4e9503a536891467e4ed7e114a69b0dd"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
