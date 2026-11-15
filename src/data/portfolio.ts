@@ -189,7 +189,7 @@ export const experience: ExperienceItem[] = [
     company: 'Founder in Residence / Accelerator Programs',
     role: 'Founder in Residence',
     period: '2024 — 2026',
-    summary: 'Participated in accelerator and founder-in-residence programs including BHive GEIP, Accelerator Centre RevLab, and League of Innovators, building founder skills alongside Data Fellows and Inscend.',
+    summary: 'Selected into multiple global and Canadian accelerator programs supporting product development, growth, and fundraising: BHive (GEIP), Accelerator Centre (RevLab), League of Innovators (LOI), Emerging Leaders Collective (ELC), and LvlUp Ventures (Labs), building founder skills alongside Data Fellows and Inscend.',
     tags: ['Accelerator', 'Founder Development'],
   },
   {
