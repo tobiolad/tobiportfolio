@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { IconArrow } from './Icons';
 import { recommendations, type Recommendation, type RecommendationCategory } from '../data/portfolio';
+import { useStaggerReveal } from '../motion';
 
 const CATEGORIES: RecommendationCategory[] = [
   'Managers & Senior Colleagues',
@@ -137,6 +138,7 @@ const Recommendations = () => {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>('All');
   const [modalOpen, setModalOpen] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
+  useStaggerReveal(trackRef, '.rec-card');
 
   const shown = useMemo(
     () => (filter === 'All' ? recommendations.filter((r) => r.featured) : recommendations.filter((r) => r.category === filter)),
@@ -152,7 +154,7 @@ const Recommendations = () => {
   };
 
   return (
-    <section id="recommendations" className="section shell" data-reveal>
+    <section id="recommendations" className="section shell">
       <header className="section-head">
         <p className="eyebrow">What people say</p>
         <h2>Recommendations from the people I&rsquo;ve worked with.</h2>

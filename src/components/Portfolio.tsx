@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { IconArrowUpRight } from './Icons';
 import { projects, type Project, type ProjectCategory } from '../data/portfolio';
+import { useStaggerReveal } from '../motion';
 
 const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'Experiment', 'AI Agents', 'BI', 'Python / ML', 'SQL', 'Data'];
 
@@ -75,9 +76,11 @@ const Portfolio = () => {
     () => (filter === 'All' ? projects : projects.filter((p) => p.category === filter)),
     [filter]
   );
+  const gridRef = useRef<HTMLDivElement>(null);
+  useStaggerReveal(gridRef, '.project-card');
 
   return (
-    <section id="work" className="section shell" data-reveal>
+    <section id="work" className="section shell">
       <header className="section-head">
         <p className="eyebrow">Selected work</p>
         <h2>Products, systems, and analysis built to make decisions clearer.</h2>
@@ -96,7 +99,7 @@ const Portfolio = () => {
           </button>
         ))}
       </div>
-      <div className="project-grid">
+      <div className="project-grid" ref={gridRef}>
         {shown.map((p) => <ProjectCard key={p.title} project={p} />)}
       </div>
     </section>

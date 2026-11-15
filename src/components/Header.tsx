@@ -1,7 +1,9 @@
+import { useRef } from 'react';
 import { scrollToSection, scrollToTop } from '../utilities';
 import { IconSearch, IconArrow, IconArrowUpRight, SocialIcon } from './Icons';
 import ThemeToggle from './ThemeToggle';
 import { profile } from '../data/portfolio';
+import { useHeroIntro } from '../motion';
 
 const NAV_ITEMS = [
    { href: '#work', label: 'Work' },
@@ -15,6 +17,8 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
    const handleNav = (href: string) => (e: React.MouseEvent) => {
       scrollToSection(href)(e);
    };
+   const heroRef = useRef<HTMLElement>(null);
+   useHeroIntro(heroRef);
 
    return (
       <>
@@ -38,14 +42,20 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
             </div>
          </nav>
 
-         <header className="hero shell" id="home">
+         <header className="hero shell" id="home" ref={heroRef}>
             <div className="hero-copy">
-               <p className="status"><i /> {profile.location}</p>
-               <p className="eyebrow">Founder · Product builder · Data & AI professional</p>
-               <h1 className="hero-name">{profile.name}</h1>
-               <p className="hero-sub">{profile.headline}</p>
-               <p className="lead">{profile.intro}</p>
-               <div className="actions">
+               <p className="status" data-hero-item><i /> {profile.location}</p>
+               <p className="eyebrow" data-hero-item>Founder · Product builder · Data & AI professional</p>
+               <h1 className="hero-name" aria-label={profile.name}>
+                  {profile.name.split(' ').map((word, i) => (
+                     <span className="word-mask" key={i}>
+                        <span className="word-inner" aria-hidden="true">{word}</span>
+                     </span>
+                  ))}
+               </h1>
+               <p className="hero-sub" data-hero-item>{profile.headline}</p>
+               <p className="lead" data-hero-item>{profile.intro}</p>
+               <div className="actions" data-hero-item>
                   <a className="button primary" href="#work" onClick={handleNav('#work')}>
                      Explore My Work <IconArrow />
                   </a>
@@ -53,7 +63,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                      Get in Touch <IconArrowUpRight />
                   </a>
                </div>
-               <div className="socials">
+               <div className="socials" data-hero-item>
                   <a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><SocialIcon name="linkedin" /> LinkedIn</a>
                   <a href={profile.github} target="_blank" rel="noopener noreferrer"><SocialIcon name="github" /> GitHub</a>
                   <a href={profile.x} target="_blank" rel="noopener noreferrer"><SocialIcon name="x" /> X</a>
