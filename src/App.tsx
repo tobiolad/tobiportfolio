@@ -1,5 +1,5 @@
 import './App.css'
-import { About, Contact, Footer, Header, Portfolio, Metrics, Focus, Resume, Testimonials, Publications, CommandPalette } from './components'
+import { About, Contact, Footer, Header, Portfolio, Metrics, Focus, Resume, Recommendations, Publications, CommandPalette } from './components'
 import type { Command } from './components/CommandPalette'
 import { profile, projects, publications } from './data/portfolio'
 import { useScrollReveal, useCommandPalette } from './hooks'
@@ -8,6 +8,7 @@ const NAV_COMMANDS: Command[] = [
   { label: 'Work', group: 'Section', href: '#work' },
   { label: 'Experience', group: 'Section', href: '#experience' },
   { label: 'Publications', group: 'Section', href: '#publications' },
+  { label: 'Recommendations', group: 'Section', href: '#recommendations' },
   { label: 'About', group: 'Section', href: '#about' },
   { label: 'Contact', group: 'Section', href: '#contact' },
 ]
@@ -36,8 +37,8 @@ function App() {
         <Portfolio />
         <Resume />
         <Publications />
+        <Recommendations />
         <About />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

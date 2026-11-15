@@ -1,10 +1,10 @@
 :root {
   font-family: Manrope, system-ui, sans-serif;
   color-scheme: dark;
-  --bg: #090c11;
-  --card: #11171f;
-  --card2: #151d27;
-  --text: #f4f7fa;
+  --bg: #050709;
+  --card: #10151c;
+  --card2: #141a22;
+  --text: #f6f8fa;
   --muted: #9ca7b5;
   --faint: #697583;
   --line: rgba(255, 255, 255, 0.1);
@@ -14,19 +14,20 @@
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.25);
   --max: 1180px;
   --mono: 'DM Mono', ui-monospace, monospace;
+  --display: 'Fraunces', 'Times New Roman', serif;
 }
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f3f0e9;
-  --card: #fffefa;
-  --card2: #ece8df;
-  --text: #11161c;
+  --bg: #f7f4ec;
+  --card: #fffefb;
+  --card2: #efebe0;
+  --text: #0e1217;
   --muted: #606a75;
   --faint: #818890;
   --line: rgba(16, 22, 28, 0.11);
   --strong: rgba(16, 22, 28, 0.19);
-  --accent: #1d7959;
+  --accent: #15694b;
   --ink: #fff;
   --shadow: 0 26px 70px rgba(60, 50, 30, 0.1);
 }
@@ -36,15 +37,15 @@
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
     color-scheme: light;
-    --bg: #f3f0e9;
-    --card: #fffefa;
-    --card2: #ece8df;
-    --text: #11161c;
+    --bg: #f7f4ec;
+    --card: #fffefb;
+    --card2: #efebe0;
+    --text: #0e1217;
     --muted: #606a75;
     --faint: #818890;
     --line: rgba(16, 22, 28, 0.11);
     --strong: rgba(16, 22, 28, 0.19);
-    --accent: #1d7959;
+    --accent: #15694b;
     --ink: #fff;
     --shadow: 0 26px 70px rgba(60, 50, 30, 0.1);
   }
@@ -71,6 +72,12 @@ body {
 h1, h2, h3, h4 {
   margin: 0;
   font-weight: 700;
+}
+
+h1, h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 p {
