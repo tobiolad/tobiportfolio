@@ -137,10 +137,6 @@
   box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 13%, transparent);
 }
 
-.hero .eyebrow {
-  margin-top: 26px;
-}
-
 .hero-name {
   font-family: var(--display);
   font-style: normal;
