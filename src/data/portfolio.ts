@@ -65,7 +65,8 @@ export interface Project {
   image?: string;
   /** Square logo mark shown instead of the initials placeholder (e.g. for a company/product card). */
   logo?: string;
-  href: string;
+  /** Omitted when there's no public link for the work (e.g. internal employer projects) — the card then has no "View project" link. */
+  href?: string;
   tags: string[];
   /** Short label shown on the card, e.g. "Active Venture" or "Past Venture". */
   badge?: string;
@@ -312,7 +313,6 @@ export const projects: Project[] = [
     title: 'PwC — Enterprise Data Transformation',
     category: 'Data',
     blurb: 'Supported a Dynamics AX to Dynamics 365 F&O enterprise data migration, leading mapping sessions and building Python validation scripts.',
-    href: 'https://www.pwc.com/',
     tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
     caseStudy: {
       context: 'A large-scale ERP migration from Dynamics AX to Dynamics 365 F&O required mapping and validating data across legacy and target systems before cutover.',
