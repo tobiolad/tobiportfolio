@@ -133,10 +133,10 @@ export const profile: Profile = {
   linkedin: 'https://www.linkedin.com/in/tobioladimeji/',
   github: 'https://github.com/tobiolad',
   x: 'https://x.com/tobioladimeji_',
-  headline: 'Data. AI. Product.',
-  tagline: 'Founder & CEO of Data Fellows, building technology to solve hard operational problems.',
-  intro: 'I work across data, artificial intelligence and product development, exploring how technology can solve complex business and operational problems.',
-  bio: 'Tobi Oladimeji is a data, AI, and product professional, entrepreneur, and Founder & CEO of Data Fellows, a software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33+ countries. He has worked across data, AI, and product at PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, and founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
+  headline: 'Building products, exploring ideas, and solving business problems through technology.',
+  tagline: 'Founder of Data Fellows, an independent automation studio and global technology community.',
+  intro: 'I’ve worked across data, AI and product development, from enterprise projects to building my own software products and businesses. I’m the founder of Data Fellows, an independent automation studio helping organizations solve recurring operational challenges through software, data and AI.',
+  bio: 'Tobi Oladimeji is a founder, product builder, and data and AI professional. He founded Data Fellows, an independent automation studio and global technology community with 1,600+ members across 33+ countries, helping organizations solve recurring operational challenges through software, data, and AI. He has worked across data, AI, and product at PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, and founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
 };
 
 /** Companies referenced in Tobi's professional experience, shown as a homepage reference strip, not as Data Fellows customers or partners. */
@@ -160,7 +160,7 @@ export const currentWork: CurrentWorkItem[] = [
   {
     eyebrow: 'Current focus',
     title: 'Data Fellows',
-    description: 'Data Fellows is a software, data, and AI company focused on solving complex operational problems, backed by a global community of over 1,600 professionals across 33+ countries. We build technology to solve hard problems.',
+    description: 'Data Fellows is an independent automation studio helping organizations solve recurring operational challenges through software, data, and AI. Founded in 2022 as a data and technology community, it’s grown into a global network of over 1,600 professionals across 33+ countries.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
@@ -178,8 +178,8 @@ export const experience: ExperienceItem[] = [
     company: 'Data Fellows',
     role: 'Founder & CEO',
     period: 'Aug 2022 – Present',
-    summary: 'Founded and lead Data Fellows, a software, data, and AI company building technology to solve complex operational problems, backed by a global community of over 1,600 professionals across 33+ countries. Built the company’s learning programs, industry partnerships, and community operations from the ground up, and lead its product and technology direction.',
-    tags: ['Data & AI', 'Product Strategy', 'Partnerships'],
+    summary: 'Founded Data Fellows in 2022 as a community for people interested in data and technology, growing it into a global network of over 1,600 professionals across 33+ countries while leading product development, technical collaborations, industry partnerships, learning programs, and community initiatives. Today, Data Fellows operates as an independent automation studio too, designing, building, and managing solutions to recurring operational challenges through software engineering, data systems, and artificial intelligence, alongside continuing to grow the community and support professional development and technical collaboration.',
+    tags: ['Automation', 'Software & AI', 'Community'],
   },
   {
     company: 'Cohere',
@@ -275,16 +275,16 @@ export const projects: Project[] = [
   {
     title: 'Data Fellows',
     category: 'Product',
-    blurb: 'A software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33+ countries.',
+    blurb: 'An independent automation studio and global technology community, helping organizations solve recurring operational challenges through software, data, and AI.',
     href: 'https://datafellowsai.com/',
-    tags: ['Data & AI', 'Product', 'Community'],
+    tags: ['Automation', 'Software', 'Data & AI', 'Community'],
     badge: 'Active Venture',
     caseStudy: {
-      context: 'Many data and AI professionals, especially outside major tech hubs, lack access to structured learning, mentorship, industry connections, and the tooling to turn that knowledge into real products.',
-      problem: 'Opportunities in data and AI weren’t evenly accessible, and there was no single place bringing practitioners together across regions to learn, build, and ship.',
-      contribution: 'Founded and lead Data Fellows, building its programs, partnerships, and community operations from the ground up, and now lead its product and technology direction.',
-      approach: 'Built learning programs, professional development initiatives, and industry partnerships, then grew that into a software, data, and AI company building technology to solve complex operational problems for the community it serves.',
-      outcome: 'Grew Data Fellows into a global community of 1,600+ professionals across 33+ countries, which now backs an active software, data, and AI company.',
+      context: 'Many data and AI professionals, especially outside major tech hubs, lack access to structured learning, mentorship, and industry connections, while organizations everywhere carry recurring operational problems that don’t fit an off-the-shelf software product.',
+      problem: 'Opportunities in data and AI weren’t evenly accessible, and there was no single place bringing practitioners together across regions, while many operational challenges stayed unsolved because they needed something built around the specific problem.',
+      contribution: 'Founded Data Fellows in 2022 as a community for people interested in data and technology, and grew it into an organization that also designs and builds automation solutions for real operational problems.',
+      approach: 'Built learning programs, professional development initiatives, and industry partnerships to grow the community, then added software engineering, data systems, and AI capability to design, build, and manage automation solutions for organizations’ recurring operational challenges.',
+      outcome: 'Grew Data Fellows into a global network of 1,600+ professionals across 33+ countries, which now also operates as an independent automation studio.',
     },
   },
   {
