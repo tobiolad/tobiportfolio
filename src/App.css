@@ -164,14 +164,6 @@
   display: inline-block;
 }
 
-.hero-headline {
-  font-weight: 700;
-  font-size: clamp(1.3rem, 2.1vw, 1.7rem);
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-
 .lead {
   max-width: 720px;
   color: var(--muted);
