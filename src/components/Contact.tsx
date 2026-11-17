@@ -18,8 +18,8 @@ const Contact = () => {
    return (
       <section id="contact" className="contact shell" data-reveal>
          <p className="eyebrow">Contact</p>
-         <h2>Open to full-time roles, technical collaborations, and hard problems.</h2>
-         <p>I’m open to full-time opportunities in data, AI, and product, technical collaborations, and conversations about complex organizational problems. For Data Fellows partnerships or community inquiries, reach out through <a href="https://datafellowsai.com/" target="_blank" rel="noopener noreferrer">datafellowsai.com</a>.</p>
+         <h2>Open to the right opportunities, technical collaborations, and hard problems.</h2>
+         <p>I’m open to the right opportunities in data, AI, and product, technical collaborations, and conversations about complex organizational problems. For Data Fellows partnerships or community inquiries, reach out through <a href="https://datafellowsai.com/" target="_blank" rel="noopener noreferrer">datafellowsai.com</a>.</p>
          <div className="actions">
             <a className="button primary" href={`mailto:${profile.email}`}>
                <IconMail /> Email me

@@ -166,8 +166,8 @@ export const currentWork: CurrentWorkItem[] = [
   },
   {
     eyebrow: 'Open to',
-    title: 'Full-time roles & collaborations',
-    description: 'Open to full-time opportunities in data, AI, and product, technical collaborations, and conversations about complex organizational problems.',
+    title: 'The right opportunities',
+    description: 'Open to the right opportunities in data, AI, and product, technical collaborations, and conversations about complex organizational problems.',
     href: '#contact',
     linkLabel: 'Get in touch',
   },
