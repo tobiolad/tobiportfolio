@@ -391,12 +391,12 @@ export const projects: Project[] = [
     tags: ['ArcGIS', 'Public APIs', 'Geospatial'],
   },
   {
-    title: 'Ontario Community Project',
-    category: 'SQL',
-    blurb: 'SQL analysis of Ontario infrastructure data covering budgets, project status, completion timelines, and community-level decision support.',
+    title: 'Ontario Infrastructure Decision Intelligence',
+    category: 'Data',
+    blurb: 'Full-stack rebuild of a public infrastructure analysis into a decision-intelligence platform: a Python ingestion pipeline with automated data-quality checks, a PostgreSQL dimensional model, a FastAPI analytics layer, and a React dashboard covering budgets, project status, and an interactive map.',
     image: '/images/portfolio/ont_communities.jpg',
     href: 'https://github.com/tobiolad/ont-communities',
-    tags: ['SQL', 'Infrastructure', 'Analysis'],
+    tags: ['Python', 'PostgreSQL', 'FastAPI', 'React'],
   },
   {
     title: 'COVID-19 Pandemic Dashboard',
