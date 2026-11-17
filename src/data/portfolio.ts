@@ -65,7 +65,7 @@ export interface Project {
   image?: string;
   /** Square logo mark shown instead of the initials placeholder (e.g. for a company/product card). */
   logo?: string;
-  /** Omitted when there's no public link for the work (e.g. internal employer projects) — the card then has no "View project" link. */
+  /** Omitted when there's no public link for the work (e.g. internal employer projects); the card then has no "View project" link. */
   href?: string;
   tags: string[];
   /** Short label shown on the card, e.g. "Active Venture" or "Past Venture". */
@@ -139,7 +139,7 @@ export const profile: Profile = {
   bio: 'Tobi Oladimeji is a data, AI, and product professional, entrepreneur, and Founder & CEO of Data Fellows, a software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33+ countries. He has worked across data, AI, and product at PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, and founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
 };
 
-/** Companies referenced in Tobi's professional experience — shown as a homepage reference strip, not as Data Fellows customers or partners. */
+/** Companies referenced in Tobi's professional experience, shown as a homepage reference strip, not as Data Fellows customers or partners. */
 export const experienceLogos: ProgramLogo[] = [
   { name: 'PwC', logo: '/images/experience-logos/pwc.svg' },
   { name: 'Cohere', logo: '/images/experience-logos/cohere.svg' },
@@ -177,84 +177,84 @@ export const experience: ExperienceItem[] = [
   {
     company: 'Data Fellows',
     role: 'Founder & CEO',
-    period: 'Aug 2022 — Present',
+    period: 'Aug 2022 – Present',
     summary: 'Founded and lead Data Fellows, a software, data, and AI company building technology to solve complex operational problems, backed by a global community of over 1,600 professionals across 33+ countries. Built the company’s learning programs, industry partnerships, and community operations from the ground up, and lead its product and technology direction.',
     tags: ['Data & AI', 'Product Strategy', 'Partnerships'],
   },
   {
     company: 'Cohere',
     role: 'AI Data Trainer',
-    period: 'Oct 2026 — Present · Independent Contractor',
+    period: 'Oct 2026 – Present · Independent Contractor',
     summary: 'Supporting machine learning data quality and evaluation workflows through ranking, auditing, error analysis and correction, quality assessment, and optimization feedback across text-based AI tasks.',
     tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
   },
   {
     company: 'Inscend',
     role: 'Founder',
-    period: 'Nov 2025 — Nov 2026',
+    period: 'Nov 2025 – Nov 2026',
     summary: 'Founded and launched an AI-powered B2B SaaS platform for ecommerce merchants. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
     tags: ['Ecommerce Technology', 'Product', 'Team Leadership'],
   },
   {
     company: 'Granted Technologies Inc.',
     role: 'Strategic Advisor (Head of Data Ops)',
-    period: 'Oct 2025 — Aug 2026 · Contract, part-time',
+    period: 'Oct 2025 – Aug 2026 · Contract, part-time',
     summary: 'Advised on scalable data systems and automation for grant discovery, extraction, and reporting, leading data strategy, workflow design, and operational systems to support large-scale grant intelligence.',
     tags: ['Data Strategy', 'Automation', 'Grant Intelligence'],
   },
   {
     company: 'Venture Learning Collective',
     role: 'Co-Founder',
-    period: 'Feb 2026 — Jul 2026 · Concluded',
+    period: 'Feb 2026 – Jul 2026 · Concluded',
     summary: 'Helped establish Venture Learning Collective to support entrepreneurship education and funding readiness. Secured a C$2,800 micro-grant through Weston Frontlines and delivered the Youth Funding Readiness Lab with GRANTED. The program ran May 27 to June 25, 2026, with six virtual sessions and a final showcase, serving a core cohort of 10 participants, eight of whom remained active throughout. Final reporting took place in July 2026.',
     tags: ['Founder Education', 'Funding Readiness', 'Community'],
   },
   {
     company: 'ESGTree',
     role: 'Data Analyst & Machine Learning Engineer',
-    period: 'Feb 2024 — Sep 2024',
+    period: 'Feb 2024 – Sep 2024',
     summary: 'Built Power BI reporting, supported SQL/Python workflows, and developed LLM-based document extraction that reduced manual data input by approximately 30%.',
     tags: ['Power BI', 'Python', 'SQL', 'LLMs'],
   },
   {
     company: 'PwC',
     role: 'Data Analyst',
-    period: 'Sep 2022 — Nov 2023',
+    period: 'Sep 2022 – Nov 2023',
     summary: 'Supported a Dynamics AX to Dynamics 365 F&O transformation, led mapping sessions, built Python validation scripts, and delivered reporting.',
     tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
   },
   {
     company: 'Rollback Ally',
     role: 'Lead Data Analyst',
-    period: 'Feb 2023 — Sep 2023',
+    period: 'Feb 2023 – Sep 2023',
     summary: 'Led data analysis and reporting work at Rollback Ally.',
     tags: ['Data Analysis', 'Reporting'],
   },
   {
     company: 'Metridash',
     role: 'Business Intelligence Analyst',
-    period: 'Jan 2023 — May 2023',
+    period: 'Jan 2023 – May 2023',
     summary: 'Business intelligence and reporting work at Metridash.',
     tags: ['Business Intelligence', 'Reporting'],
   },
   {
     company: 'Analytic Company GmbH',
     role: 'Data Analyst',
-    period: 'May 2022 — Nov 2022',
+    period: 'May 2022 – Nov 2022',
     summary: 'Data analysis work at Analytic Company GmbH.',
     tags: ['Data Analysis'],
   },
   {
     company: 'Quantum Analytics NG',
     role: 'Data Analyst Intern',
-    period: 'Sep 2021 — Nov 2021',
+    period: 'Sep 2021 – Nov 2021',
     summary: 'Data analyst internship at Quantum Analytics NG.',
     tags: ['Data Analysis'],
   },
   {
     company: 'AgroMall',
     role: 'Business Intelligence Analyst Intern',
-    period: 'Jun 2021 — Oct 2021',
+    period: 'Jun 2021 – Oct 2021',
     summary: 'Built operational dashboards and recurring reports across agricultural and financial workflows while improving validation and automation.',
     tags: ['Power BI', 'SQL', 'Excel', 'Python'],
   },
@@ -290,7 +290,7 @@ export const projects: Project[] = [
   {
     title: 'Inscend',
     category: 'Product',
-    blurb: 'An AI-powered B2B SaaS platform for ecommerce merchants, founded and launched Nov 2025 — Nov 2026. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    blurb: 'An AI-powered B2B SaaS platform for ecommerce merchants, founded and launched Nov 2025 – Nov 2026. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
     href: 'https://www.inscend.io/',
     tags: ['Ecommerce', 'Product', 'Shopify'],
     badge: 'Past Venture',
@@ -310,7 +310,7 @@ export const projects: Project[] = [
     tags: ['AI Agents', 'Gemini API', 'Funding'],
   },
   {
-    title: 'PwC — Enterprise Data Transformation',
+    title: 'PwC: Enterprise Data Transformation',
     category: 'Data',
     blurb: 'Supported a Dynamics AX to Dynamics 365 F&O enterprise data migration, leading mapping sessions and building Python validation scripts.',
     tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
@@ -323,7 +323,7 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'ESGTree — Applied AI & Document Extraction',
+    title: 'ESGTree: Applied AI & Document Extraction',
     category: 'AI Agents',
     blurb: 'Developed LLM-based document extraction that reduced manual data input by approximately 30%, alongside Power BI reporting and SQL/Python workflows.',
     href: 'https://esgtree.com/',
@@ -401,7 +401,7 @@ export const projects: Project[] = [
   {
     title: 'COVID-19 Pandemic Dashboard',
     category: 'BI',
-    blurb: 'Power BI dashboard tracking the global COVID-19 pandemic — countries affected, confirmed cases, and deaths.',
+    blurb: 'Power BI dashboard tracking the global COVID-19 pandemic: countries affected, confirmed cases, and deaths.',
     image: '/images/portfolio/corona.png',
     href: 'https://github.com/tobiolad/Corona-Viz',
     tags: ['Power BI', 'DAX', 'Public Health'],
@@ -466,21 +466,21 @@ export const publications: Publication[] = [
   },
   {
     type: 'Recognition',
-    title: 'League of Innovators — 2024 Cohort',
+    title: 'League of Innovators: 2024 Cohort',
     source: 'League of Innovators',
     blurb: 'Selected for Canada’s free accelerator for founders under 30.',
     href: 'https://www.loi.ac/',
   },
   {
     type: 'Recognition',
-    title: 'SAAS NORTH AI PitchFest — Finalist',
+    title: 'SAAS NORTH AI PitchFest: Finalist',
     source: 'SAAS NORTH',
     blurb: 'Finalist for the 9th annual SAAS NORTH Conference AI PitchFest, pitching Inscend in Ottawa.',
     href: 'https://www.linkedin.com/posts/tobioladimeji_saasnorth-pitchfestai-inscend-share-7513323612762955777-EkPp/',
   },
   {
     type: 'Recognition',
-    title: 'OBSIDI BFUTR 2026 — Finalist',
+    title: 'OBSIDI BFUTR 2026: Finalist',
     source: 'OBSIDI',
     blurb: 'Selected as a finalist for BFUTR 2026 in Mississauga.',
     href: 'https://www.linkedin.com/posts/tobioladimeji_bfutr2026-blackfounders-inscend-share-7521118285040623616-ALE-/',
@@ -514,7 +514,7 @@ export const education: EducationItem[] = [
 ];
 
 export const recommendations: Recommendation[] = [
-  // Category A — Managers & Senior Colleagues
+  // Category A: Managers & Senior Colleagues
   {
     name: 'Andrew S. Nevin, PhD',
     title: 'Partner, Financial Services Leader and Chief Economist, PwC',
@@ -535,7 +535,7 @@ export const recommendations: Recommendation[] = [
     photo: '/images/recommendations/edgardo-jaramillo.jpg',
     featured: true,
   },
-  // Category B — Teammates
+  // Category B: Teammates
   {
     name: 'Daniela Titus',
     title: 'Executive Assistant, Servi-Tek Facility Solutions',
@@ -631,7 +631,7 @@ export const recommendations: Recommendation[] = [
     photo: '/images/recommendations/oyindamola-victor.jpg',
     isExcerpt: true,
   },
-  // Category C — Educators & Mentors
+  // Category C: Educators & Mentors
   {
     name: 'Vinod Thomas',
     title: 'Vice President, Cybersecurity, M&T Bank',
@@ -687,7 +687,7 @@ export const recommendations: Recommendation[] = [
     quote: 'I have know Tobi for 4 years and for those years, he impressed me with intense focus and commitment. I understand your organisation was made for persons who are deligent. Hardworking and have demonstrated relevant research and leadership skills. Tobi is no exception. Due to Tobi commitments to his research and academic work, he came out with a good grade in his first degree. He is indeed a talented and mature-minded student. I am certain and believe that Tobi is a perfect fit for your organisation and I give my highest recommendation for him.',
     photo: '/images/recommendations/roseline-ogundokun.jpg',
   },
-  // Category D — Clients & Collaborators
+  // Category D: Clients & Collaborators
   {
     name: 'Iwalola Adetunji-Odogwu, PhD',
     title: 'Principal Information Officer, Federal Ministry of Information and National Orientation',
