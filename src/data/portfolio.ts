@@ -397,6 +397,13 @@ export const projects: Project[] = [
     image: '/images/portfolio/ont_communities.jpg',
     href: 'https://github.com/tobiolad/ont-communities',
     tags: ['Python', 'PostgreSQL', 'FastAPI', 'React'],
+    caseStudy: {
+      context: 'Ontario publishes a live public dataset of infrastructure projects (courthouses, correctional facilities, affordable housing, water infrastructure, and more) through its open data portal. A 2024 university group project had analyzed a static snapshot of this data in PostgreSQL and SQL.',
+      problem: 'That original analysis worked from a static snapshot and had real data-cleaning weaknesses: coalescing missing budgets to $0, coalescing missing text to "unknown," detecting duplicates only on full-row matches, and applying a date type to a field that’s rarely a real date.',
+      contribution: 'Independently rebuilt the project in 2026: a full repository and live-source audit, a from-scratch Python ingestion pipeline, a new PostgreSQL dimensional schema, an automated data-quality framework, a FastAPI analytical service, and a React and TypeScript dashboard.',
+      approach: 'Built a pipeline that ingests directly from Ontario’s own API, not a static download, runs eight automated data quality checks on every run, and serves the data through a dashboard designed to avoid common misreadings, such as treating a $0 budget as free or a passed target window as proof of delay.',
+      outcome: 'Verified against a real run on 2,272 live-ingested projects, with 62 passing tests across the pipeline, API, and web app, and a committed data-quality report from an actual pipeline run.',
+    },
   },
   {
     title: 'COVID-19 Pandemic Dashboard',
