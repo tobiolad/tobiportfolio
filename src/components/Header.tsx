@@ -47,7 +47,6 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
          <header className="hero shell" id="home" ref={heroRef}>
             <div className="hero-copy">
                <p className="status" data-hero-item><i /> {profile.location}</p>
-               <p className="eyebrow" data-hero-item>Founder & CEO, Data Fellows</p>
                <h1 className="hero-name" aria-label={profile.name}>
                   {profile.name.split(' ').map((word, i) => (
                      <span className="word-mask" key={i}>
