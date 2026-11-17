@@ -1,25 +1,7 @@
 import { useState } from 'react';
-import { experience, type ProgramLogo } from '../data/portfolio';
+import { experience } from '../data/portfolio';
 
 const VISIBLE_COUNT = 8;
-
-const ProgramChip = ({ program }: { program: ProgramLogo }) => {
-  const [imgOk, setImgOk] = useState(true);
-  const showImg = program.logo && imgOk;
-  const className = `job-logo${program.dark && showImg ? ' dark' : ''}`;
-  const content = showImg ? (
-    <img src={program.logo} alt={program.name} loading="lazy" onError={() => setImgOk(false)} />
-  ) : (
-    <span>{program.name}</span>
-  );
-  return program.href ? (
-    <a className={className} href={program.href} target="_blank" rel="noopener noreferrer" title={program.name}>
-      {content}
-    </a>
-  ) : (
-    <span className={className} title={program.name}>{content}</span>
-  );
-};
 
 const Resume = () => {
   const [showAll, setShowAll] = useState(false);
@@ -30,7 +12,7 @@ const Resume = () => {
     <section id="experience" className="section shell" data-reveal>
       <header className="section-head">
         <p className="eyebrow">Experience</p>
-        <h2>From enterprise data transformation to founder-led product building.</h2>
+        <h2>From enterprise data and AI work to building a data, AI, and product company.</h2>
         <p>The common thread is practical decision support: cleaner information, clearer systems, and better actions.</p>
       </header>
       <div className="timeline">
@@ -44,11 +26,6 @@ const Resume = () => {
               <div className="tags">
                 {job.tags.map((t) => <span key={t}>{t}</span>)}
               </div>
-              {job.logos && (
-                <div className="job-logos">
-                  {job.logos.map((p) => <ProgramChip key={p.name} program={p} />)}
-                </div>
-              )}
             </div>
           </article>
         ))}

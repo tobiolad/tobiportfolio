@@ -43,8 +43,11 @@ export interface ExperienceItem {
   period: string;
   summary: string;
   tags: string[];
-  /** Real logos of the specific programs/companies named in this entry, shown as a chip row. */
-  logos?: ProgramLogo[];
+}
+
+export interface FounderPrograms {
+  summary: string;
+  programs: ProgramLogo[];
 }
 
 export interface ProjectCaseStudy {
@@ -129,11 +132,20 @@ export const profile: Profile = {
   linkedin: 'https://www.linkedin.com/in/tobioladimeji/',
   github: 'https://github.com/tobiolad',
   x: 'https://x.com/tobioladimeji_',
-  headline: 'Building products, exploring ideas, and solving business problems through technology.',
-  tagline: 'Exploring hard problems worth building a company around.',
-  intro: 'I’ve worked across data, AI, and product development, from enterprise projects to building my own software products and businesses. I’m exploring new full-time roles in product, data, and AI, and open to building again when the right problem comes along.',
-  bio: 'Tobi Oladimeji is a founder and product builder with a background in data analytics and AI. He founded Data Fellows and built Inscend, and is currently exploring his next opportunity in product, data, and AI.',
+  headline: 'Data. AI. Product.',
+  tagline: 'Founder & CEO of Data Fellows, building technology to solve hard operational problems.',
+  intro: 'I work across data, artificial intelligence and product development, exploring how technology can solve complex business and operational problems.',
+  bio: 'Tobi Oladimeji is a data, AI, and product professional, entrepreneur, and Founder & CEO of Data Fellows, a software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33+ countries. He has worked across data, AI, and product at PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, and founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
 };
+
+/** Companies referenced in Tobi's professional experience — shown as a homepage reference strip, not as Data Fellows customers or partners. */
+export const experienceLogos: ProgramLogo[] = [
+  { name: 'PwC', logo: '/images/experience-logos/pwc.svg' },
+  { name: 'Cohere', logo: '/images/experience-logos/cohere.svg' },
+  { name: 'ESGTree', logo: '/images/experience-logos/esgtree.svg' },
+  { name: 'Granted', logo: '/images/experience-logos/granted.png' },
+  { name: 'AgroMall', logo: '/images/experience-logos/agromall.png' },
+];
 
 export const metrics: Metric[] = [
   { value: '5+', label: 'years across data & analytics' },
@@ -145,16 +157,16 @@ export const metrics: Metric[] = [
 
 export const currentWork: CurrentWorkItem[] = [
   {
-    eyebrow: 'Current work',
+    eyebrow: 'Current focus',
     title: 'Data Fellows',
-    description: 'A global AI and data community with 1,600+ members across 33+ countries. Learning programs, professional development, industry partnerships, and community events.',
+    description: 'Data Fellows is a software, data, and AI company focused on solving complex operational problems, backed by a global community of over 1,600 professionals across 33+ countries. We build technology to solve hard problems.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
   {
-    eyebrow: 'Exploring next',
-    title: 'What’s next',
-    description: 'Exploring hard problems worth building a company around. Open to product, data, and AI roles, and to new venture opportunities where I can build, lead, or contribute.',
+    eyebrow: 'Open to',
+    title: 'Full-time roles & collaborations',
+    description: 'Open to full-time opportunities in data, AI, and product, technical collaborations, and conversations about complex organizational problems.',
     href: '#contact',
     linkLabel: 'Get in touch',
   },
@@ -165,8 +177,8 @@ export const experience: ExperienceItem[] = [
     company: 'Data Fellows',
     role: 'Founder & CEO',
     period: 'Aug 2022 — Present',
-    summary: 'Founded Data Fellows, a global AI and data community with over 1,600 members across 33+ countries. Led learning programs, professional development initiatives, industry partnerships, and community events, bringing together professionals and organizations to make opportunities in technology more accessible.',
-    tags: ['Community', 'Strategy', 'Partnerships'],
+    summary: 'Founded and lead Data Fellows, a software, data, and AI company building technology to solve complex operational problems, backed by a global community of over 1,600 professionals across 33+ countries. Built the company’s learning programs, industry partnerships, and community operations from the ground up, and lead its product and technology direction.',
+    tags: ['Data & AI', 'Product Strategy', 'Partnerships'],
   },
   {
     company: 'Cohere',
@@ -184,31 +196,17 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: 'Granted Technologies Inc.',
-    role: 'Advisor',
-    period: 'Oct 2025 — Aug 2026',
-    summary: 'Advised on data architecture, quality controls, workflow design, automation, operational KPIs, and AI-assisted grant-data processes.',
-    tags: ['Data Quality', 'Automation', 'AI Workflows'],
+    role: 'Strategic Advisor (Head of Data Ops)',
+    period: 'Oct 2025 — Aug 2026 · Contract, part-time',
+    summary: 'Advised on scalable data systems and automation for grant discovery, extraction, and reporting, leading data strategy, workflow design, and operational systems to support large-scale grant intelligence.',
+    tags: ['Data Strategy', 'Automation', 'Grant Intelligence'],
   },
   {
     company: 'Venture Learning Collective',
     role: 'Co-Founder',
-    period: 'Feb 2026 — Jul 2026',
+    period: 'Feb 2026 — Jul 2026 · Concluded',
     summary: 'Helped establish Venture Learning Collective to support entrepreneurship education and funding readiness. Secured a C$2,800 micro-grant through Weston Frontlines and delivered the Youth Funding Readiness Lab with GRANTED. The program ran May 27 to June 25, 2026, with six virtual sessions and a final showcase, serving a core cohort of 10 participants, eight of whom remained active throughout. Final reporting took place in July 2026.',
     tags: ['Founder Education', 'Funding Readiness', 'Community'],
-  },
-  {
-    company: 'Founder in Residence / Accelerator Programs',
-    role: 'Founder in Residence',
-    period: '2024 — 2026',
-    summary: 'Selected into multiple global and Canadian accelerator programs supporting product development, growth, and fundraising: BHive (GEIP), Accelerator Centre (RevLab), League of Innovators (LOI), Emerging Leaders Collective (ELC), and LvlUp Ventures (Labs), building founder skills alongside Data Fellows and Inscend.',
-    tags: ['Accelerator', 'Founder Development'],
-    logos: [
-      { name: 'BHive (GEIP)', logo: '/images/programs/bhive.png' },
-      { name: 'Accelerator Centre (RevLab)', logo: '/images/programs/accelerator-centre.svg', href: 'https://www.acceleratorcentre.com/' },
-      { name: 'League of Innovators (LOI)', logo: '/images/programs/league-of-innovators.png', href: 'https://www.loi.ac/' },
-      { name: 'Emerging Leaders Collective (ELC)', logo: '/images/programs/elc.png' },
-      { name: 'LvlUp Ventures (Labs)', logo: '/images/programs/lvlup-ventures.png', dark: true },
-    ],
   },
   {
     company: 'ESGTree',
@@ -261,7 +259,33 @@ export const experience: ExperienceItem[] = [
   },
 ];
 
+export const founderPrograms: FounderPrograms = {
+  summary: 'Selected into multiple global and Canadian accelerator and founder-in-residence programs supporting product development, growth, and fundraising, alongside Data Fellows and Inscend.',
+  programs: [
+    { name: 'BHive (GEIP)', logo: '/images/programs/bhive.png' },
+    { name: 'Accelerator Centre (RevLab)', logo: '/images/programs/accelerator-centre.svg', href: 'https://www.acceleratorcentre.com/' },
+    { name: 'League of Innovators (LOI)', logo: '/images/programs/league-of-innovators.png', href: 'https://www.loi.ac/' },
+    { name: 'Emerging Leaders Collective (ELC)', logo: '/images/programs/elc.png' },
+    { name: 'LvlUp Ventures (Labs)', logo: '/images/programs/lvlup-ventures.png', dark: true },
+  ],
+};
+
 export const projects: Project[] = [
+  {
+    title: 'Data Fellows',
+    category: 'Product',
+    blurb: 'A software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33+ countries.',
+    href: 'https://datafellowsai.com/',
+    tags: ['Data & AI', 'Product', 'Community'],
+    badge: 'Active Venture',
+    caseStudy: {
+      context: 'Many data and AI professionals, especially outside major tech hubs, lack access to structured learning, mentorship, industry connections, and the tooling to turn that knowledge into real products.',
+      problem: 'Opportunities in data and AI weren’t evenly accessible, and there was no single place bringing practitioners together across regions to learn, build, and ship.',
+      contribution: 'Founded and lead Data Fellows, building its programs, partnerships, and community operations from the ground up, and now lead its product and technology direction.',
+      approach: 'Built learning programs, professional development initiatives, and industry partnerships, then grew that into a software, data, and AI company building technology to solve complex operational problems for the community it serves.',
+      outcome: 'Grew Data Fellows into a global community of 1,600+ professionals across 33+ countries, which now backs an active software, data, and AI company.',
+    },
+  },
   {
     title: 'Inscend',
     category: 'Product',
@@ -278,26 +302,39 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'Data Fellows',
-    category: 'Product',
-    blurb: 'A global AI and data community with 1,600+ members across 33+ countries, focused on professional development, technology education, community building, and industry partnerships.',
-    href: 'https://datafellowsai.com/',
-    tags: ['Community', 'Education', 'Data'],
-    badge: 'Active Venture',
+    title: 'Granted Source Agent',
+    category: 'AI Agents',
+    blurb: 'AI agent built for Granted that discovers, filters, analyzes, and exports non-dilutive funding opportunities across Canada and the US, using Gemini with Google Search grounding.',
+    href: 'https://github.com/tobiolad/granted-source-agent',
+    tags: ['AI Agents', 'Gemini API', 'Funding'],
+  },
+  {
+    title: 'PwC — Enterprise Data Transformation',
+    category: 'Data',
+    blurb: 'Supported a Dynamics AX to Dynamics 365 F&O enterprise data migration, leading mapping sessions and building Python validation scripts.',
+    href: 'https://www.pwc.com/',
+    tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
     caseStudy: {
-      context: 'Many data and AI professionals, especially outside major tech hubs, lack access to structured learning, mentorship, and industry connections.',
-      problem: 'Opportunities in data and AI weren’t evenly accessible, and there was no single place bringing practitioners together across regions.',
-      contribution: 'Founded and lead Data Fellows, building its programs, partnerships, and community operations from the ground up.',
-      approach: 'Built learning programs, professional development initiatives, industry partnerships, and community events, bringing together professionals and organizations across countries.',
-      outcome: 'Grew it into a global AI and data community with 1,600+ members across 33+ countries.',
+      context: 'A large-scale ERP migration from Dynamics AX to Dynamics 365 F&O required mapping and validating data across legacy and target systems before cutover.',
+      problem: 'Without rigorous mapping and validation, a migration of this scale risks silent data loss or corruption that only surfaces after go-live.',
+      contribution: 'Led mapping sessions between business and technical stakeholders and built the Python validation scripts used to check migrated data against source records.',
+      approach: 'Combined structured mapping workshops with Python-based validation scripts and Power BI reporting to give the project team visibility into data quality throughout the migration.',
+      outcome: 'Delivered validation and reporting that supported 98% data accuracy on the migration.',
     },
   },
   {
-    title: 'BizPilot AI',
-    category: 'Experiment',
-    blurb: 'An early experiment built through Data Fellows, started in 2025. It initially explored a marketplace connecting businesses with data professionals, then shifted toward AI-powered decision intelligence for small businesses. That work later informed Inscend.',
-    href: 'https://www.producthunt.com/products/data-fellows',
-    tags: ['AI', 'Decision Intelligence', 'Data Fellows'],
+    title: 'ESGTree — Applied AI & Document Extraction',
+    category: 'AI Agents',
+    blurb: 'Developed LLM-based document extraction that reduced manual data input by approximately 30%, alongside Power BI reporting and SQL/Python workflows.',
+    href: 'https://esgtree.com/',
+    tags: ['LLMs', 'Document Extraction', 'Power BI', 'Python'],
+    caseStudy: {
+      context: 'ESG reporting workflows involved large volumes of source documents whose data had to be manually read and entered into reporting systems.',
+      problem: 'Manual document review and data entry was slow and didn’t scale with the volume of documents the team needed to process.',
+      contribution: 'Designed and built the LLM-based extraction workflow, alongside the Power BI reporting and SQL/Python data pipelines that supported it.',
+      approach: 'Used an LLM to read source documents and extract the relevant structured fields automatically, replacing manual entry for most cases while keeping a review step for edge cases.',
+      outcome: 'Reduced manual data input by approximately 30%.',
+    },
   },
   {
     title: 'Inscend Source Agent',
@@ -307,11 +344,11 @@ export const projects: Project[] = [
     tags: ['AI Agents', 'Gemini API', 'React'],
   },
   {
-    title: 'Granted Source Agent',
-    category: 'AI Agents',
-    blurb: 'AI agent built for Granted that discovers, filters, analyzes, and exports non-dilutive funding opportunities across Canada and the US, using Gemini with Google Search grounding.',
-    href: 'https://github.com/tobiolad/granted-source-agent',
-    tags: ['AI Agents', 'Gemini API', 'Funding'],
+    title: 'BizPilot AI',
+    category: 'Experiment',
+    blurb: 'An early experiment built through Data Fellows, started in 2025. It initially explored a marketplace connecting businesses with data professionals, then shifted toward AI-powered decision intelligence for small businesses. That work later informed Inscend.',
+    href: 'https://www.producthunt.com/products/data-fellows',
+    tags: ['AI', 'Decision Intelligence', 'Data Fellows'],
   },
   {
     title: 'Monitoring & Evaluation Dashboard',
