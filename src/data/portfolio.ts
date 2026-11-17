@@ -135,7 +135,7 @@ export const profile: Profile = {
   headline: 'Data. AI. Product.',
   tagline: 'Founder & CEO of Data Fellows, building technology to solve hard operational problems.',
   intro: 'I work across data, artificial intelligence and product development, exploring how technology can solve complex business and operational problems.',
-  bio: 'Tobi Oladimeji is a data, AI, and product professional, entrepreneur, and Founder & CEO of Data Fellows, a software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33 countries. He has worked across data, AI, and product at PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, and founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
+  bio: 'Tobi Oladimeji is a data, AI, and product professional, entrepreneur, and Founder & CEO of Data Fellows, a software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33+ countries. He has worked across data, AI, and product at PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, and founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
 };
 
 /** Companies referenced in Tobi's professional experience — shown as a homepage reference strip, not as Data Fellows customers or partners. */
@@ -144,7 +144,7 @@ export const experienceLogos: ProgramLogo[] = [
   { name: 'Cohere', logo: '/images/experience-logos/cohere.svg' },
   { name: 'ESGTree', logo: '/images/experience-logos/esgtree.svg' },
   { name: 'Granted' },
-  { name: 'AgroMall', logo: '/images/experience-logos/agromall.png' },
+  { name: 'AgroMall' },
 ];
 
 export const metrics: Metric[] = [
@@ -159,7 +159,7 @@ export const currentWork: CurrentWorkItem[] = [
   {
     eyebrow: 'Current focus',
     title: 'Data Fellows',
-    description: 'Data Fellows is a software, data, and AI company focused on solving complex operational problems, backed by a global community of over 1,600 professionals across 33 countries. We build technology to solve hard problems.',
+    description: 'Data Fellows is a software, data, and AI company focused on solving complex operational problems, backed by a global community of over 1,600 professionals across 33+ countries. We build technology to solve hard problems.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
@@ -177,7 +177,7 @@ export const experience: ExperienceItem[] = [
     company: 'Data Fellows',
     role: 'Founder & CEO',
     period: 'Aug 2022 — Present',
-    summary: 'Founded and lead Data Fellows, a software, data, and AI company building technology to solve complex operational problems, backed by a global community of over 1,600 professionals across 33 countries. Built the company’s learning programs, industry partnerships, and community operations from the ground up, and lead its product and technology direction.',
+    summary: 'Founded and lead Data Fellows, a software, data, and AI company building technology to solve complex operational problems, backed by a global community of over 1,600 professionals across 33+ countries. Built the company’s learning programs, industry partnerships, and community operations from the ground up, and lead its product and technology direction.',
     tags: ['Data & AI', 'Product Strategy', 'Partnerships'],
   },
   {
@@ -274,7 +274,7 @@ export const projects: Project[] = [
   {
     title: 'Data Fellows',
     category: 'Product',
-    blurb: 'A software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33 countries.',
+    blurb: 'A software, data, and AI company solving complex operational problems, backed by a global community of 1,600+ professionals across 33+ countries.',
     href: 'https://datafellowsai.com/',
     tags: ['Data & AI', 'Product', 'Community'],
     badge: 'Active Venture',
@@ -283,7 +283,7 @@ export const projects: Project[] = [
       problem: 'Opportunities in data and AI weren’t evenly accessible, and there was no single place bringing practitioners together across regions to learn, build, and ship.',
       contribution: 'Founded and lead Data Fellows, building its programs, partnerships, and community operations from the ground up, and now lead its product and technology direction.',
       approach: 'Built learning programs, professional development initiatives, and industry partnerships, then grew that into a software, data, and AI company building technology to solve complex operational problems for the community it serves.',
-      outcome: 'Grew Data Fellows into a global community of 1,600+ professionals across 33 countries, which now backs an active software, data, and AI company.',
+      outcome: 'Grew Data Fellows into a global community of 1,600+ professionals across 33+ countries, which now backs an active software, data, and AI company.',
     },
   },
   {
