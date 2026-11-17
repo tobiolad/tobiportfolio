@@ -7,6 +7,15 @@ const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'Experiment',
 
 const initials = (title: string) => title.slice(0, 2).toUpperCase();
 
+const Visual = ({ href, className, children }: { href?: string; className: string; children: React.ReactNode }) =>
+  href ? (
+    <a className={className} href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  ) : (
+    <div className={className}>{children}</div>
+  );
+
 const CASE_STUDY_LABELS = [
   ['context', 'Context'],
   ['problem', 'Problem'],
@@ -21,17 +30,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <article className="project-card">
       {project.image ? (
-        <a className="project-image" href={project.href} target="_blank" rel="noopener noreferrer">
+        <Visual className="project-image" href={project.href}>
           <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
-        </a>
+        </Visual>
       ) : project.logo ? (
-        <a className="project-visual logo" href={project.href} target="_blank" rel="noopener noreferrer">
+        <Visual className="project-visual logo" href={project.href}>
           <img src={project.logo} alt={`${project.title} logo`} loading="lazy" />
-        </a>
+        </Visual>
       ) : (
-        <a className="project-visual" href={project.href} target="_blank" rel="noopener noreferrer">
+        <Visual className="project-visual" href={project.href}>
           <span>{initials(project.title)}</span>
-        </a>
+        </Visual>
       )}
       <div className="project-body">
         <div className="project-meta">
@@ -56,9 +65,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
         )}
 
         <div className="project-links">
-          <a className="text-link" href={project.href} target="_blank" rel="noopener noreferrer">
-            View project <IconArrowUpRight />
-          </a>
+          {project.href && (
+            <a className="text-link" href={project.href} target="_blank" rel="noopener noreferrer">
+              View project <IconArrowUpRight />
+            </a>
+          )}
           {project.caseStudy && (
             <button type="button" className="text-link ghost" onClick={() => setExpanded((v) => !v)}>
               {expanded ? 'Hide case study' : 'Read full case study'}

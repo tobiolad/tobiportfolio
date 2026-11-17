@@ -25,7 +25,7 @@ function noscriptFallbackHtml(): string {
   const projectItems = projects
     .map(
       (p) =>
-        `<li><strong>${escapeHtml(p.title)}</strong> (${escapeHtml(p.category)}) — ${escapeHtml(p.blurb)} <a href="${escapeHtml(p.href)}">${escapeHtml(p.href)}</a></li>`
+        `<li><strong>${escapeHtml(p.title)}</strong> (${escapeHtml(p.category)}) — ${escapeHtml(p.blurb)}${p.href ? ` <a href="${escapeHtml(p.href)}">${escapeHtml(p.href)}</a>` : ''}</li>`
     )
     .join('');
 
