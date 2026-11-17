@@ -1,6 +1,6 @@
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
-import { profile, experience, projects, education, publications, newsletter, recommendations } from './src/data/portfolio'
+import { profile, experience, projects, education, publications, newsletter, recommendations, founderPrograms } from './src/data/portfolio'
 
 const escapeHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -66,6 +66,9 @@ function noscriptFallbackHtml(): string {
       <ul>${educationItems}</ul>
       <h2>Writing &amp; recognition</h2>
       <ul>${writingItems}</ul>
+      <h2>Founder &amp; accelerator programs</h2>
+      <p>${escapeHtml(founderPrograms.summary)}</p>
+      <ul>${founderPrograms.programs.map((p) => `<li>${escapeHtml(p.name)}</li>`).join('')}</ul>
       <h2>${escapeHtml(newsletter.title)} (newsletter)</h2>
       <p>${escapeHtml(newsletter.description)} <a href="${escapeHtml(newsletter.href)}">${escapeHtml(newsletter.href)}</a></p>
       <ul>${newsletterItems}</ul>

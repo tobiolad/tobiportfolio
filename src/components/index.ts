@@ -6,6 +6,7 @@ export { default as Contact } from './Contact';
 export { default as Recommendations } from './Recommendations';
 export { default as Portfolio } from './Portfolio';
 export { default as Metrics } from './Metrics';
+export { default as ExperienceLogos } from './ExperienceLogos';
 export { default as Focus } from './Focus';
 export { default as Publications } from './Publications';
 export { default as ThemeToggle } from './ThemeToggle';
