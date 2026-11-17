@@ -168,6 +168,13 @@
   display: inline-block;
 }
 
+.hero-headline {
+  font: 700 clamp(1.15rem, 2vw, 1.5rem) var(--mono);
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
 .lead {
   max-width: 720px;
   color: var(--muted);
@@ -245,6 +252,34 @@
   }
   .actions .button {
     width: 100%;
+  }
+}
+
+/* ---------- Experience logos ---------- */
+
+.exp-logos {
+  margin-top: 56px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+}
+
+.exp-logos-label {
+  flex: 0 0 auto;
+  color: var(--faint);
+  font: 11px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.exp-logos .job-logos {
+  margin-top: 0;
+}
+
+@media (max-width: 680px) {
+  .exp-logos {
+    margin-top: 40px;
   }
 }
 
@@ -673,6 +708,13 @@ button.text-link:hover {
 
 .pub-group-label:first-of-type {
   margin-top: 0;
+}
+
+.pub-group-note {
+  max-width: 640px;
+  margin-top: -6px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 .writing-card {
@@ -1247,6 +1289,12 @@ blockquote footer {
   max-width: 620px;
   margin-inline: auto;
   color: var(--muted);
+}
+
+.contact > p a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .contact .actions {

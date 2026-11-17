@@ -1,5 +1,6 @@
 import { IconArrowUpRight } from './Icons';
-import { publications, newsletter, type Publication } from '../data/portfolio';
+import { publications, newsletter, founderPrograms, type Publication } from '../data/portfolio';
+import ProgramChip from './ProgramChip';
 
 const PublicationCard = ({ item, index }: { item: Publication; index: number }) => (
   <a
@@ -26,7 +27,7 @@ const Publications = () => {
       <header className="section-head">
         <p className="eyebrow">Publications & media</p>
         <h2>Writing, interviews, and appearances.</h2>
-        <p>Articles I’ve written, profiles and features about my work, and recognition from accelerators and pitch competitions.</p>
+        <p>Writing and recognition spanning data, AI, product development, organizational operations, entrepreneurship, and technology infrastructure — plus profiles, features, and founder programs.</p>
       </header>
 
       <h3 className="pub-group-label">Articles I’ve written</h3>
@@ -37,6 +38,12 @@ const Publications = () => {
       <h3 className="pub-group-label">Profiles, features & recognition</h3>
       <div className="writing-grid">
         {about.map((item, i) => <PublicationCard item={item} index={i} key={item.title} />)}
+      </div>
+
+      <h3 className="pub-group-label">Founder & accelerator programs</h3>
+      <p className="pub-group-note">{founderPrograms.summary}</p>
+      <div className="job-logos">
+        {founderPrograms.programs.map((p) => <ProgramChip key={p.name} program={p} />)}
       </div>
 
       {video && (

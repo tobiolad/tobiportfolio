@@ -1,5 +1,5 @@
 import './App.css'
-import { About, Contact, Footer, Header, Portfolio, Metrics, Focus, Resume, Recommendations, Publications, CommandPalette } from './components'
+import { About, Contact, Footer, Header, Portfolio, Metrics, ExperienceLogos, Focus, Resume, Recommendations, Publications, CommandPalette } from './components'
 import type { Command } from './components/CommandPalette'
 import { profile, projects, publications } from './data/portfolio'
 import { useScrollReveal, useCommandPalette } from './hooks'
@@ -32,6 +32,7 @@ function App() {
       <a className="skip" href="#main">Skip to content</a>
       <Header onOpenPalette={() => setOpen(true)} />
       <main id="main">
+        <ExperienceLogos />
         <Metrics />
         <Focus />
         <Portfolio />
