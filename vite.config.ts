@@ -18,14 +18,14 @@ function noscriptFallbackHtml(): string {
   const experienceItems = experience
     .map(
       (e) =>
-        `<li><strong>${escapeHtml(e.role)}, ${escapeHtml(e.company)}</strong> (${escapeHtml(e.period)}) — ${escapeHtml(e.summary)}</li>`
+        `<li><strong>${escapeHtml(e.role)}, ${escapeHtml(e.company)}</strong> (${escapeHtml(e.period)}): ${escapeHtml(e.summary)}</li>`
     )
     .join('');
 
   const projectItems = projects
     .map(
       (p) =>
-        `<li><strong>${escapeHtml(p.title)}</strong> (${escapeHtml(p.category)}) — ${escapeHtml(p.blurb)}${p.href ? ` <a href="${escapeHtml(p.href)}">${escapeHtml(p.href)}</a>` : ''}</li>`
+        `<li><strong>${escapeHtml(p.title)}</strong> (${escapeHtml(p.category)}): ${escapeHtml(p.blurb)}${p.href ? ` <a href="${escapeHtml(p.href)}">${escapeHtml(p.href)}</a>` : ''}</li>`
     )
     .join('');
 
@@ -36,7 +36,7 @@ function noscriptFallbackHtml(): string {
   const writingItems = publications
     .map(
       (w) =>
-        `<li>${escapeHtml(w.title)} (${escapeHtml(w.type)}) — ${escapeHtml(w.source)}${w.date ? `, ${escapeHtml(w.date)}` : ''}: ${escapeHtml(w.blurb)} <a href="${escapeHtml(w.href)}">${escapeHtml(w.href)}</a></li>`
+        `<li>${escapeHtml(w.title)} (${escapeHtml(w.type)}), ${escapeHtml(w.source)}${w.date ? `, ${escapeHtml(w.date)}` : ''}: ${escapeHtml(w.blurb)} <a href="${escapeHtml(w.href)}">${escapeHtml(w.href)}</a></li>`
     )
     .join('');
 
@@ -47,7 +47,7 @@ function noscriptFallbackHtml(): string {
   const recommendationItems = recommendations
     .map(
       (r) =>
-        `<li><strong>${escapeHtml(r.name)}</strong>, ${escapeHtml(r.title)} (${escapeHtml(r.category)}; ${escapeHtml(r.relationship)}; ${escapeHtml(r.date)}) — “${escapeHtml(r.quote)}”</li>`
+        `<li><strong>${escapeHtml(r.name)}</strong>, ${escapeHtml(r.title)} (${escapeHtml(r.category)}; ${escapeHtml(r.relationship)}; ${escapeHtml(r.date)}): “${escapeHtml(r.quote)}”</li>`
     )
     .join('');
 

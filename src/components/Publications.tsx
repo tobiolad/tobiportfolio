@@ -27,7 +27,7 @@ const Publications = () => {
       <header className="section-head">
         <p className="eyebrow">Publications & media</p>
         <h2>Writing, interviews, and appearances.</h2>
-        <p>Writing and recognition spanning data, AI, product development, organizational operations, entrepreneurship, and technology infrastructure — plus profiles, features, and founder programs.</p>
+        <p>Writing and recognition spanning data, AI, product development, organizational operations, entrepreneurship, and technology infrastructure, plus profiles, features, and founder programs.</p>
       </header>
 
       <h3 className="pub-group-label">Articles I’ve written</h3>
