@@ -113,7 +113,7 @@ export function useStaggerReveal(containerRef: React.RefObject<HTMLElement>, chi
 /**
  * Signature hero interaction: the portrait tilts subtly toward the pointer,
  * like a product shot under a moving light. Pointer-responsive effects are
- * additive only — this never runs for touch/coarse pointers (no hover to
+ * additive only; this never runs for touch/coarse pointers (no hover to
  * drive it), under prefers-reduced-motion (large-area 3D rotation is a
  * vestibular trigger, Tier 1), or once the window loses focus/visibility,
  * and it always resets cleanly back to neutral.
