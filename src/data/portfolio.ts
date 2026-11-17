@@ -143,8 +143,8 @@ export const experienceLogos: ProgramLogo[] = [
   { name: 'PwC', logo: '/images/experience-logos/pwc.svg' },
   { name: 'Cohere', logo: '/images/experience-logos/cohere.svg' },
   { name: 'ESGTree', logo: '/images/experience-logos/esgtree.svg' },
-  { name: 'Granted' },
-  { name: 'AgroMall' },
+  { name: 'Granted', logo: '/images/experience-logos/granted.png' },
+  { name: 'AgroMall', logo: '/images/experience-logos/agromall.png' },
 ];
 
 export const metrics: Metric[] = [
