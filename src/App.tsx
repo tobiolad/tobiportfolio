@@ -19,7 +19,7 @@ function App() {
 
   const commands: Command[] = [
     ...NAV_COMMANDS,
-    ...projects.map((p) => ({ label: p.title, group: 'Project', href: p.href })),
+    ...projects.filter((p) => p.href).map((p) => ({ label: p.title, group: 'Project', href: p.href as string })),
     ...publications.map((w) => ({ label: w.title, group: 'Publication', href: w.href })),
     { label: 'LinkedIn', group: 'Link', href: profile.linkedin },
     { label: 'GitHub', group: 'Link', href: profile.github },
