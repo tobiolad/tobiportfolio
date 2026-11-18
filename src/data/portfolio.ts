@@ -326,7 +326,6 @@ export const projects: Project[] = [
     title: 'ESGTree: Applied AI & Document Extraction',
     category: 'AI Agents',
     blurb: 'Developed LLM-based document extraction that reduced manual data input by approximately 30%, alongside Power BI reporting and SQL/Python workflows.',
-    href: 'https://esgtree.com/',
     tags: ['LLMs', 'Document Extraction', 'Power BI', 'Python'],
     caseStudy: {
       context: 'ESG reporting workflows involved large volumes of source documents whose data had to be manually read and entered into reporting systems.',
