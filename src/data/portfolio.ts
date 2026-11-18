@@ -405,6 +405,21 @@ export const projects: Project[] = [
     },
   },
   {
+    title: 'Product Analytics & Experimentation Lab',
+    category: 'Data',
+    blurb: 'A synthetic SaaS product analytics stack: a deterministic data generator, a DuckDB metrics layer, an A/B experimentation engine with proper statistical testing, a FastAPI analytics API, and a React dashboard covering activation, funnels, retention, and experiment results.',
+    image: '/images/portfolio/product_analytics_lab.jpg',
+    href: 'https://github.com/tobiolad/product-analytics-lab',
+    tags: ['Python', 'DuckDB', 'FastAPI', 'React'],
+    caseStudy: {
+      context: 'Product analytics teams need more than a dashboard of pre-aggregated numbers: a reproducible data source, one tested definition per metric, and a statistically sound A/B testing process.',
+      problem: 'Most portfolio-style analytics projects stop at a few charts over a static CSV, with no reproducibility guarantee, no tested metric definitions, and no real experimentation methodology behind the numbers.',
+      contribution: 'Built the full stack independently: a deterministic synthetic-data generator, a DuckDB schema with a canonical deduplicated events view, a metrics layer, an experimentation engine, a FastAPI analytics API, and a React and TypeScript dashboard.',
+      approach: 'Generated synthetic SaaS data with a fixed seed and deliberate data-quality issues (duplicate events, late arrivals, missing channels), gave every metric exactly one documented SQL definition shared by the API and dashboard, and implemented the A/B test with a sample-ratio-mismatch check, a two-proportion z-test cross-validated against scipy, and an honestly-caveated post-hoc power read.',
+      outcome: 'Verified with 77 passing tests across the generator, metrics, experiment engine, API, and frontend; the baked-in onboarding experiment shows a statistically significant +11.2 percentage point activation lift with no guardrail harm.',
+    },
+  },
+  {
     title: 'COVID-19 Pandemic Dashboard',
     category: 'BI',
     blurb: 'Power BI dashboard tracking the global COVID-19 pandemic: countries affected, confirmed cases, and deaths.',
