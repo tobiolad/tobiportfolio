@@ -3,7 +3,13 @@ import { IconArrowUpRight } from './Icons';
 import { projects, type Project, type ProjectCategory } from '../data/portfolio';
 import { useStaggerReveal } from '../motion';
 
-const FILTERS: Array<'All' | ProjectCategory> = ['All', 'Product', 'Experiment', 'AI Agents', 'BI', 'Python / ML', 'SQL', 'Data'];
+const CATEGORY_ORDER: ProjectCategory[] = ['Product', 'Experiment', 'AI Agents', 'BI', 'Python / ML', 'SQL', 'Data'];
+// Only show a filter for categories that actually have a project, so a filter
+// never shows an empty grid after a project gets recategorized.
+const FILTERS: Array<'All' | ProjectCategory> = [
+  'All',
+  ...CATEGORY_ORDER.filter((c) => projects.some((p) => p.category === c)),
+];
 
 const initials = (title: string) => title.slice(0, 2).toUpperCase();
 
