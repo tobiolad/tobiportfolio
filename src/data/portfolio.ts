@@ -203,7 +203,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: 'Granted Technologies Inc.',
-    role: 'Strategic Advisor',
+    role: 'Strategic Advisor (Head of Data Ops)',
     period: 'Oct 2025 – Aug 2026 · Contract, part-time',
     summary: 'Advised on data strategy, operational systems, workflow design, data quality and automation for grant discovery, extraction and reporting, supporting large-scale grant intelligence.',
     tags: ['Data Strategy', 'Automation', 'Grant Intelligence'],
