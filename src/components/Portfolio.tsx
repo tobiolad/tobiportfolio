@@ -3,7 +3,14 @@ import { IconArrowUpRight } from './Icons';
 import { projects, type Project, type ProjectCategory } from '../data/portfolio';
 import { useStaggerReveal } from '../motion';
 
-const CATEGORY_ORDER: ProjectCategory[] = ['Product', 'Experiment', 'AI Agents', 'BI', 'Python / ML', 'SQL', 'Data'];
+const CATEGORY_ORDER: ProjectCategory[] = [
+  'Product Analytics & Experimentation',
+  'Data Analytics & Business Intelligence',
+  'AI & Intelligent Automation',
+  'Data Engineering',
+  'Software & Product Development',
+  'Enterprise Transformation',
+];
 // Only show a filter for categories that actually have a project, so a filter
 // never shows an empty grid after a project gets recategorized.
 const FILTERS: Array<'All' | ProjectCategory> = [
@@ -101,7 +108,7 @@ const Portfolio = () => {
       <header className="section-head">
         <p className="eyebrow">Selected work</p>
         <h2>Products, systems, and analysis built to make decisions clearer.</h2>
-        <p>A mix of product, business intelligence, machine learning, SQL, and operational analytics.</p>
+        <p>A mix of product analytics, business intelligence, applied AI, data engineering, and enterprise transformation work.</p>
       </header>
       <div className="filters" role="tablist" aria-label="Filter projects by category">
         {FILTERS.map((f) => (

@@ -1,4 +1,10 @@
-export type ProjectCategory = 'Product' | 'AI Agents' | 'BI' | 'Python / ML' | 'SQL' | 'Data' | 'Experiment';
+export type ProjectCategory =
+  | 'Data Analytics & Business Intelligence'
+  | 'Product Analytics & Experimentation'
+  | 'AI & Intelligent Automation'
+  | 'Data Engineering'
+  | 'Software & Product Development'
+  | 'Enterprise Transformation';
 export type PublicationType = 'Article' | 'Profile' | 'Feature' | 'Recognition' | 'Video';
 
 export interface Profile {
@@ -133,10 +139,10 @@ export const profile: Profile = {
   linkedin: 'https://www.linkedin.com/in/tobioladimeji/',
   github: 'https://github.com/tobiolad',
   x: 'https://x.com/tobioladimeji_',
-  headline: 'Building products, exploring ideas, and solving business problems through technology.',
-  tagline: 'Founder of Data Fellows, an independent automation studio and global technology community.',
-  intro: 'I’ve worked across data, AI and product development, from enterprise projects to building my own software products and businesses. I’m the founder of Data Fellows, an independent automation studio helping organizations solve recurring operational challenges through software, data and AI.',
-  bio: 'Tobi Oladimeji is a founder, product builder, and data and AI professional. He founded Data Fellows, an independent automation studio and global technology community with 1,600+ members across 33+ countries, helping organizations solve recurring operational challenges through software, data, and AI. He has worked across data, AI, and product at PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, and founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
+  headline: 'Data. AI. Product.',
+  tagline: 'Building technology. Solving business problems.',
+  intro: 'I’m a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation. My experience spans organizations including PwC, ESGTree, Granted and Cohere, alongside building products and growing a global technology community through Data Fellows. Based in Waterloo, Ontario, Canada.',
+  bio: 'Tobi Oladimeji is a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans organizations including PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside building products and growing Data Fellows, a global technology community of 1,600+ members across 33+ countries that he founded in 2022, into an independent automation studio. He also founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
 };
 
 /** Companies referenced in Tobi's professional experience, shown as a homepage reference strip, not as Data Fellows customers or partners. */
@@ -158,48 +164,48 @@ export const metrics: Metric[] = [
 
 export const currentWork: CurrentWorkItem[] = [
   {
-    eyebrow: 'Current focus',
+    eyebrow: 'Open to',
+    title: 'Full-time opportunities',
+    description: 'Open to full-time opportunities in data, AI, product and technology, as well as meaningful professional collaborations and conversations about complex organizational problems.',
+    href: '#contact',
+    linkLabel: 'Get in touch',
+  },
+  {
+    eyebrow: 'Alongside that',
     title: 'Data Fellows',
     description: 'Data Fellows is an independent automation studio helping organizations solve recurring operational challenges through software, data, and AI. Founded in 2022 as a data and technology community, it’s grown into a global network of over 1,600 professionals across 33+ countries.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
-  {
-    eyebrow: 'Open to',
-    title: 'The right opportunities',
-    description: 'Open to the right opportunities in data, AI, and product, technical collaborations, and conversations about complex organizational problems.',
-    href: '#contact',
-    linkLabel: 'Get in touch',
-  },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    company: 'Data Fellows',
-    role: 'Founder & CEO',
-    period: 'Aug 2022 – Present',
-    summary: 'Founded Data Fellows in 2022 as a community for people interested in data and technology, growing it into a global network of over 1,600 professionals across 33+ countries while leading product development, technical collaborations, industry partnerships, learning programs, and community initiatives. Today, Data Fellows operates as an independent automation studio too, designing, building, and managing solutions to recurring operational challenges through software engineering, data systems, and artificial intelligence, alongside continuing to grow the community and support professional development and technical collaboration.',
-    tags: ['Automation', 'Software & AI', 'Community'],
-  },
-  {
     company: 'Cohere',
-    role: 'AI Data Trainer',
-    period: 'Oct 2026 – Present · Independent Contractor',
-    summary: 'Supporting machine learning data quality and evaluation workflows through ranking, auditing, error analysis and correction, quality assessment, and optimization feedback across text-based AI tasks.',
+    role: 'AI Data Trainer (Independent Contractor)',
+    period: 'Oct 2026 – Present',
+    summary: 'Supporting AI model evaluation and data quality through structured response ranking, annotation, quality assessment, error identification and evaluation feedback across English and multimodal tasks.',
     tags: ['Data Annotation', 'AI Evaluation', 'Quality'],
   },
   {
-    company: 'Inscend',
+    company: 'Data Fellows',
     role: 'Founder',
-    period: 'Nov 2025 – Nov 2026',
-    summary: 'Founded and launched an AI-powered B2B SaaS platform for ecommerce merchants. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
-    tags: ['Ecommerce Technology', 'Product', 'Team Leadership'],
+    period: 'Aug 2022 – Present',
+    summary: 'Founded Data Fellows in 2022, growing it into a global network of over 1,600 data and technology professionals across 33 countries. My work spans product development, data strategy, applied AI, technical collaboration, industry partnerships and community development. Today, Data Fellows develops software, data and AI solutions to address operational challenges while continuing to support professional development and technical collaboration.',
+    tags: ['Automation', 'Software & AI', 'Community'],
+  },
+  {
+    company: 'Inscend',
+    role: 'Founder & Product Lead',
+    period: 'Nov 2025 – Nov 2026 · Concluded',
+    summary: 'Led product discovery, validation and technical development for an AI-powered B2B SaaS platform for ecommerce merchants, in close collaboration with a distributed engineering team. Validated the product through customer discovery with 50+ founders, ran Shopify merchant pilots, and turned those customer insights into an AI-powered product intelligence feature set. Secured early paying customers and a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    tags: ['Product Discovery', 'Ecommerce Technology', 'Team Leadership'],
   },
   {
     company: 'Granted Technologies Inc.',
-    role: 'Strategic Advisor (Head of Data Ops)',
+    role: 'Strategic Advisor',
     period: 'Oct 2025 – Aug 2026 · Contract, part-time',
-    summary: 'Advised on scalable data systems and automation for grant discovery, extraction, and reporting, leading data strategy, workflow design, and operational systems to support large-scale grant intelligence.',
+    summary: 'Advised on data strategy, operational systems, workflow design, data quality and automation for grant discovery, extraction and reporting, supporting large-scale grant intelligence.',
     tags: ['Data Strategy', 'Automation', 'Grant Intelligence'],
   },
   {
@@ -261,7 +267,7 @@ export const experience: ExperienceItem[] = [
 ];
 
 export const founderPrograms: FounderPrograms = {
-  summary: 'Selected into multiple global and Canadian accelerator and founder-in-residence programs supporting product development, growth, and fundraising, alongside Data Fellows and Inscend.',
+  summary: 'Selected into multiple global and Canadian accelerator and founder-in-residence programs supporting product development, growth, and fundraising, for Data Fellows and, previously, Inscend.',
   programs: [
     { name: 'BHive (GEIP)', logo: '/images/programs/bhive.png' },
     { name: 'Accelerator Centre (RevLab)', logo: '/images/programs/accelerator-centre.svg', href: 'https://www.acceleratorcentre.com/' },
@@ -273,8 +279,96 @@ export const founderPrograms: FounderPrograms = {
 
 export const projects: Project[] = [
   {
+    title: 'Product Analytics & Experimentation Lab',
+    category: 'Product Analytics & Experimentation',
+    blurb: 'An independently developed portfolio project using synthetic data: a deterministic SaaS data generator, a DuckDB metrics layer, an A/B experimentation engine with proper statistical testing, a FastAPI analytics API, and a React dashboard covering activation, funnels, retention, and experiment results.',
+    image: '/images/portfolio/product_analytics_lab.jpg',
+    href: 'https://github.com/tobiolad/product-analytics-lab',
+    tags: ['Python', 'DuckDB', 'FastAPI', 'React'],
+    badge: 'Flagship Project',
+    caseStudy: {
+      context: 'Product analytics teams need more than a dashboard of pre-aggregated numbers: a reproducible data source, one tested definition per metric, and a statistically sound A/B testing process.',
+      problem: 'Most portfolio-style analytics projects stop at a few charts over a static CSV, with no reproducibility guarantee, no tested metric definitions, and no real experimentation methodology behind the numbers.',
+      contribution: 'Built the full stack independently: a deterministic synthetic-data generator, a DuckDB schema with a canonical deduplicated events view, a metrics layer, an experimentation engine, a FastAPI analytics API, and a React and TypeScript dashboard.',
+      approach: 'Generated synthetic SaaS data with a fixed seed and deliberate data-quality issues (duplicate events, late arrivals, missing channels), gave every metric exactly one documented SQL definition shared by the API and dashboard, and implemented the A/B test with a sample-ratio-mismatch check, a two-proportion z-test cross-validated against scipy, and an honestly-caveated post-hoc power read.',
+      outcome: 'Verified with 77 passing tests across the generator, metrics, experiment engine, API, and frontend; the baked-in onboarding experiment on the synthetic dataset shows a statistically significant +11.2 percentage point activation lift with no guardrail harm. No real customers or commercial results are involved -- it demonstrates the methodology, not a live product.',
+    },
+  },
+  {
+    title: 'Ontario Infrastructure Decision Intelligence',
+    category: 'Data Engineering',
+    blurb: 'Full-stack rebuild of a public infrastructure analysis into a decision-intelligence platform: a Python ingestion pipeline with automated data-quality checks, a PostgreSQL dimensional model, a FastAPI analytics layer, and a React dashboard covering budgets, project status, and an interactive map.',
+    image: '/images/portfolio/ont_communities.jpg',
+    href: 'https://github.com/tobiolad/ont-communities',
+    tags: ['Python', 'PostgreSQL', 'FastAPI', 'React'],
+    badge: 'Flagship Project',
+    caseStudy: {
+      context: 'Ontario publishes a live public dataset of infrastructure projects (courthouses, correctional facilities, affordable housing, water infrastructure, and more) through its open data portal. A 2024 university group project had analyzed a static snapshot of this data in PostgreSQL and SQL.',
+      problem: 'That original analysis worked from a static snapshot and had real data-cleaning weaknesses: coalescing missing budgets to $0, coalescing missing text to "unknown," detecting duplicates only on full-row matches, and applying a date type to a field that’s rarely a real date.',
+      contribution: 'Independently rebuilt the project in 2026: a full repository and live-source audit, a from-scratch Python ingestion pipeline, a new PostgreSQL dimensional schema, an automated data-quality framework, a FastAPI analytical service, and a React and TypeScript dashboard.',
+      approach: 'Built a pipeline that ingests directly from Ontario’s own API, not a static download, runs eight automated data quality checks on every run, and serves the data through a dashboard designed to avoid common misreadings, such as treating a $0 budget as free or a passed target window as proof of delay.',
+      outcome: 'Verified against a real run on 2,272 live-ingested projects, with 62 passing tests across the pipeline, API, and web app, and a committed data-quality report from an actual pipeline run.',
+    },
+  },
+  {
+    title: 'PwC — Enterprise Data Transformation',
+    category: 'Enterprise Transformation',
+    blurb: 'Supported a Dynamics AX to Dynamics 365 F&O enterprise data migration, leading mapping sessions and building Python validation scripts.',
+    tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
+    caseStudy: {
+      context: 'A large-scale ERP migration from Dynamics AX to Dynamics 365 F&O required mapping and validating data across legacy and target systems before cutover.',
+      problem: 'Without rigorous mapping and validation, a migration of this scale risks silent data loss or corruption that only surfaces after go-live.',
+      contribution: 'Led mapping sessions between business and technical stakeholders and built the Python validation scripts used to check migrated data against source records.',
+      approach: 'Combined structured mapping workshops with Python-based validation scripts and Power BI reporting to give the project team visibility into data quality throughout the migration.',
+      outcome: 'Delivered validation and reporting that supported 98% data accuracy on the migration.',
+    },
+  },
+  {
+    title: 'ESGTree — Applied AI & Document Extraction',
+    category: 'AI & Intelligent Automation',
+    blurb: 'Developed LLM-based document extraction that reduced manual data input by approximately 30%, alongside Power BI reporting and SQL/Python workflows.',
+    tags: ['LLMs', 'Document Extraction', 'Power BI', 'Python'],
+    caseStudy: {
+      context: 'ESG reporting workflows involved large volumes of source documents whose data had to be manually read and entered into reporting systems.',
+      problem: 'Manual document review and data entry was slow and didn’t scale with the volume of documents the team needed to process.',
+      contribution: 'Designed and built the LLM-based extraction workflow, alongside the Power BI reporting and SQL/Python data pipelines that supported it.',
+      approach: 'Used an LLM to read source documents and extract the relevant structured fields automatically, replacing manual entry for most cases while keeping a review step for edge cases.',
+      outcome: 'Reduced manual data input by approximately 30%.',
+    },
+  },
+  {
+    title: 'Granted Source Agent',
+    category: 'AI & Intelligent Automation',
+    blurb: 'AI agent built for Granted that discovers, filters, analyzes, and exports non-dilutive funding opportunities across Canada and the US, using Gemini with Google Search grounding.',
+    href: 'https://github.com/tobiolad/granted-source-agent',
+    tags: ['AI Agents', 'Gemini API', 'Funding'],
+  },
+  {
+    title: 'Inscend',
+    category: 'Software & Product Development',
+    blurb: 'A past venture (Nov 2025 – Nov 2026): an AI-powered B2B SaaS platform for ecommerce merchants. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    href: 'https://www.inscend.io/',
+    tags: ['Ecommerce', 'Product', 'Shopify'],
+    badge: 'Past Venture',
+    caseStudy: {
+      context: 'Independent merchants running ecommerce stores, often on Shopify, need to continuously track what’s affecting their sales and operations, but rarely have the time or tooling to do it well.',
+      problem: 'Founders were spending time manually checking their stores instead of acting on what actually needed their attention.',
+      contribution: 'Founded Inscend and led a distributed engineering team building the product end to end.',
+      approach: 'Built an AI-powered B2B SaaS platform that monitors store activity, surfaces what needs attention, and prepares next steps, bringing the founder in when judgment is required. Validated the approach through customer discovery with 50+ founders and Shopify merchant pilots.',
+      outcome: 'Secured early paying customers and a development and referral agreement with SHOPLINE. Selected as a finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026. Concluded November 2026; not an active product or company today.',
+    },
+  },
+  {
+    title: 'Monitoring & Evaluation Dashboard',
+    category: 'Data Analytics & Business Intelligence',
+    blurb: 'Power BI reporting for field operations, geographic activity, visit status, pending work, and monitoring performance.',
+    image: '/images/portfolio/m & e.png',
+    href: 'https://github.com/tobiolad/Evaluation-Dashboard',
+    tags: ['Power BI', 'DAX', 'Operations'],
+  },
+  {
     title: 'Data Fellows',
-    category: 'Product',
+    category: 'Software & Product Development',
     blurb: 'An independent automation studio and global technology community, helping organizations solve recurring operational challenges through software, data, and AI.',
     href: 'https://datafellowsai.com/',
     tags: ['Automation', 'Software', 'Data & AI', 'Community'],
@@ -288,86 +382,30 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'Inscend',
-    category: 'Product',
-    blurb: 'An AI-powered B2B SaaS platform for ecommerce merchants, founded and launched Nov 2025 – Nov 2026. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
-    href: 'https://www.inscend.io/',
-    tags: ['Ecommerce', 'Product', 'Shopify'],
-    badge: 'Past Venture',
-    caseStudy: {
-      context: 'Independent merchants running ecommerce stores, often on Shopify, need to continuously track what’s affecting their sales and operations, but rarely have the time or tooling to do it well.',
-      problem: 'Founders were spending time manually checking their stores instead of acting on what actually needed their attention.',
-      contribution: 'Founded Inscend and led a distributed engineering team building the product end to end.',
-      approach: 'Built an AI-powered B2B SaaS platform that monitors store activity, surfaces what needs attention, and prepares next steps, bringing the founder in when judgment is required. Validated the approach through customer discovery with 50+ founders and Shopify merchant pilots.',
-      outcome: 'Secured early paying customers and a development and referral agreement with SHOPLINE. Selected as a finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
-    },
-  },
-  {
-    title: 'Granted Source Agent',
-    category: 'AI Agents',
-    blurb: 'AI agent built for Granted that discovers, filters, analyzes, and exports non-dilutive funding opportunities across Canada and the US, using Gemini with Google Search grounding.',
-    href: 'https://github.com/tobiolad/granted-source-agent',
-    tags: ['AI Agents', 'Gemini API', 'Funding'],
-  },
-  {
-    title: 'PwC: Enterprise Data Transformation',
-    category: 'Data',
-    blurb: 'Supported a Dynamics AX to Dynamics 365 F&O enterprise data migration, leading mapping sessions and building Python validation scripts.',
-    tags: ['Data Migration', 'Python', 'SQL', 'Power BI'],
-    caseStudy: {
-      context: 'A large-scale ERP migration from Dynamics AX to Dynamics 365 F&O required mapping and validating data across legacy and target systems before cutover.',
-      problem: 'Without rigorous mapping and validation, a migration of this scale risks silent data loss or corruption that only surfaces after go-live.',
-      contribution: 'Led mapping sessions between business and technical stakeholders and built the Python validation scripts used to check migrated data against source records.',
-      approach: 'Combined structured mapping workshops with Python-based validation scripts and Power BI reporting to give the project team visibility into data quality throughout the migration.',
-      outcome: 'Delivered validation and reporting that supported 98% data accuracy on the migration.',
-    },
-  },
-  {
-    title: 'ESGTree: Applied AI & Document Extraction',
-    category: 'AI Agents',
-    blurb: 'Developed LLM-based document extraction that reduced manual data input by approximately 30%, alongside Power BI reporting and SQL/Python workflows.',
-    tags: ['LLMs', 'Document Extraction', 'Power BI', 'Python'],
-    caseStudy: {
-      context: 'ESG reporting workflows involved large volumes of source documents whose data had to be manually read and entered into reporting systems.',
-      problem: 'Manual document review and data entry was slow and didn’t scale with the volume of documents the team needed to process.',
-      contribution: 'Designed and built the LLM-based extraction workflow, alongside the Power BI reporting and SQL/Python data pipelines that supported it.',
-      approach: 'Used an LLM to read source documents and extract the relevant structured fields automatically, replacing manual entry for most cases while keeping a review step for edge cases.',
-      outcome: 'Reduced manual data input by approximately 30%.',
-    },
-  },
-  {
     title: 'Inscend Source Agent',
-    category: 'AI Agents',
+    category: 'AI & Intelligent Automation',
     blurb: 'AI-assisted discovery agent built for Inscend. Uses Gemini with Google Search grounding to find and score indie beauty and skincare brands and founders across Canada and Nigeria, surfacing signal strength, fit, and outreach angles.',
     href: 'https://github.com/tobiolad/inscend-source-agent',
     tags: ['AI Agents', 'Gemini API', 'React'],
   },
   {
-    title: 'BizPilot AI',
-    category: 'Experiment',
-    blurb: 'An early experiment built through Data Fellows, started in 2025. It initially explored a marketplace connecting businesses with data professionals, then shifted toward AI-powered decision intelligence for small businesses. That work later informed Inscend.',
-    href: 'https://www.producthunt.com/products/data-fellows',
-    tags: ['AI', 'Decision Intelligence', 'Data Fellows'],
-  },
-  {
-    title: 'Monitoring & Evaluation Dashboard',
-    category: 'BI',
-    blurb: 'Power BI reporting for field operations, geographic activity, visit status, pending work, and monitoring performance.',
-    image: '/images/portfolio/m & e.png',
-    href: 'https://github.com/tobiolad/Evaluation-Dashboard',
-    tags: ['Power BI', 'DAX', 'Operations'],
-  },
-  {
     title: 'AgroWallet Dashboard',
-    category: 'BI',
+    category: 'Data Analytics & Business Intelligence',
     blurb: 'Operational reporting across farmer profiles, financial activity, loans, disbursements, repayments, agents, and farm characteristics.',
     image: '/images/portfolio/agrowallet.png',
     href: 'https://github.com/tobiolad/Farmers-Dash',
     tags: ['Power BI', 'Financial Data', 'Analytics'],
   },
   {
+    title: 'BizPilot AI',
+    category: 'Software & Product Development',
+    blurb: 'An early experiment built through Data Fellows, started in 2025. It initially explored a marketplace connecting businesses with data professionals, then shifted toward AI-powered decision intelligence for small businesses. That work later informed Inscend.',
+    href: 'https://www.producthunt.com/products/data-fellows',
+    tags: ['AI', 'Decision Intelligence', 'Data Fellows'],
+  },
+  {
     title: 'Tire Price Analysis',
-    category: 'Python / ML',
+    category: 'Data Analytics & Business Intelligence',
     blurb: 'Analysis of 4,350 tire records combining Python EDA and Excel analysis to understand pricing and customer preferences.',
     image: '/images/portfolio/tire_price.jpg',
     href: 'https://github.com/tobiolad/tire-price-analysis',
@@ -375,7 +413,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Economic Freedom Analysis',
-    category: 'Python / ML',
+    category: 'Data Analytics & Business Intelligence',
     blurb: 'Python analysis of the Fraser Institute’s Economic Freedom dataset, examining Canada’s standing on legal system, sound money, and trade openness to make an evidence-based case for it as a stable, high-opportunity market.',
     image: '/images/portfolio/canada_economic.jpeg',
     href: 'https://github.com/tobiolad/Economic-Freedom',
@@ -383,45 +421,15 @@ export const projects: Project[] = [
   },
   {
     title: 'Real-Time Seismic Monitoring',
-    category: 'Data',
+    category: 'Data Engineering',
     blurb: 'Public-data ingestion and geospatial analysis using USGS earthquake data for automated seismic monitoring and reporting.',
     image: '/images/portfolio/seismic.png',
     href: 'https://medium.com/@Tobioladimeji_/exploring-geospatial-analysis-building-a-real-time-seismic-event-monitoring-solution-a0c197a52c61',
     tags: ['ArcGIS', 'Public APIs', 'Geospatial'],
   },
   {
-    title: 'Ontario Infrastructure Decision Intelligence',
-    category: 'Data',
-    blurb: 'Full-stack rebuild of a public infrastructure analysis into a decision-intelligence platform: a Python ingestion pipeline with automated data-quality checks, a PostgreSQL dimensional model, a FastAPI analytics layer, and a React dashboard covering budgets, project status, and an interactive map.',
-    image: '/images/portfolio/ont_communities.jpg',
-    href: 'https://github.com/tobiolad/ont-communities',
-    tags: ['Python', 'PostgreSQL', 'FastAPI', 'React'],
-    caseStudy: {
-      context: 'Ontario publishes a live public dataset of infrastructure projects (courthouses, correctional facilities, affordable housing, water infrastructure, and more) through its open data portal. A 2024 university group project had analyzed a static snapshot of this data in PostgreSQL and SQL.',
-      problem: 'That original analysis worked from a static snapshot and had real data-cleaning weaknesses: coalescing missing budgets to $0, coalescing missing text to "unknown," detecting duplicates only on full-row matches, and applying a date type to a field that’s rarely a real date.',
-      contribution: 'Independently rebuilt the project in 2026: a full repository and live-source audit, a from-scratch Python ingestion pipeline, a new PostgreSQL dimensional schema, an automated data-quality framework, a FastAPI analytical service, and a React and TypeScript dashboard.',
-      approach: 'Built a pipeline that ingests directly from Ontario’s own API, not a static download, runs eight automated data quality checks on every run, and serves the data through a dashboard designed to avoid common misreadings, such as treating a $0 budget as free or a passed target window as proof of delay.',
-      outcome: 'Verified against a real run on 2,272 live-ingested projects, with 62 passing tests across the pipeline, API, and web app, and a committed data-quality report from an actual pipeline run.',
-    },
-  },
-  {
-    title: 'Product Analytics & Experimentation Lab',
-    category: 'Data',
-    blurb: 'A synthetic SaaS product analytics stack: a deterministic data generator, a DuckDB metrics layer, an A/B experimentation engine with proper statistical testing, a FastAPI analytics API, and a React dashboard covering activation, funnels, retention, and experiment results.',
-    image: '/images/portfolio/product_analytics_lab.jpg',
-    href: 'https://github.com/tobiolad/product-analytics-lab',
-    tags: ['Python', 'DuckDB', 'FastAPI', 'React'],
-    caseStudy: {
-      context: 'Product analytics teams need more than a dashboard of pre-aggregated numbers: a reproducible data source, one tested definition per metric, and a statistically sound A/B testing process.',
-      problem: 'Most portfolio-style analytics projects stop at a few charts over a static CSV, with no reproducibility guarantee, no tested metric definitions, and no real experimentation methodology behind the numbers.',
-      contribution: 'Built the full stack independently: a deterministic synthetic-data generator, a DuckDB schema with a canonical deduplicated events view, a metrics layer, an experimentation engine, a FastAPI analytics API, and a React and TypeScript dashboard.',
-      approach: 'Generated synthetic SaaS data with a fixed seed and deliberate data-quality issues (duplicate events, late arrivals, missing channels), gave every metric exactly one documented SQL definition shared by the API and dashboard, and implemented the A/B test with a sample-ratio-mismatch check, a two-proportion z-test cross-validated against scipy, and an honestly-caveated post-hoc power read.',
-      outcome: 'Verified with 77 passing tests across the generator, metrics, experiment engine, API, and frontend; the baked-in onboarding experiment shows a statistically significant +11.2 percentage point activation lift with no guardrail harm.',
-    },
-  },
-  {
     title: 'COVID-19 Pandemic Dashboard',
-    category: 'BI',
+    category: 'Data Analytics & Business Intelligence',
     blurb: 'Power BI dashboard tracking the global COVID-19 pandemic: countries affected, confirmed cases, and deaths.',
     image: '/images/portfolio/corona.png',
     href: 'https://github.com/tobiolad/Corona-Viz',
@@ -429,7 +437,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Fake News Detection',
-    category: 'Python / ML',
+    category: 'AI & Intelligent Automation',
     blurb: 'Final-year computer science project exploring machine-learning approaches for fake-news detection in Python.',
     href: 'https://github.com/tobiolad/Fake-News-Detection',
     tags: ['Python', 'Machine Learning', 'NLP'],
@@ -523,10 +531,10 @@ export const newsletter: Newsletter = {
 };
 
 export const capabilities: CapabilityGroup[] = [
-  { label: 'Analytics & BI', items: ['Power BI', 'SQL', 'Advanced Excel', 'Tableau', 'KPI design', 'Executive reporting'] },
-  { label: 'Data & Engineering', items: ['Python', 'ETL', 'Data quality', 'Validation', 'PostgreSQL', 'Microsoft SQL Server'] },
-  { label: 'AI & Automation', items: ['LLM workflows', 'Document extraction', 'AI evaluation', 'Workflow automation', 'Decision systems'] },
-  { label: 'Product & Strategy', items: ['Product discovery', 'Customer research', 'Business strategy', 'Team leadership', 'Community development'] },
+  { label: 'Data & Analytics', items: ['SQL', 'Python', 'Power BI', 'Excel', 'Tableau', 'Operational reporting', 'Data quality', 'Data modelling', 'Product analytics'] },
+  { label: 'Artificial Intelligence', items: ['Applied LLM workflows', 'AI model evaluation', 'Document extraction', 'Agentic workflows', 'AI-assisted software development'] },
+  { label: 'Product & Technology', items: ['Product discovery', 'Requirements gathering', 'Software delivery', 'Product validation', 'Business analysis', 'Workflow automation'] },
+  { label: 'Leadership & Strategy', items: ['Stakeholder management', 'Technical collaboration', 'Community development', 'Data strategy', 'Partnerships', 'Technical education'] },
 ];
 
 export const education: EducationItem[] = [

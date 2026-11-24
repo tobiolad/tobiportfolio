@@ -137,6 +137,20 @@
   box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 13%, transparent);
 }
 
+/* A second, discreet status line (open-to-work) directly under the
+   location line -- same visual language, not a banner. */
+.status-open {
+  margin-top: 6px;
+}
+
+.hero-kicker {
+  margin: 4px 0 10px;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.05rem, 1.9vw, 1.3rem);
+  color: var(--text);
+}
+
 .hero-name {
   font-family: var(--display);
   font-style: normal;
