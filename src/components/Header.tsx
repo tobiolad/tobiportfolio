@@ -47,6 +47,7 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
          <header className="hero shell" id="home" ref={heroRef}>
             <div className="hero-copy">
                <p className="status" data-hero-item><i /> {profile.location}</p>
+               <p className="status status-open" data-hero-item><i /> Open to full-time opportunities</p>
                <h1 className="hero-name" aria-label={profile.name}>
                   {profile.name.split(' ').map((word, i) => (
                      <span className="word-mask" key={i}>
@@ -54,13 +55,17 @@ const Header = ({ onOpenPalette }: { onOpenPalette: () => void }) => {
                      </span>
                   ))}
                </h1>
-               <p className="lead" data-hero-item>{profile.headline} {profile.intro}</p>
+               <p className="hero-kicker" data-hero-item>{profile.headline} {profile.tagline}</p>
+               <p className="lead" data-hero-item>{profile.intro}</p>
                <div className="actions" data-hero-item>
                   <a className="button primary" href="#work" onClick={handleNav('#work')}>
-                     Explore My Work <IconArrow />
+                     View My Work <IconArrow />
+                  </a>
+                  <a className="button" href="#experience" onClick={handleNav('#experience')}>
+                     View Experience <IconArrowUpRight />
                   </a>
                   <a className="button" href="#contact" onClick={handleNav('#contact')}>
-                     Get in Touch <IconArrowUpRight />
+                     Contact Me <IconArrowUpRight />
                   </a>
                </div>
                <div className="socials" data-hero-item>
