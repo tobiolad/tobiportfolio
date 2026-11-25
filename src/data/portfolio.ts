@@ -142,7 +142,7 @@ export const profile: Profile = {
   headline: 'Data. AI. Product.',
   tagline: 'Building technology. Solving business problems.',
   intro: 'I’m a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation. My experience spans organizations including PwC, ESGTree, Granted and Cohere, alongside building products and growing a global technology community through Data Fellows. Based in Waterloo, Ontario, Canada.',
-  bio: 'Tobi Oladimeji is a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans organizations including PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside building products and growing Data Fellows, a global technology community of 1,600+ members across 33+ countries that he founded in 2022, into an independent automation studio. He also founded Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.',
+  bio: 'Tobi Oladimeji is a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside building products and growing Data Fellows, a global technology community of more than 1,600 professionals across 33+ countries. He previously worked as Product Manager, AI Commerce at Inscend, an AI-powered Shopify-connected commerce product, from November 2025 to November 2026.',
 };
 
 /** Companies referenced in Tobi's professional experience, shown as a homepage reference strip, not as Data Fellows customers or partners. */
@@ -173,7 +173,7 @@ export const currentWork: CurrentWorkItem[] = [
   {
     eyebrow: 'Alongside that',
     title: 'Data Fellows',
-    description: 'Data Fellows is an independent automation studio helping organizations solve recurring operational challenges through software, data, and AI. Founded in 2022 as a data and technology community, it’s grown into a global network of over 1,600 professionals across 33+ countries.',
+    description: 'Data Fellows is a software, data and AI company building practical solutions for complex operational problems. It began as a data and technology community and has grown into a global network of more than 1,600 professionals across 33+ countries.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
@@ -189,16 +189,16 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: 'Data Fellows',
-    role: 'Founder',
+    role: 'Product & Data Builder',
     period: 'Aug 2022 – Present',
-    summary: 'Founded Data Fellows in 2022, growing it into a global network of over 1,600 data and technology professionals across 33 countries. My work spans product development, data strategy, applied AI, technical collaboration, industry partnerships and community development. Today, Data Fellows develops software, data and AI solutions to address operational challenges while continuing to support professional development and technical collaboration.',
+    summary: 'Built Data Fellows into a global network of more than 1,600 data and technology professionals across 33+ countries. Work spans product development, data strategy, applied AI, technical collaboration, industry partnerships and community development, alongside software, data and AI solutions for complex operational problems.',
     tags: ['Automation', 'Software & AI', 'Community'],
   },
   {
     company: 'Inscend',
-    role: 'Founder & Product Lead',
+    role: 'Product Manager, AI Commerce',
     period: 'Nov 2025 – Nov 2026 · Concluded',
-    summary: 'Led product discovery, validation and technical development for an AI-powered B2B SaaS platform for ecommerce merchants, in close collaboration with a distributed engineering team. Validated the product through customer discovery with 50+ founders, ran Shopify merchant pilots, and turned those customer insights into an AI-powered product intelligence feature set. Secured early paying customers and a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    summary: 'Worked on an AI-powered, Shopify-connected B2B commerce product for ecommerce merchants. Led product discovery, engineering coordination and merchant pilots, engaged 50+ founders, built a merchant-focused audience of 3,000+ through a newsletter and articles shared with 19,000+ followers, and started the Shopify Builders Waterloo community. Supported early paying customers and helped establish a development and referral agreement with SHOPLINE intended to support access to more than 600,000 merchants. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
     tags: ['Product Discovery', 'Ecommerce Technology', 'Team Leadership'],
   },
   {
@@ -210,7 +210,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: 'Venture Learning Collective',
-    role: 'Co-Founder',
+    role: 'Program & Community Builder',
     period: 'Feb 2026 – Jul 2026 · Concluded',
     summary: 'Helped establish Venture Learning Collective to support entrepreneurship education and funding readiness. Secured a C$2,800 micro-grant through Weston Frontlines and delivered the Youth Funding Readiness Lab with GRANTED. The program ran May 27 to June 25, 2026, with six virtual sessions and a final showcase, serving a core cohort of 10 participants, eight of whom remained active throughout. Final reporting took place in July 2026.',
     tags: ['Founder Education', 'Funding Readiness', 'Community'],
@@ -346,7 +346,7 @@ export const projects: Project[] = [
   {
     title: 'Inscend',
     category: 'Software & Product Development',
-    blurb: 'A past venture (Nov 2025 – Nov 2026): an AI-powered B2B SaaS platform for ecommerce merchants. Led a distributed engineering team, engaged 50+ founders, ran Shopify merchant pilots, secured early paying customers, and established a development and referral agreement with SHOPLINE. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
+    blurb: 'A past venture (Nov 2025 – Nov 2026): an AI-powered, Shopify-connected B2B commerce product for ecommerce merchants. Led product discovery and engineering coordination, engaged 50+ founders, built a 3,000+ merchant-focused audience through a newsletter and articles shared with 19,000+ followers, started Shopify Builders Waterloo, and helped establish a SHOPLINE development and referral agreement intended to support access to more than 600,000 merchants. Finalist at SAAS NORTH AI PitchFest and OBSIDI BFUTR 2026.',
     href: 'https://www.inscend.io/',
     tags: ['Ecommerce', 'Product', 'Shopify'],
     badge: 'Past Venture',
