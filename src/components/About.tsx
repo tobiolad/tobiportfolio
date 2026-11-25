@@ -4,14 +4,14 @@ const About = () => (
   <section id="about" className="section shell" data-reveal>
     <header className="section-head">
       <p className="eyebrow">About</p>
-      <h2>A data, AI, and product professional, with entrepreneurial experience that sharpens how I work.</h2>
+      <h2>A data, AI, and product professional who builds useful systems and works well across teams.</h2>
     </header>
     <div className="about-grid">
       <div className="story">
-        <p className="lede">Data, AI, and product aren’t separate lanes for me. They’re how I approach every problem, whether inside an organization or building my own.</p>
-        <p>I’ve worked across enterprise analytics, business intelligence, data engineering, applied AI, and software product development at PwC, ESGTree, and Granted, and I currently support AI model evaluation and data quality as an independent contractor with Cohere.</p>
-        <p>Alongside that, I founded Data Fellows in 2022, growing it from a data and technology community into a global network of 1,600+ professionals across 33+ countries that also develops software, data, and AI solutions for operational challenges. I previously founded and led Inscend, an AI-powered B2B SaaS platform for ecommerce merchants, from November 2025 to November 2026.</p>
-        <p>That range, from enterprise data transformation to AI model evaluation to leading my own company, is what I bring to a team: the rigor of structured analysis and the judgment to turn it into something that actually works.</p>
+        <p className="lede">I work at the intersection of data, AI, and product development, helping organizations solve problems through technology.</p>
+        <p>My experience spans enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation across PwC, ESGTree, Granted and Cohere.</p>
+        <p>Alongside that work, I’ve built Data Fellows into a global network of more than 1,600 professionals across 33+ countries. I also worked as Product Manager, AI Commerce at Inscend, leading an AI-powered Shopify-connected commerce product through discovery, merchant pilots and early customer work.</p>
+        <p>That range gives me structured analytical judgment, product sense and practical experience working with technical and business stakeholders.</p>
         <p className="human">Outside the work, I play saxophone and enjoy mentoring people early in their data and technology careers.</p>
       </div>
       <div className="capability-grid">
