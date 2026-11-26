@@ -12,7 +12,7 @@ const Resume = () => {
     <section id="experience" className="section shell" data-reveal>
       <header className="section-head">
         <p className="eyebrow">Experience</p>
-        <h2>From enterprise data and AI work to building a data, AI, and product company.</h2>
+        <h2>Experience across data, AI, product and community.</h2>
         <p>The common thread is practical decision support: cleaner information, clearer systems, and better actions.</p>
       </header>
       <div className="timeline">
