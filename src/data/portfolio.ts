@@ -134,15 +134,15 @@ export interface Recommendation {
 
 export const profile: Profile = {
   name: 'Tobi Oladimeji',
-  location: 'Waterloo Region, Ontario, Canada',
+  location: 'Waterloo, Ontario, Canada',
   email: 'tobi@datafellowsai.com',
   linkedin: 'https://www.linkedin.com/in/tobioladimeji/',
   github: 'https://github.com/tobiolad',
   x: 'https://x.com/tobioladimeji_',
   headline: 'Data. AI. Product.',
-  tagline: 'Building technology. Solving business problems.',
-  intro: 'I’m a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation. My experience spans organizations including PwC, ESGTree, Granted and Cohere, alongside building products and growing a global technology community through Data Fellows. Based in Waterloo, Ontario, Canada.',
-  bio: 'Tobi Oladimeji is a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside building products and growing Data Fellows, a global technology community of more than 1,600 professionals across 33+ countries. He previously worked as Product Manager, AI Commerce at Inscend, an AI-powered Shopify-connected commerce product, from November 2025 to November 2026.',
+  tagline: 'Exploring how technology solves real problems.',
+  intro: 'I’m a data, AI and product professional with experience across enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation. My experience spans PwC, ESGTree, Granted Technologies, AgroMall and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative. I’m interested in how technology can solve real-world problems, improve decisions and create better products and systems. Based in Waterloo, Ontario, Canada.',
+  bio: 'Tobi Oladimeji is a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative connecting more than 1,600 professionals across 33 countries. He previously worked on Inscend, a Shopify-connected commerce product initiative that concluded in November 2026.',
 };
 
 /** Companies referenced in Tobi's professional experience, shown as a homepage reference strip, not as Data Fellows customers or partners. */
@@ -173,7 +173,7 @@ export const currentWork: CurrentWorkItem[] = [
   {
     eyebrow: 'Alongside that',
     title: 'Data Fellows',
-    description: 'Data Fellows is a software, data and AI company building practical solutions for complex operational problems. It began as a data and technology community and has grown into a global network of more than 1,600 professionals across 33+ countries.',
+    description: 'Data Fellows is a global, community-led technology initiative connecting more than 1,600 professionals across 33 countries. Through practical learning, mentorship, product development and technical collaboration, we bring people together to build technology and solve real-world problems across software, data and AI.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
@@ -189,10 +189,10 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: 'Data Fellows',
-    role: 'Product & Data Builder',
-    period: 'Aug 2022 – Present',
-    summary: 'Built Data Fellows into a global network of more than 1,600 data and technology professionals across 33+ countries. Work spans product development, data strategy, applied AI, technical collaboration, industry partnerships and community development, alongside software, data and AI solutions for complex operational problems.',
-    tags: ['Automation', 'Software & AI', 'Community'],
+    role: 'Product & Community Builder',
+    period: 'August 2022 – Present',
+    summary: 'Founded and grew Data Fellows into a global, community-led technology initiative connecting more than 1,600 professionals across 33 countries. Our focus spans practical learning, mentorship, product development, technical collaboration and community-driven innovation across software, data and AI. We bring people together to learn, build technology and solve real-world problems.',
+    tags: ['Community Building', 'Product Development', 'Software, Data & AI'],
   },
   {
     company: 'Inscend',
@@ -267,7 +267,7 @@ export const experience: ExperienceItem[] = [
 ];
 
 export const founderPrograms: FounderPrograms = {
-  summary: 'Selected into multiple global and Canadian accelerator and founder-in-residence programs supporting product development, growth, and fundraising, for Data Fellows and, previously, Inscend.',
+  summary: 'Historical participation in global and Canadian accelerator and founder-in-residence programs as part of product development and entrepreneurial experience with Data Fellows and, previously, Inscend.',
   programs: [
     { name: 'BHive (GEIP)', logo: '/images/programs/bhive.png' },
     { name: 'Accelerator Centre (RevLab)', logo: '/images/programs/accelerator-centre.svg', href: 'https://www.acceleratorcentre.com/' },
@@ -369,16 +369,16 @@ export const projects: Project[] = [
   {
     title: 'Data Fellows',
     category: 'Software & Product Development',
-    blurb: 'An independent automation studio and global technology community, helping organizations solve recurring operational challenges through software, data, and AI.',
+    blurb: 'A global, community-led technology initiative connecting more than 1,600 professionals across 33 countries through practical learning, mentorship, product development and technical collaboration across software, data and AI.',
     href: 'https://datafellowsai.com/',
-    tags: ['Automation', 'Software', 'Data & AI', 'Community'],
-    badge: 'Active Venture',
+    tags: ['Community', 'Learning', 'Software, Data & AI'],
+    badge: 'Community-Led Initiative',
     caseStudy: {
-      context: 'Many data and AI professionals, especially outside major tech hubs, lack access to structured learning, mentorship, and industry connections, while organizations everywhere carry recurring operational problems that don’t fit an off-the-shelf software product.',
-      problem: 'Opportunities in data and AI weren’t evenly accessible, and there was no single place bringing practitioners together across regions, while many operational challenges stayed unsolved because they needed something built around the specific problem.',
-      contribution: 'Founded Data Fellows in 2022 as a community for people interested in data and technology, and grew it into an organization that also designs and builds automation solutions for real operational problems.',
-      approach: 'Built learning programs, professional development initiatives, and industry partnerships to grow the community, then added software engineering, data systems, and AI capability to design, build, and manage automation solutions for organizations’ recurring operational challenges.',
-      outcome: 'Grew Data Fellows into a global network of 1,600+ professionals across 33+ countries, which now also operates as an independent automation studio.',
+      context: 'People working across data and technology benefit from practical learning, mentorship, collaboration and opportunities to build together across geographies.',
+      problem: 'Access to learning, peer support and technical collaboration can be uneven, especially for people outside major technology hubs.',
+      contribution: 'Founded Data Fellows in August 2022 and grew it into a global, community-led technology initiative connecting more than 1,600 professionals across 33 countries.',
+      approach: 'Bring people together through practical learning, mentorship, product development and technical collaboration, with shared work spanning software, data and AI.',
+      outcome: 'A global community where professionals learn, build technology and contribute to solving real-world problems.',
     },
   },
   {

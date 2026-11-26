@@ -19,7 +19,7 @@ const Contact = () => {
       <section id="contact" className="contact shell" data-reveal>
          <p className="eyebrow">Contact</p>
          <h2>Open to full-time opportunities and meaningful professional collaborations.</h2>
-         <p>I’m open to full-time opportunities in data, AI, product and technology, as well as meaningful professional collaborations. For Data Fellows partnerships or community inquiries, reach out through <a href="https://datafellowsai.com/" target="_blank" rel="noopener noreferrer">datafellowsai.com</a>.</p>
+         <p>I’m open to full-time opportunities in data, AI, product and technology, as well as meaningful professional collaborations. For Data Fellows community and collaboration inquiries, reach out through <a href="https://datafellowsai.com/" target="_blank" rel="noopener noreferrer">datafellowsai.com</a>.</p>
          <div className="actions">
             <a className="button primary" href={`mailto:${profile.email}`}>
                <IconMail /> Email me
