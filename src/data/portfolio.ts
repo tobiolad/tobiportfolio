@@ -142,7 +142,7 @@ export const profile: Profile = {
   headline: 'Data. AI. Product.',
   tagline: 'Exploring how technology solves real problems.',
   intro: 'I’m a data, AI and product professional with experience across enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation. My experience spans PwC, ESGTree, Granted Technologies, AgroMall and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative. I’m interested in how technology can solve real-world problems, improve decisions and create better products and systems. Based in Waterloo, Ontario, Canada.',
-  bio: 'Tobi Oladimeji is a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative connecting more than 1,600 professionals across 33 countries. He previously worked on Inscend, a Shopify-connected commerce product initiative that concluded in November 2026.',
+  bio: 'Tobi Oladimeji is a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative connecting 1,600+ professionals across 33+ countries. He previously worked on Inscend, a Shopify-connected commerce product initiative that concluded in November 2026.',
 };
 
 /** Companies referenced in Tobi's professional experience, shown as a homepage reference strip, not as Data Fellows customers or partners. */
@@ -173,7 +173,7 @@ export const currentWork: CurrentWorkItem[] = [
   {
     eyebrow: 'Alongside that',
     title: 'Data Fellows',
-    description: 'Data Fellows is a global, community-led technology initiative connecting more than 1,600 professionals across 33 countries. Through practical learning, mentorship, product development and technical collaboration, we bring people together to build technology and solve real-world problems across software, data and AI.',
+    description: 'Data Fellows is a global, community-led technology initiative connecting 1,600+ professionals across 33+ countries. Through practical learning, mentorship, product development and technical collaboration, we bring people together to build technology and solve real-world problems across software, data and AI.',
     href: 'https://datafellowsai.com/',
     linkLabel: 'Visit datafellowsai.com',
   },
@@ -191,7 +191,7 @@ export const experience: ExperienceItem[] = [
     company: 'Data Fellows',
     role: 'Product & Community Builder',
     period: 'August 2022 – Present',
-    summary: 'Founded and grew Data Fellows into a global, community-led technology initiative connecting more than 1,600 professionals across 33 countries. Our focus spans practical learning, mentorship, product development, technical collaboration and community-driven innovation across software, data and AI. We bring people together to learn, build technology and solve real-world problems.',
+    summary: 'Founded and grew Data Fellows into a global, community-led technology initiative connecting 1,600+ professionals across 33+ countries. Our focus spans practical learning, mentorship, product development, technical collaboration and community-driven innovation across software, data and AI. We bring people together to learn, build technology and solve real-world problems.',
     tags: ['Community Building', 'Product Development', 'Software, Data & AI'],
   },
   {
@@ -369,14 +369,14 @@ export const projects: Project[] = [
   {
     title: 'Data Fellows',
     category: 'Software & Product Development',
-    blurb: 'A global, community-led technology initiative connecting more than 1,600 professionals across 33 countries through practical learning, mentorship, product development and technical collaboration across software, data and AI.',
+    blurb: 'A global, community-led technology initiative connecting 1,600+ professionals across 33+ countries through practical learning, mentorship, product development and technical collaboration across software, data and AI.',
     href: 'https://datafellowsai.com/',
     tags: ['Community', 'Learning', 'Software, Data & AI'],
     badge: 'Community-Led Initiative',
     caseStudy: {
       context: 'People working across data and technology benefit from practical learning, mentorship, collaboration and opportunities to build together across geographies.',
       problem: 'Access to learning, peer support and technical collaboration can be uneven, especially for people outside major technology hubs.',
-      contribution: 'Founded Data Fellows in August 2022 and grew it into a global, community-led technology initiative connecting more than 1,600 professionals across 33 countries.',
+      contribution: 'Founded Data Fellows in August 2022 and grew it into a global, community-led technology initiative connecting 1,600+ professionals across 33+ countries.',
       approach: 'Bring people together through practical learning, mentorship, product development and technical collaboration, with shared work spanning software, data and AI.',
       outcome: 'A global community where professionals learn, build technology and contribute to solving real-world problems.',
     },
