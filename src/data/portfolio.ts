@@ -147,7 +147,7 @@ export const profile: Profile = {
 
 /** Companies referenced in Tobi's professional experience, shown as a homepage reference strip, not as Data Fellows customers or partners. */
 export const experienceLogos: ProgramLogo[] = [
-  { name: 'Conscia' },
+  { name: 'Conscia', logo: '/images/experience-logos/conscia.png' },
   { name: 'PwC', logo: '/images/experience-logos/pwc.svg' },
   { name: 'Cohere', logo: '/images/experience-logos/cohere.svg' },
   { name: 'ESGTree', logo: '/images/experience-logos/esgtree.svg' },
