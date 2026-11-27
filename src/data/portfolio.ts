@@ -164,11 +164,11 @@ export const metrics: Metric[] = [
 
 export const currentWork: CurrentWorkItem[] = [
   {
-    eyebrow: 'Open to',
-    title: 'Full-time opportunities',
-    description: 'Open to full-time opportunities in data, AI, product and technology, as well as meaningful professional collaborations and conversations about complex organizational problems.',
-    href: '#contact',
-    linkLabel: 'Get in touch',
+    eyebrow: 'Professional focus',
+    title: 'Data, AI & product',
+    description: 'Exploring how data, AI and product development can help teams understand complex problems and build useful technology.',
+    href: '#experience',
+    linkLabel: 'View experience',
   },
   {
     eyebrow: 'Alongside that',
