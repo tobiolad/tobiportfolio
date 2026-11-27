@@ -141,12 +141,13 @@ export const profile: Profile = {
   x: 'https://x.com/tobioladimeji_',
   headline: 'Data. AI. Product.',
   tagline: 'Exploring how technology solves real problems.',
-  intro: 'I’m a data, AI and product professional with experience across enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation. My experience spans PwC, ESGTree, Granted Technologies, AgroMall and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative. I’m interested in how technology can solve real-world problems, improve decisions and create better products and systems. Based in Waterloo, Ontario, Canada.',
-  bio: 'Tobi Oladimeji is a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative connecting 1,600+ professionals across 33+ countries. He previously worked on Inscend, a Shopify-connected commerce product initiative that concluded in November 2026.',
+  intro: 'I’m a Forward Deployed Product Manager at Conscia and a data, AI and product professional with experience across enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation. My experience spans PwC, ESGTree, Granted Technologies, AgroMall and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative. I’m interested in how technology can solve real-world problems, improve decisions and create better products and systems. Based in Waterloo, Ontario, Canada.',
+  bio: 'Tobi Oladimeji is a Forward Deployed Product Manager at Conscia and a data, AI and product professional with experience in enterprise analytics, business intelligence, data engineering, applied AI, software product development, and digital transformation. His experience spans PwC, ESGTree, Granted Technologies, AgroMall, and Cohere, alongside independent product development and growing Data Fellows, a global, community-led technology initiative connecting 1,600+ professionals across 33+ countries. He previously worked on Inscend, a Shopify-connected commerce product initiative that concluded in November 2026.',
 };
 
 /** Companies referenced in Tobi's professional experience, shown as a homepage reference strip, not as Data Fellows customers or partners. */
 export const experienceLogos: ProgramLogo[] = [
+  { name: 'Conscia' },
   { name: 'PwC', logo: '/images/experience-logos/pwc.svg' },
   { name: 'Cohere', logo: '/images/experience-logos/cohere.svg' },
   { name: 'ESGTree', logo: '/images/experience-logos/esgtree.svg' },
@@ -164,9 +165,9 @@ export const metrics: Metric[] = [
 
 export const currentWork: CurrentWorkItem[] = [
   {
-    eyebrow: 'Professional focus',
-    title: 'Data, AI & product',
-    description: 'Exploring how data, AI and product development can help teams understand complex problems and build useful technology.',
+    eyebrow: 'Current role',
+    title: 'Forward Deployed Product Manager at Conscia',
+    description: 'Working across customer discovery, product management and enterprise technology, with a focus on data infrastructure and AI enablement.',
     href: '#experience',
     linkLabel: 'View experience',
   },
@@ -180,6 +181,13 @@ export const currentWork: CurrentWorkItem[] = [
 ];
 
 export const experience: ExperienceItem[] = [
+  {
+    company: 'Conscia',
+    role: 'Forward Deployed Product Manager',
+    period: 'Nov 2026 – Present · Full-time',
+    summary: 'Focused on understanding customer needs, translating business requirements into product and technical solutions, and collaborating with customers and engineering teams to support the adoption of enterprise data and AI technology.',
+    tags: ['Product Management', 'AI', 'Enterprise Software', 'Data Architecture', 'Solutions Engineering'],
+  },
   {
     company: 'Cohere',
     role: 'AI Data Trainer (Independent Contractor)',

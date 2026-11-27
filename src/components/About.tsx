@@ -9,6 +9,7 @@ const About = () => (
     <div className="about-grid">
       <div className="story">
         <p className="lede">I work at the intersection of data, AI, and product development, helping organizations solve problems through technology.</p>
+        <p>As a Forward Deployed Product Manager at Conscia, my focus is customer discovery, product management and enterprise data and AI technology.</p>
         <p>My experience spans enterprise analytics, business intelligence, data engineering, applied AI, software product development and digital transformation across PwC, ESGTree, Granted and Cohere.</p>
         <p>Alongside that work, I’ve grown Data Fellows into a global, community-led technology initiative connecting 1,600+ professionals across 33+ countries. I also worked on Inscend, a Shopify-connected commerce product initiative that concluded in November 2026, contributing to product discovery, engineering coordination and merchant pilots.</p>
         <p>That range gives me structured analytical judgment, product sense and practical experience working with technical and business stakeholders.</p>
