@@ -553,6 +553,16 @@ export const education: EducationItem[] = [
 export const recommendations: Recommendation[] = [
   // Category A: Managers & Senior Colleagues
   {
+    name: 'Majid Mirza',
+    title: 'Founder, ESGTree',
+    relationship: 'Worked with Tobi at ESGTree',
+    category: 'Managers & Senior Colleagues',
+    date: 'Nov 2026',
+    quote: 'Tobi worked as a data analytics consultant for us a few years ago. I found Tobi to be energetic, dependable, capable and ambitious. I would recommend him for data analytics related roles and consulting.',
+    photo: '',
+    featured: true,
+  },
+  {
     name: 'Andrew S. Nevin, PhD',
     title: 'Partner, Financial Services Leader and Chief Economist, PwC',
     relationship: 'Senior colleague at PwC; did not manage Tobi directly',
